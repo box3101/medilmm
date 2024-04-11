@@ -1,10 +1,10 @@
 .header {
-  height: 5rem;
-  border-bottom: 0.0625rem solid #f2f2f2;
+  height: 5.3125rem;
   .inner {
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
   .logo {
     position: absolute;
@@ -12,7 +12,7 @@
   }
   .gnb {
     position: absolute;
-    left: 15.625rem;
+    right: 0;
     height: 100%;
     display: flex;
     > ul {
@@ -30,6 +30,7 @@
           background: transparent;
         }
         > a {
+          position: relative;
           display: inline-flex;
           align-items: center;
           font-size: 1.125rem;
@@ -41,6 +42,21 @@
 
           &:hover {
             color: $clr-pri;
+          }
+
+          &.on {
+            @include make-after {
+              content: 'TM';
+              font-family: 'Poppins', sans-serif !important;
+              font-size: 10px;
+              font-weight: 400;
+              color: #000;
+              position: absolute;
+              width: 12px;
+              height: 12px;
+              top: 28px;
+              right: 13px;
+            }
           }
         }
         &:first-of-type {
@@ -103,9 +119,10 @@
                   top: 41%;
                   transform: translateY(-50%);
                   right: -1.6875rem;
-                  width: 1.25rem;
-                  height: 1.25rem;
-                  @include bg-url('img', 'active-star.svg');
+                  width: 1.2rem;
+                  height: 1.2rem;
+                  @include bg-url('img', 'TM.svg');
+                  background-size: contain;
                 }
               }
             }
@@ -119,45 +136,10 @@
       }
     }
   }
-  .utilmenu {
-    position: absolute;
-    right: 0;
-    ul {
-      display: flex;
-      gap: 1.25rem;
-      li {
-        img {
-          // width: 1.5625rem;
-        }
-        &:first-of-type {
-          top: 0.3125rem;
-          position: relative;
-          @include media($web, max) {
-            top: 0rem;
-          }
-          span {
-            position: absolute;
-            right: -0.5rem;
-            bottom: -0.125rem;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 1.25rem;
-            height: 1.25rem;
-            background: $clr-pri;
-            border-radius: 50%;
-            font-size: 0.75rem;
-            color: #fff;
-            font-weight: 400;
-          }
-        }
-      }
-    }
-  }
 }
 .mobileMenu {
   // position: relative;
-  .logout{
+  .logout {
     display: none;
     position: absolute;
     left: 50%;
@@ -169,7 +151,7 @@
     display: flex;
     align-items: flex-end;
     padding-bottom: 34px;
-    a{
+    a {
       display: inline-block;
       font-size: 16px;
       font-weight: 500;
@@ -324,7 +306,7 @@
               font-weight: 400;
               color: #333;
               padding-left: 0.8125rem !important;
-              &.on{
+              &.on {
                 @include make-after {
                   position: absolute;
                   top: 55%;

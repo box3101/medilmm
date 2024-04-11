@@ -5,10 +5,10 @@ import '../css/ui.css';
 
 <!-- header -->
 <header id="header" class="header">
-  <div class="inner lg">
+  <div class="inner">
     <h1 class="logo">
       <a href="../main/main.html">
-        <img class="" src="../assets/img/logo.svg" alt="" />
+        <img class="" src="../public/assets/images/logo_blk.svg" alt="" />
       </a>
     </h1>
     <!-- 모바일메뉴 -->
@@ -25,21 +25,15 @@ import '../css/ui.css';
               return (
                 <>
                   <li class="mobileNavItem">
-                    <a
-                      class={active === 'on' ? 'on' : ''}
-                      href={`../${category}/${url}.html`}
-                    >
+                    <a class={active === 'on' ? 'on' : ''} href={`../${category}/${url}.html`}>
                       {title}
                     </a>
                     {items && (
                       <ul class="dapth2">
-                        {items.map(function ({ url, title,active2 }) {
+                        {items.map(function ({ url, title, active2 }) {
                           return (
                             <li>
-                              <a
-                                class={active2 === 'on' ? 'on' : ''}
-                                href={`../${category}/${url}.html`}
-                              >
+                              <a class={active2 === 'on' ? 'on' : ''} href={`../${category}/${url}.html`}>
                                 {title}
                               </a>
                             </li>
@@ -61,20 +55,19 @@ import '../css/ui.css';
     <nav class="gnb is-web-hide">
       <ul>
         {
-          menu.map(({ category, title, items, url }) => {
+          menu.map(({ category, title, items, url, active }) => {
             return (
               <>
                 <li>
-                  <a href={`../${category}/${url}.html`}>{title}</a>
+                  <a class={active === 'on' ? 'on' : ''} href={`../${category}/${url}.html`}>
+                    {title}
+                  </a>
                   {items && (
                     <ul class="sub-menu">
                       {items.map(function ({ url, title, active }) {
                         return (
                           <li>
-                            <a
-                              class={active === 'on' ? 'on' : ''}
-                              href={`../${category}/${url}.html`}
-                            >
+                            <a class={active === 'on' ? 'on' : ''} href={`../${category}/${url}.html`}>
                               {title}
                             </a>
                           </li>
@@ -87,22 +80,6 @@ import '../css/ui.css';
             );
           })
         }
-      </ul>
-    </nav>
-    <nav class="utilmenu">
-      <ul>
-        <li>
-          <a href="#">
-            <img class="" src="../assets/img/util01.svg" alt="" />
-            <span>3</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img class="is-web-hide" src="../assets/img/util02.svg" alt="" />
-            <img class="is-web-show" src="../assets/img/mo-util02.svg" alt="" />
-          </a>
-        </li>
       </ul>
     </nav>
   </div>

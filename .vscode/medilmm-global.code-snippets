@@ -57,4 +57,10 @@
 			"@include media(\\$mo, max) {$1}"
 		],
 	},
+	"ur": {
+		"prefix": "url",
+		"body": [
+			"@include bg-url('images','$1');"
+		],
+	},
 }

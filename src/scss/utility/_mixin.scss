@@ -27,6 +27,7 @@
 @mixin bg-url($path, $img, $op-default: false, $op-p: null, $op-s: null) {
   background-image: urlPath($path, $img);
   background-repeat: no-repeat;
+  background-size: contain;
 
   @if ($op-default) {
     @include bg-op;

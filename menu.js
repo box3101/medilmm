@@ -1,39 +1,56 @@
 const menu = [
   {
-    category: "sub",
-    title: "보미오라 소개",
-    url: "보미오라소개"
-  },
-  {
-    active: "on",
-    category: "sub",
-    title: "제품",
-    url: "제품리스트",
+    category: 'sub',
+    title: 'Core Technology',
+    url: 'CoreTechnology',
     items: [
-      { "url": "제품리스트", "title": "신상품" },
-      { "url": "제품리스트", "title": "베스트" },
-      { "url": "제품리스트", "title": "다이어트", "active": "on" ,"active2": "on" },
-      { "url": "제품리스트", "title": "디톡스", "active": "on" ,"active2": "on" },
-      { "url": "제품리스트", "title": "건강/면역" },
-      { "url": "제품리스트", "title": "뷰티/코스메틱" },
-      { "url": "제품리스트", "title": "헤어/탈모" }
+      { url: 'MultiModalData', title: 'Multi Modal Data' },
+      { url: 'AboutMediLMM', title: 'About MediLMM' },
+      { url: 'OurPlatform', title: 'Our Platform' },
     ],
   },
   {
-    category: "sub",
-    title: "체험단",
-    url: "체험단",
+    active: 'on',
+    category: 'sub',
+    title: 'MediLMM CAD',
+    url: 'SimpleModel',
+    items: [
+      { url: 'SimpleModel', title: 'Simple Model' },
+      { url: 'UVLTransformer', title: 'UVL Transformer' },
+      { url: 'CADCatch', title: 'CAD Catch' },
+      { url: 'CADWrap', title: 'CAD Wrap' },
+    ],
+    active: 'on',
   },
   {
-    category: "sub",
-    title: "리뷰",
-    url: "리뷰-로그인"
+    category: 'sub',
+    title: 'Strategy',
+    url: 'Strategy',
+    items: [
+      { url: 'Overview', title: 'Overview' },
+      { url: 'Board', title: 'BusinessStrategy' },
+      { url: 'MarketingStrategy', title: 'Marketing Strategy' },
+    ],
   },
   {
-    category: "sub",
-    title: "온라인상담",
-    url: "온라인상담"
+    category: 'sub',
+    title: 'Plan',
+    url: 'Plan',
+    items: [
+      { url: 'MediLMMRoadmap', title: 'MediLMM Roadmap' },
+      { url: 'FinancialPlan', title: 'Financial Plan' },
+    ],
+  },
+  {
+    category: 'sub',
+    title: 'Contact us',
+    url: 'Contact us',
+    items: [
+      { url: 'MediLMMCEO', title: 'MediLMM CEO' },
+      { url: 'Board', title: 'Board' },
+      { url: 'Contact', title: 'Contact' },
+    ],
   },
 ];
 
-export default menu
+export default menu;
