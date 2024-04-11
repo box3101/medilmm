@@ -20,5 +20,41 @@
 			"<img src='$3' alt='$4'>",
 	 	"</picture>"
 		],
-	}
+	},
+	"cp": {
+		"prefix": "cp",
+		"body": [
+			"\\$clr-pri",
+		],
+	},
+	"cs": {
+		"prefix": "cs",
+		"body": [
+			"\\$clr-sec",
+		],
+	},
+	"Font Size and Weight": {
+		"prefix": "f",
+		"body": [
+			"font-size: ${1:size}px;", "font-weight: ${2:weight};", "color: $3;",
+		],
+	},
+	"web": {
+		"prefix": "web",
+		"body": [
+			"@include media(\\$web, max) {$1}"
+		],
+	},
+	"tab": {
+		"prefix": "tab",
+		"body": [
+			"@include media(\\$tab, max) {$1}"
+		],
+	},
+	"mo": {
+		"prefix": "mo",
+		"body": [
+			"@include media(\\$mo, max) {$1}"
+		],
+	},
 }
