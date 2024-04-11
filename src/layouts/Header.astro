@@ -47,9 +47,6 @@ import '../css/ui.css';
             })
           }
         </ul>
-        <div class="logout">
-          <a href="#">LOGOUT</a>
-        </div>
       </div>
     </nav>
     <nav class="gnb is-web-hide">
@@ -92,12 +89,19 @@ import '../css/ui.css';
     document.querySelector('.menuToggle')?.classList.toggle('open');
   });
 
+  const $$mobileNav = document.querySelectorAll('.mobileNavItem');
   const $$mobileNavItem = document.querySelectorAll('.mobileNavItem>a');
+
   $$mobileNavItem.forEach((el) => {
     el.addEventListener('click', (e) => {
+      if (!el.closest('li')?.classList.contains('on')) {
+        $$mobileNav.forEach((el) => el.classList.remove('on'));
+      }
+
       if (el.classList.contains('on')) {
         e.preventDefault();
         el.closest('li')?.classList.toggle('on');
+      } else {
       }
     });
   });

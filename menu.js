@@ -8,6 +8,7 @@ const menu = [
       { url: 'AboutMediLMM', title: 'About MediLMM' },
       { url: 'OurPlatform', title: 'Our Platform' },
     ],
+    active: 'on2',
   },
   {
     active: 'on',
@@ -20,7 +21,6 @@ const menu = [
       { url: 'CADCatch', title: 'CAD Catch' },
       { url: 'CADWrap', title: 'CAD Wrap' },
     ],
-    active: 'on',
   },
   {
     category: 'sub',
@@ -31,6 +31,7 @@ const menu = [
       { url: 'Board', title: 'BusinessStrategy' },
       { url: 'MarketingStrategy', title: 'Marketing Strategy' },
     ],
+    active: 'on2',
   },
   {
     category: 'sub',
@@ -40,16 +41,18 @@ const menu = [
       { url: 'MediLMMRoadmap', title: 'MediLMM Roadmap' },
       { url: 'FinancialPlan', title: 'Financial Plan' },
     ],
+    active: 'on2',
   },
   {
     category: 'sub',
     title: 'Contact us',
-    url: 'Contact us',
-    items: [
-      { url: 'MediLMMCEO', title: 'MediLMM CEO' },
-      { url: 'Board', title: 'Board' },
-      { url: 'Contact', title: 'Contact' },
-    ],
+    url: 'Contactus',
+    active: 'on2',
+    // items: [
+    //   { url: 'MediLMMCEO', title: 'MediLMM CEO' },
+    //   { url: 'Board', title: 'Board' },
+    //   { url: 'Contact', title: 'Contact' },
+    // ],
   },
 ];
 

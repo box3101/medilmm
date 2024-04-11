@@ -48,5 +48,17 @@
   "aos fade up": {
     "prefix": "au",
     "body": ["<div class='$1' data-aos='fade-up' data-aos-duration='1000'></div>"]
+  },
+  "bor": {
+    "prefix": "bor",
+    "body": ["border-radius: $1px;"]
+  },
+  "bd": {
+    "prefix": "bd",
+    "body": ["border: 1px solid $1;"]
+  },
+  "bb": {
+    "prefix": "bb",
+    "body": ["border-bottom: 1px solid $1;"]
   }
 }

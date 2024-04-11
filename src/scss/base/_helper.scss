@@ -18,28 +18,6 @@
   }
 }
 /* =================== Title =================== */
-.com-title {
-  padding: 0 0.825rem;
-  height: 3.25rem;
-  background: #000;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.625rem;
-  font-weight: 600;
-  color: #fff;
-  border-radius: 0.5625rem;
-  margin-bottom: 2.4rem;
-  letter-spacing: -0.05rem;
-}
-.com-title2 {
-  font-size: 3rem;
-  font-weight: 800;
-  &.tac {
-    text-align: center;
-  }
-  letter-spacing: -0.0625rem;
-}
 
 // 폰트 사이즈와 무게를 설정하는 믹스인 정의
 @mixin font-style($size, $weight) {
@@ -200,19 +178,19 @@
   }
   &.col33 {
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 29px;
     @include media($web, max) {
-      gap: 11px !important;
+      gap: 0px !important;
       flex-direction: row !important;
     }
   }
   &.col33 > li {
-    flex: 0 0 calc(33% - (16px * 2 / 3)); /* 4개 아이템이므로 3번의 gap을 고려 */
-    max-width: calc(33% - (16px * 2 / 3));
-    margin: 32px 0px;
+    flex: 0 0 calc(33% - (29px * 2 / 3)); /* 4개 아이템이므로 3번의 gap을 고려 */
+    max-width: calc(33% - (29px * 2 / 3));
+    margin: 10px 0px;
     @include media($web, max) {
-      flex: 0 0 calc(50% - (11px * 1 / 2));
-      max-width: calc(50% - (11px * 1 / 2));
+      flex: 0 0 100%;
+      max-width: 100%;
     }
   }
 }
@@ -542,6 +520,20 @@
   opacity: 1;
 }
 
+.image-hover {
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .image-hover {
+  display: block;
+  height: auto;
+}
+
+/* Ensure the default image is not visible when the hover image is active */
+.card:hover .image-default {
+  display: none;
+}
 /* =================== 슬라이드 =================== */
 .swiper-button-next,
 .swiper-button-prev {
@@ -557,4 +549,8 @@
 }
 .swiper-button-next {
   @include bg-url('img', 'ico-slide-next.svg', 'cover');
+}
+
+body {
+  overflow-x: hidden;
 }

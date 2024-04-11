@@ -1,5 +1,22 @@
 .header {
   height: 5.3125rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+
+  &.on {
+    @include make-after {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      bottom: 0;
+      background: rgba(255, 255, 255, 1); /* 흰색 배경 */
+      filter: blur(1.875rem) brightness(1.5);
+    }
+  }
   .inner {
     height: 100%;
     display: flex;
@@ -9,6 +26,7 @@
   .logo {
     position: absolute;
     left: 0;
+    z-index: 10;
   }
   .gnb {
     position: absolute;
@@ -21,6 +39,7 @@
       > li {
         position: relative;
         z-index: 2;
+        text-align: center;
         height: 100%;
         @include make-before {
           position: absolute;
@@ -33,7 +52,7 @@
           position: relative;
           display: inline-flex;
           align-items: center;
-          font-size: 1.125rem;
+          font-size: 1.0625rem;
           font-weight: 400;
           color: #000;
           height: 100%;
@@ -41,78 +60,78 @@
           padding: 0 1.5625rem;
 
           &:hover {
-            color: $clr-pri;
+            color: $clr-sec;
           }
 
           &.on {
             @include make-after {
               content: 'TM';
               font-family: 'Poppins', sans-serif !important;
-              font-size: 10px;
+              font-size: 0.625rem;
               font-weight: 400;
               color: #000;
               position: absolute;
-              width: 12px;
-              height: 12px;
-              top: 28px;
-              right: 13px;
+              width: 0.75rem;
+              height: 0.75rem;
+              top: 1.75rem;
+              right: 0.8125rem;
             }
           }
-        }
-        &:first-of-type {
-          a {
-            padding-left: 0;
+
+          &.on2 {
           }
         }
         &:hover .sub-menu {
           opacity: 1; /* 투명도를 1로 설정하여 서브 메뉴를 완전히 보이게 함 */
           visibility: visible; /* 서브 메뉴를 보이게 설정 */
-          transform: translateY(0); /* 원래 위치로 돌아오게 설정 */
+          transform: translateX(-50%) translateY(0); /* 원래 위치로 돌아오게 설정 */
         }
         .sub-menu {
           position: absolute;
           opacity: 0;
           visibility: hidden;
-          transform: translateY(-1.25rem); /* 초기 위치를 조금 위로 올림 */
+          min-width: 10.4375rem;
+          // transform: translateY(-1.25rem); /* 초기 위치를 조금 위로 올림 */
           transition: opacity 0.5s ease, transform 0.5s ease; /* 투명도와 위치 변화에 대한 전환 효과 적용 */
           top: 6.325rem;
-          left: -5.625rem;
-          min-width: 16.75rem;
+          width: 100%;
           border: 0.0625rem solid #e2e2e2;
           box-shadow: 0 0.4375rem 0.875rem rgba(0, 0, 0, 0.07);
-          border-radius: 0.3125rem;
-          padding: 1rem;
+          border-radius: 0.375rem;
+          padding: 0.375rem;
           box-sizing: border-box;
-          background: #fff;
+          background: rgb(2, 198, 255);
+          background: linear-gradient(137deg, rgba(2, 198, 255, 1) 0%, rgba(28, 69, 249, 1) 100%);
           z-index: 1;
-          @include make-after {
-            @include bg-url('img', 'submenu-arr.svg');
-            width: 1rem;
-            height: 3.75rem;
-            z-index: 10;
-            background-size: contain;
-            position: absolute;
-            top: -0.75rem;
-            left: 50%;
-            transform: translateX(-50%);
-          }
+          text-align: center;
+          left: 50%;
+          transform: translateX(-50%) translateY(-1.25rem);
           > li {
-            padding: 0.8125rem 1.4375rem;
             border-radius: 0.3125rem;
+            margin-bottom: 0.3125rem;
+            &:last-of-type {
+              margin-bottom: 0;
+            }
             &:hover {
-              background: rgba(255, 55, 135, 0.07);
+              background: rgba(255, 255, 255, 0.25);
               a {
                 font-weight: bold;
               }
             }
             a {
-              display: inline-block;
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
               color: #000;
+              height: 2.625rem;
+              font-size: 1rem;
+              font-weight: 400;
+              color: #fff;
               &:hover {
-                color: $clr-pri;
+                color: #fff;
               }
               &.on {
-                color: $clr-pri;
+                color: $clr-sec;
                 position: relative;
                 @include make-after {
                   position: absolute;
@@ -133,6 +152,28 @@
             }
           }
         }
+
+        &:nth-of-type(4) {
+          margin-right: 10.625rem;
+        }
+
+        &:last-of-type {
+          max-height: 3.4375rem;
+          @include po-y;
+          right: 0;
+          transition: all 0.3s;
+          > a {
+            background: rgb(2, 198, 255);
+            background: linear-gradient(148deg, rgba(2, 198, 255, 1) 0%, rgba(28, 69, 249, 1) 100%);
+            color: #fff;
+            border-radius: 0.3125rem;
+            font-weight: 600;
+          }
+
+          &:hover > a {
+            background: #02c6ff;
+          }
+        }
       }
     }
   }
@@ -146,24 +187,23 @@
     transform: translateX(-50%);
     bottom: 0;
     top: 0;
-    height: calc(100vh - 64px);
+    height: calc(100vh - 4rem);
     z-index: 9999;
     display: flex;
     align-items: flex-end;
-    padding-bottom: 34px;
+    padding-bottom: 2.125rem;
     a {
       display: inline-block;
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: 500;
       color: rgba(0, 0, 0, 0.6);
     }
   }
   .menuToggle {
-    background: #fff;
+    background: transparent;
     position: absolute;
-    left: 0.9375rem;
-    top: 50%;
-    transform: translateY(-50%);
+    right: 15px;
+    top: 26px;
     display: inline-block;
     cursor: pointer;
     z-index: 9999;
@@ -215,7 +255,7 @@
     left: 0;
     background-color: #3c3842;
     width: 100%;
-    height: calc(100vh - 65px);
+    height: 100vh;
     transform: translate(100%, 0);
     transition: all 0.2s ease-in-out;
 
@@ -225,17 +265,17 @@
         > a {
           position: relative;
           color: #000;
-          font-size: 18px;
+          font-size: 1.125rem;
           font-weight: 600;
           &.on {
             @include make-after {
               @include po-y;
               transition: all 0.3s ease-in-out;
               right: 1.25rem;
-              width: 0.625rem;
-              height: 0.625rem;
-              border-top: 0.125rem solid #000;
-              border-right: 0.125rem solid #000;
+              width: 11px;
+              height: 11px;
+              border-top: 1px solid #000;
+              border-right: 1px solid #000;
               transform: translateY(-50%) rotate(135deg);
               top: 43%;
             }
@@ -243,15 +283,15 @@
         }
         &.on {
           > a {
-            background: $clr-pri;
+            background: $clr-sec;
             color: #fff;
             @include make-after {
               @include po-y;
               right: 1.25rem;
-              width: 0.625rem;
-              height: 0.625rem;
-              border-top: 0.125rem solid #fff;
-              border-right: 0.125rem solid #fff;
+              width: 11px;
+              height: 11px;
+              border-top: 1px solid #fff;
+              border-right: 1px solid #fff;
               transform: translateY(-50%) rotate(315deg);
               top: 55%;
             }
@@ -288,9 +328,9 @@
           background: #fff !important;
           padding: 0.625rem;
           li {
-            border-radius: 5px;
+            border-radius: 0.3125rem;
             &:hover {
-              background: rgba(255, 55, 135, 0.07);
+              background: rgba(0, 0, 0, 0.03);
               a {
                 font-weight: 700;
               }
@@ -311,7 +351,7 @@
                   position: absolute;
                   top: 55%;
                   transform: translateY(-50%);
-                  left: 64px;
+                  left: 4rem;
                   width: 2.25rem;
                   width: 2.25rem;
                   height: 2.25rem;
@@ -320,7 +360,7 @@
                 }
               }
               &:hover {
-                color: $clr-pri;
+                color: $clr-sec;
               }
             }
             &:last-of-type {
@@ -349,24 +389,18 @@
 }
 
 .header .mobileMenu .menuToggle.open .menuItem {
-  margin: 1px 0px 5px;
-  background: $clr-pri !important;
+  margin: 1px 0 5px;
+  background: $clr-sec !important;
 }
 
 // 미디어쿼리
-@include media($tab, max) {
-  .container {
-    padding-top: 65px;
-  }
-}
 @include media($web, max) {
   .header {
     z-index: 9999 !important;
   }
   .header .logo {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 15px;
     z-index: 9999;
   }
   .header .utilmenu {
@@ -399,10 +433,14 @@
 
 @include media($mo, max) {
   .header .logo {
-    left: 47%;
+    left: 15px;
+    top: 15px;
+    img {
+      width: 11rem;
+    }
   }
   .mobileMenu .menuToggle {
-    top: 51%;
+    top: 16px;
   }
 }
 
@@ -518,5 +556,15 @@
   img {
     position: relative;
     top: -0.25rem;
+  }
+}
+
+@include media($tab, max) {
+  .mobileMenu .mobileNav ul li.mobileNavItem > a {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .mobileNav > ul > li.on .dapth2 li > a {
+    font-size: 16px;
   }
 }

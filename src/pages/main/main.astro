@@ -2,12 +2,88 @@
 import Layout from '../../layouts/Layout.astro';
 import '../../css/ui.css';
 
-const pageTitle = '매디램';
+const pageTitle = '매디램 > 홈';
 const idName = 'main';
 ---
 
 <Layout pageTitle={pageTitle} idName={idName}>
   <!-- 컨텐츠가 들어갈 부분 -->
+  <section class="visual">
+    <div class="video-container">
+      <video class="visual__video is-tab-hide" autoplay loop muted>
+        <source class="is-tab-hide" src="../public/assets/video/main.mp4" type="video/mp4" />
+      </video>
+      <video class="visual__video is-tab-show" autoplay loop muted>
+        <source class="is-tab-show" src="../public/assets/video/main_tab.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="visual__inner inner">
+      <div class="visual__title">
+        <img class="" src="../public/assets/images/main-txt.svg" alt="" />
+        Generatied <br class="is-tab-show" /> Multi Modal <br class="is-tab-hide" /> Analysis Process
+      </div>
+      <div class="visual__txt">
+        <span>생성형 AI를 활용한</span> 멀티 모달 데이터 분석 이미지와 <br class="is-tab-hide" /> 텍스트를 결합한 자동화
+        프로세스
+      </div>
+    </div>
+  </section>
+  <section class="main-section">
+    <div class="inner">
+      <div class="com-title">
+        <div class="title-badge">MEDILMM Overview</div>
+        <h1 class="f-pop">Introduction to <span>MEDILMM</span></h1>
+      </div>
+
+      <ul class="card-list flx col33">
+        <li class="card">
+          <a href="#">
+            <div class="image-cnt">
+              <img class="image-default" src="../public/assets/images/s1_1.webp" alt="" />
+              <img class="image-hover" src="../public/assets/images/s1_1_gif.gif" alt="Hover Image" />
+            </div>
+            <h2>SimPLE Modal</h2>
+            <p>
+              기존의 한정적인 데이터 처리와 AI 기술을 <br />
+              뛰어넘어 멀티 모달 데이터를 수집, 변환 처리 <br />
+              최신 생성형 AI 기술에 최적화
+            </p>
+            <button>See More +</button>
+          </a>
+        </li>
+        <li class="card">
+          <a href="#">
+            <div class="image-cnt">
+              <img class="image-default" src="../public/assets/images/s1_2.webp" alt="" />
+              <img class="image-hover" src="../public/assets/images/s1_2_gif.gif" alt="Hover Image" />
+            </div>
+
+            <h2>CAD CatchTM</h2>
+            <p>
+              이미지, 영상을 텍스트와 결합한 <br />
+              멀티 모달 데이터를 생성형 AI에 의해 <br />
+              다양하게 분석 가능
+            </p>
+            <button>See More +</button>
+          </a>
+        </li>
+        <li class="card">
+          <a href="#">
+            <div class="image-cnt">
+              <img class="image-default" src="../public/assets/images/s1_3.webp" alt="" />
+              <img class="image-hover" src="../public/assets/images/s1_3_gif.gif" alt="Hover Image" />
+            </div>
+            <h2>UVL Transformer</h2>
+            <p>
+              UVL 트랜스포머와 MIT의 SimPLE로 <br />
+              경량화 및 파인튜닝된 LMM을 바탕으로 <br />
+              메디컬 도메인에 특화된 솔루션 제공
+            </p>
+            <button>See More +</button>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
   <!-- 컨텐츠가 들어갈 부분 eee -->
-  <img class="" src="/assets/images/pocketcamp-v2/" alt="" />
 </Layout>

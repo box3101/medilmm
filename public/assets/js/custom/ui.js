@@ -27,6 +27,8 @@
       childList: true,
       subtree: true,
     });
+
+    goTop();
   });
 
   /* ///////////////////////////////////////////////////////
@@ -114,13 +116,43 @@
   }
 
   /* ///////////////////////////////////////////////////////
-  TOP 이동
-  */ ////////////////////////////////////////////////////////
-  document.getElementById('top-button').addEventListener('click', function () {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth',
+  상단이동
+*/ ////////////////////////////////////////////////////////
+  const goTop = () => {
+    const goTop = document.querySelector('.goTop');
+    const goTopAnchor = goTop.querySelector('button');
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.scrollY;
+      if (currentScroll > 100) {
+        goTop.classList.add('on');
+        goTopAnchor.setAttribute('tabindex', '0');
+      } else {
+        goTop.classList.remove('on');
+        goTopAnchor.setAttribute('tabindex', '-1');
+      }
     });
+
+    goTop.addEventListener('click', () => {
+      window.scrollTo({
+        behavior: 'smooth',
+        top: 0,
+      });
+    });
+  };
+
+  /* ///////////////////////////////////////////////////////
+   헤더 스크롤
+  */ ////////////////////////////////////////////////////////
+  window.addEventListener('scroll', function () {
+    // 헤더 요소를 선택합니다.
+    var header = document.querySelector('.header');
+    // 스크롤 위치가 50px보다 크면 클래스를 추가합니다.
+    if (window.pageYOffset > 50) {
+      header.classList.add('on');
+    } else {
+      // 스크롤 위치가 50px 이하면 클래스를 제거합니다.
+      header.classList.remove('on');
+    }
   });
 })();

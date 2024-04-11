@@ -3,14 +3,10 @@
   font-weight: 300;
   font-style: normal;
   src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot');
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot?#iefix')
-      format('embedded-opentype'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff2')
-      format('woff2'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff')
-      format('woff'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.ttf')
-      format('truetype');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot?#iefix') format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.ttf') format('truetype');
   font-display: swap;
 }
 @font-face {
@@ -18,14 +14,10 @@
   font-weight: 500;
   font-style: normal;
   src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot');
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix')
-      format('embedded-opentype'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2')
-      format('woff2'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff')
-      format('woff'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf')
-      format('truetype');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix') format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf') format('truetype');
   font-display: swap;
 }
 @font-face {
@@ -33,13 +25,48 @@
   font-weight: 700;
   font-style: normal;
   src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot');
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot?#iefix')
-      format('embedded-opentype'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2')
-      format('woff2'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff')
-      format('woff'),
-    url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf')
-      format('truetype');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot?#iefix') format('embedded-opentype'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2') format('woff2'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf') format('truetype');
   font-display: swap;
+}
+
+.com-title {
+  text-align: center;
+  margin-bottom: 55px;
+  .title-badge {
+    display: inline-block;
+    padding: 7px 22px;
+    background: #f5f6f7;
+    border-radius: 19px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #7c7c7c;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #000;
+    span {
+      color: $clr-sec;
+    }
+  }
+}
+
+@include media($tab, max) {
+  .com-title .title-badge {
+    font-size: 13px;
+    font-weight: 400;
+  }
+  .com-title h1 {
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .com-title {
+    margin-bottom: 0;
+  }
 }
