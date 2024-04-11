@@ -1,66 +1,52 @@
 {
-	"img": {
-		"prefix": "img",
-		"body": [
-			"<img class='$1' src='../public/assets/images/$2' alt='$3'>"
-		],
-	},
-	"vedio": {
-		"prefix": "vedio",
-		"body": [
-			"<img class='$1' src='../public/assets/vedio/$2' alt='$3'>"
-		],
-	},
-	"pic": {
-		"prefix": "pic",
-		"body": [
-		"<picture>",
-			"<source media='(min-width: 1024px) srcset='../assets/img/$1'>",
-			"<source media='(min-width: 768px)' srcset='../assets/img/$2'>",
-			"<img src='$3' alt='$4'>",
-	 	"</picture>"
-		],
-	},
-	"cp": {
-		"prefix": "cp",
-		"body": [
-			"\\$clr-pri",
-		],
-	},
-	"cs": {
-		"prefix": "cs",
-		"body": [
-			"\\$clr-sec",
-		],
-	},
-	"Font Size and Weight": {
-		"prefix": "f",
-		"body": [
-			"font-size: ${1:size}px;", "font-weight: ${2:weight};", "color: $3;",
-		],
-	},
-	"web": {
-		"prefix": "web",
-		"body": [
-			"@include media(\\$web, max) {$1}"
-		],
-	},
-	"tab": {
-		"prefix": "tab",
-		"body": [
-			"@include media(\\$tab, max) {$1}"
-		],
-	},
-	"mo": {
-		"prefix": "mo",
-		"body": [
-			"@include media(\\$mo, max) {$1}"
-		],
-	},
-	"ur": {
-		"prefix": "url",
-		"body": [
-			"@include bg-url('images','$1');"
-		],
-	},
+  "img": {
+    "prefix": "img",
+    "body": ["<img class='$1' src='../public/assets/images/$2' alt='$3'>"]
+  },
+  "vedio": {
+    "prefix": "vedio",
+    "body": ["<img class='$1' src='../public/assets/vedio/$2' alt='$3'>"]
+  },
+  "pic": {
+    "prefix": "pic",
+    "body": [
+      "<picture>",
+      "<source media='(min-width: 1024px) srcset='../assets/img/$1'>",
+      "<source media='(min-width: 768px)' srcset='../assets/img/$2'>",
+      "<img src='$3' alt='$4'>",
+      "</picture>"
+    ]
+  },
+  "cp": {
+    "prefix": "cp",
+    "body": ["\\$clr-pri"]
+  },
+  "cs": {
+    "prefix": "cs",
+    "body": ["\\$clr-sec"]
+  },
+  "Font Size and Weight": {
+    "prefix": "f",
+    "body": ["font-size: ${1:size}px;", "font-weight: ${2:weight};", "color: $3;"]
+  },
+  "web": {
+    "prefix": "web",
+    "body": ["@include media(\\$web, max) {$1}"]
+  },
+  "tab": {
+    "prefix": "tab",
+    "body": ["@include media(\\$tab, max) {$1}"]
+  },
+  "mo": {
+    "prefix": "mo",
+    "body": ["@include media(\\$mo, max) {$1}"]
+  },
+  "ur": {
+    "prefix": "url",
+    "body": ["@include bg-url('images','$1');"]
+  },
+  "aos fade up": {
+    "prefix": "au",
+    "body": ["<div class='$1' data-aos='fade-up' data-aos-duration='1000'></div>"]
+  }
 }
