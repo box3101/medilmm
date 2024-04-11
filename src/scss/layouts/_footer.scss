@@ -1,0 +1,107 @@
+#footer.footer {
+  height: 22.875rem;
+  background: #171717;
+  .inner {
+    .footer__logo {
+      padding-top: 4.875rem;
+      padding-left: 0;
+      img {
+        width: 10.0625rem;
+      }
+    }
+
+    .footer__info {
+      margin-top: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 0.0625rem solid rgba(112, 122, 112, 0.6);
+      li {
+        display: flex;
+        gap: 1.0625rem;
+        margin-bottom: 0.3125rem;
+        dl {
+          display: flex;
+          gap: 0.625rem;
+          dt {
+            font-size: 0.875rem;
+            font-weight: 400;
+            color: #fff;
+          }
+          dd {
+            font-size: 0.875rem;
+            font-weight: 400;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .footer__bot {
+      margin-top: 1.875rem;
+      width: 100%;
+      .copy {
+        font-size: 0.875rem;
+        opacity: 0.48;
+        color: #fff;
+      }
+
+      .ft_link {
+        display: flex;
+        gap: 1.25rem;
+        li {
+          a {
+            display: inline-block;
+            font-size: 1.25rem;
+            font-weight: 300;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media($web, max) {
+  #footer.footer {
+    height: auto;
+  }
+  #footer.footer .inner .footer__info li {
+    flex-wrap: wrap;
+  }
+  #footer.footer .inner .footer__bot {
+    flex-direction: column;
+    gap: 1.5625rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+@include media($mo, max) {
+  #footer.footer .inner .footer__logo {
+    padding-top: 37px;
+  }
+  #footer.footer .inner .footer__info {
+    margin-top: 20px;
+  }
+  #footer.footer .inner .footer__logo {
+    margin-bottom: 20px;
+  }
+  #footer.footer .inner .footer__logo img {
+    width: 133px;
+  }
+  #footer.footer .inner .footer__info li {
+    gap: 7px;
+  }
+  #footer.footer .inner .footer__info li dl dt,
+  #footer.footer .inner .footer__info li dl dd {
+    font-size: 11px;
+    opacity: 0.8;
+  }
+  #footer.footer .inner .footer__info {
+    padding-bottom: 25px;
+  }
+  #footer.footer .inner .footer__bot .ft_link li a {
+    font-size: 14px;
+  }
+  #footer.footer .inner .footer__bot {
+    flex-direction: column-reverse;
+  }
+}

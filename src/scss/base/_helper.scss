@@ -1,0 +1,557 @@
+@include media($web, min) {
+  html {
+    font-size: calc(#{$base-font-size}px);
+  }
+}
+
+// 웹사이트가 모바일 사이즈일 때의 스타일
+@include media($tab, max) {
+  html {
+    font-size: calc(#{$base-font-size}px - 2px);
+  }
+}
+
+// 모바일 화면에 대한 스타일
+@include media($mo, max) {
+  html {
+    font-size: calc(#{$base-font-size}px - 3px);
+  }
+}
+/* =================== Title =================== */
+.com-title {
+  padding: 0 0.825rem;
+  height: 3.25rem;
+  background: #000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.625rem;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 0.5625rem;
+  margin-bottom: 2.4rem;
+  letter-spacing: -0.05rem;
+}
+.com-title2 {
+  font-size: 3rem;
+  font-weight: 800;
+  &.tac {
+    text-align: center;
+  }
+  letter-spacing: -0.0625rem;
+}
+
+// 폰트 사이즈와 무게를 설정하는 믹스인 정의
+@mixin font-style($size, $weight) {
+  font-size: $size;
+  font-weight: $weight;
+}
+
+// 기본 텍스트 스타일
+.txt-defalut {
+  @include font-style(1.375rem, 500);
+}
+
+// 가벼운 텍스트 스타일
+.txt-light {
+  @include font-style(1.375rem, 300);
+}
+
+.txt-sm {
+  @include font-style(1.1rem, 300);
+  letter-spacing: -1.2px;
+}
+
+.txt-mid {
+  @include font-style(1.375rem, 500);
+}
+
+// 굵은 텍스트 스타일
+.txt-bold {
+  @include font-style(1.375rem, 700);
+}
+
+.txt-gra{
+  background: $clr-pri;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* =================== Font =================== */
+.f-pop {
+  font-family: 'Poppins', sans-serif !important;
+}
+.c-pri {
+  color: $clr-pri !important;
+}
+.c-sec {
+  color: $clr-sec !important;
+}
+.c-thi {
+  color: $clr-thi !important;
+}
+.c-blue{
+  color: #007EBF!important;
+}
+.fw-300{
+  font-weight: 300!important;
+}
+.fw-500{
+  font-weight: 500!important;
+}
+.fw-600{
+  font-weight: 500!important;
+}
+.fw-700{
+  font-weight: 700!important;
+}
+.fw-800{
+  font-weight: 700!important;
+}
+@for $i from 0 through 1000 {
+  .fz-#{$i} {
+    font-size:  calc-rem($i) !important;
+  }
+}
+/* =================== Inner =================== */
+.inner {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  &.lg {
+    max-width: 1600px;
+  }
+  &.sm{
+    max-width: 1110px;
+  }
+  @include media($web, max) {
+    padding: 0 15px;
+  }
+}
+/* =================== Flex =================== */
+.flx {
+  display: flex;
+  &.ais {
+    align-items: flex-start;
+  }
+  &.aic {
+    align-items: center;
+  }
+  &.jcc {
+    justify-content: center;
+  }
+  &.jcb {
+    justify-content: space-between;
+  }
+  &.col20 {
+    gap: 15px;
+    flex-wrap: wrap;
+    @include media($web, max) {
+      gap: 11px !important;
+      flex-direction: row!important;
+    }
+    &.gap8{
+      gap:8px;
+      &.col20 > label{
+        flex: 0 0 calc(20% - (8px * 4 / 5)); /* 4개 아이템이므로 3번의 gap을 고려 */
+        max-width: calc(20% - (8px * 4 / 5));
+        @include media($web, max) {
+          flex: 0 0 calc(50% - (11px * 1 / 2));
+          max-width: calc(50% - (11px * 1 / 2));
+        }
+      }
+    }
+  }
+  &.col20 > li{
+    flex: 0 0 calc(20% - (15px * 4 / 5)); /* 4개 아이템이므로 3번의 gap을 고려 */
+    max-width: calc(20% - (15px * 4 / 5));
+    @include media($web, max) {
+      flex: 0 0 calc(50% - (11px * 1 / 2));
+      max-width: calc(50% - (11px * 1 / 2));
+    }
+  }
+
+  &.col25 {
+    flex-wrap: wrap;
+    @include media($web, max) {
+      gap: 11px !important;
+      flex-direction: row!important;
+    }
+    &.gap18{
+      gap:18px;
+      &.col25 > label {
+        flex: 0 0 calc(25% - (18px * 3 / 4)); /* 4개 아이템이므로 3번의 gap을 고려 */
+        max-width: calc(25% - (18px * 3 / 4));
+        @include media($web, max) {
+          flex: 0 0 calc(50% - (11px * 1 / 2));
+          max-width: calc(50% - (11px * 1 / 2));
+        }
+      }
+    }
+  }
+  &.col25 > li{
+    flex: 0 0 calc(25% - (38px * 3 / 4)); /* 4개 아이템이므로 3번의 gap을 고려 */
+    max-width: calc(25% - (38px * 3 / 4));
+    @include media($web, max) {
+      flex: 0 0 calc(50% - (11px * 1 / 2));
+      max-width: calc(50% - (11px * 1 / 2));
+    }
+  }
+  &.col33 {
+    flex-wrap: wrap;
+    gap: 16px;
+    @include media($web, max) {
+      gap: 11px !important;
+      flex-direction: row!important;
+    }
+  }
+  &.col33 > li {
+    flex: 0 0 calc(33% - (16px * 2 / 3)); /* 4개 아이템이므로 3번의 gap을 고려 */
+    max-width: calc(33% - (16px * 2 / 3));
+    margin: 32px 0px;
+    @include media($web, max) {
+      flex: 0 0 calc(50% - (11px * 1 / 2));
+      max-width: calc(50% - (11px * 1 / 2));
+    }
+  }
+}
+.iflx {
+  display: inline-flex;
+}
+
+/* =================== FlexDirection =================== */
+.flx-col {
+  flex-direction: column;
+}
+.flex-col-r {
+  flex-direction: column-reverse;
+}
+
+/* =================== FlexWrap =================== */
+.flx-nw {
+  flex-wrap: nowrap;
+}
+.flx-w {
+  flex-wrap: wrap;
+}
+
+/* =================== FlexLayout =================== */
+.flx-1 {
+  flex: 1 1 0%;
+}
+.flx-auto {
+  flex: 1 1 auto;
+}
+.flex-init {
+  flex: 0 1 auto;
+}
+.flex-none {
+  flex: none;
+}
+
+/* =================== Order =================== */
+@for $i from 0 through 10 {
+  .order#{$i} {
+    order: #{$i} !important;
+  }
+}
+
+/* =================== gap =================== */
+@for $i from 0 through 1000 {
+  .gap#{$i} {
+    gap: calc-rem($i) !important;
+  }
+}
+
+/* =================== padding, margin =================== */
+@for $i from 0 through 1000 {
+  .ml#{$i} {
+    margin-left: calc-rem($i) !important;
+  }
+  .mt#{$i} {
+    margin-top: calc-rem($i) !important;
+  }
+  .mr#{$i} {
+    margin-right: calc-rem($i) !important;
+  }
+  .mb#{$i} {
+    margin-bottom: calc-rem($i) !important;
+  }
+  .pl#{$i} {
+    padding-left: calc-rem($i) !important;
+  }
+  .pr#{$i} {
+    padding-right: calc-rem($i) !important;
+  }
+  .pb#{$i} {
+    padding-bottom: calc-rem($i) !important;
+  }
+  .pt#{$i} {
+    padding-top: calc-rem($i) !important;
+  }
+}
+
+/* =================== Z-index =================== */
+@for $i from 0 through 9999 {
+  .zix#{$i} {
+    z-index: #{$i} !important;
+  }
+}
+
+/* =================== Width =================== */
+@for $i from 0 through 1000 {
+  .w#{$i} {
+    width: calc-rem($i) !important;
+    flex: 0 0 calc-rem($i) !important;
+  }
+}
+
+/* =================== MinWidth =================== */
+@for $i from 0 through 1000 {
+  .mw#{$i} {
+    min-width: calc-rem($i) !important;
+  }
+}
+.min-w-full {
+  min-width: 100%!important;
+}
+
+/* =================== MaxWidth =================== */
+@for $i from 0 through 1000 {
+  .max-w#{$i} {
+    max-width: calc-rem($i) !important;
+  }
+}
+.min-w-none {
+  max-width: none;
+}
+
+/* =================== Height=================== */
+@for $i from 0 through 1000 {
+  .h#{$i} {
+    height: calc-rem($i) !important;
+  }
+}
+
+/* =================== MinHeight=================== */
+@for $i from 0 through 1000 {
+  .min-h#{$i} {
+    height: calc-rem($i) !important;
+  }
+}
+
+/* =================== MaxHeight=================== */
+@for $i from 0 through 1000 {
+  .max-h#{$i} {
+    height: calc-rem($i) !important;
+  }
+}
+
+/* =================== font-weight =================== */
+.font-bold {
+  font-weight: 600;
+}
+
+/* =================== color =================== */
+.clr-pri {
+  color: $clr-pri;
+}
+.clr-sec {
+  color: $clr-sec;
+}
+
+/* =================== hid =================== */
+
+// 높이는 가지고 싶은데 안보이게 할 경우
+.hid {
+  text-indent: -9999px;
+  &::before {
+    display: none !important;
+  }
+}
+
+/* =================== TEXT-ALIGN =================== */
+.tac {
+  text-align: center;
+  width: 100%;
+}
+.tal {
+  text-align: left;
+}
+.tar {
+  text-align: right;
+}
+
+/* =================== LINE =================== */
+.one-line {
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.two-line {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow: hidden;
+}
+.three-line {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow: hidden;
+}
+
+.hide {
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.hidden,
+.blind,
+.hd-element {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: -10000000000000000px;
+  top: -999999px;
+  width: 0;
+  height: 0;
+  font-size: 1px;
+}
+
+.hide-txt {
+  display: inline-block;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  font-size: 1px;
+  line-height: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* =================== 브라우저 크기별 레이아웃 보이기=================== */
+.is-tab-show {
+  display: none!important;
+  @include media($tab) {
+    display: block !important;
+  }
+}
+
+.is-tab-hide {
+  @include media($tab) {
+    display: none !important;
+  }
+}
+
+.is-web-show {
+  display: none !important;
+  @include media($web) {
+    display: block !important;
+  }
+}
+
+.is-web-hide {
+  @include media($web) {
+    display: none !important;
+  }
+}
+
+.is-mo-show {
+  display: none !important;
+  @include media($mo) {
+    display: block !important;
+  }
+}
+
+.is-mo-hide {
+  @include media($mo) {
+    display: none !important;
+  }
+}
+
+.is-mo-sm-show {
+  display: none !important;
+  @include media($s-mo) {
+    display: block !important;
+  }
+}
+
+.is-mo-sm-hide {
+  @include media($s-mo) {
+    display: none !important;
+  }
+}
+
+.is-mo-xsm-show {
+  display: none !important;
+  @include media($xs-mo) {
+    display: block !important;
+  }
+}
+
+.is-mo-xsm-hide {
+  @include media($xs-mo) {
+    display: none !important;
+  }
+}
+
+/* =================== 이미지 효과 =================== */
+
+.img-wrap {
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.img-wrap img {
+  transition: transform 0.5s ease, filter 0.5s ease; /* 이미지 확대와 필터 효과에 대한 전환 설정 */
+  display: block; /* 이미지가 자연스럽게 확대되도록 설정 */
+  width: 100%; /* 이미지가 컨테이너를 꽉 채우도록 설정 */
+  height: auto; /* 이미지의 비율을 유지하면서 높이 설정 */
+  object-fit: cover;
+}
+
+.img-wrap:hover img {
+  transform: scale(1.1); /* 이미지 호버 시 10% 확대 */
+}
+
+.img-wrap .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* 반투명 검은색 오버레이 */
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.img-wrap:hover .overlay {
+  opacity: 1;
+}
+
+/* =================== 슬라이드 =================== */ 
+.swiper-button-next,.swiper-button-prev{
+  width: 64px; height: 64px;
+  transition: transform 0.3s ease-in-out; /* 추가된 트랜지션 효과 */
+  &:hover{
+    transform: scale(1.1);
+  }
+}
+.swiper-button-prev{
+  @include bg-url('img','ico-slide-prev.svg','cover');
+}
+.swiper-button-next{
+  @include bg-url('img','ico-slide-next.svg','cover');
+}

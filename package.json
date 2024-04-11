@@ -1,0 +1,22 @@
+{
+  "name": "strong-solstice",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "prettier": "prettier --write \"**/*.html\"",
+    "sass": "concurrently \"sass --watch src/scss/ui.scss:src/css/ui.css\" \"sass --watch src/scss/ui.scss:public/assets/css/ui.css\""
+  },
+  "dependencies": {
+    "astro": "^2.0.6",
+    "sass": "^1.71.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8",
+    "prettier-plugin-astro": "^0.8.0"
+  }
+}

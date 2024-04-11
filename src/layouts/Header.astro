@@ -1,0 +1,127 @@
+---
+import menu from '../../menu.js';
+import '../css/ui.css';
+---
+
+<!-- header -->
+<header id="header" class="header">
+  <div class="inner lg">
+    <h1 class="logo">
+      <a href="../main/main.html">
+        <img class="" src="../assets/img/logo.svg" alt="" />
+      </a>
+    </h1>
+    <!-- 모바일메뉴 -->
+    <nav class="mobileMenu is-web-show">
+      <button type="button" class="menuToggle" title="모바일 메뉴 토글버튼">
+        <span class="menuItem"></span>
+        <span class="menuItem"></span>
+        <span class="menuItem"></span>
+      </button>
+      <div class="mobileNav">
+        <ul class="mobileNavList">
+          {
+            menu.map(({ category, title, items, active, url }) => {
+              return (
+                <>
+                  <li class="mobileNavItem">
+                    <a
+                      class={active === 'on' ? 'on' : ''}
+                      href={`../${category}/${url}.html`}
+                    >
+                      {title}
+                    </a>
+                    {items && (
+                      <ul class="dapth2">
+                        {items.map(function ({ url, title,active2 }) {
+                          return (
+                            <li>
+                              <a
+                                class={active2 === 'on' ? 'on' : ''}
+                                href={`../${category}/${url}.html`}
+                              >
+                                {title}
+                              </a>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    )}
+                  </li>
+                </>
+              );
+            })
+          }
+        </ul>
+        <div class="logout">
+          <a href="#">LOGOUT</a>
+        </div>
+      </div>
+    </nav>
+    <nav class="gnb is-web-hide">
+      <ul>
+        {
+          menu.map(({ category, title, items, url }) => {
+            return (
+              <>
+                <li>
+                  <a href={`../${category}/${url}.html`}>{title}</a>
+                  {items && (
+                    <ul class="sub-menu">
+                      {items.map(function ({ url, title, active }) {
+                        return (
+                          <li>
+                            <a
+                              class={active === 'on' ? 'on' : ''}
+                              href={`../${category}/${url}.html`}
+                            >
+                              {title}
+                            </a>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  )}
+                </li>
+              </>
+            );
+          })
+        }
+      </ul>
+    </nav>
+    <nav class="utilmenu">
+      <ul>
+        <li>
+          <a href="#">
+            <img class="" src="../assets/img/util01.svg" alt="" />
+            <span>3</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img class="is-web-hide" src="../assets/img/util02.svg" alt="" />
+            <img class="is-web-show" src="../assets/img/mo-util02.svg" alt="" />
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- header eee -->
+</header>
+
+<script>
+  document.querySelector('.menuToggle')?.addEventListener('click', () => {
+    document.querySelector('.menuToggle')?.classList.toggle('open');
+  });
+
+  const $$mobileNavItem = document.querySelectorAll('.mobileNavItem>a');
+  $$mobileNavItem.forEach((el) => {
+    el.addEventListener('click', (e) => {
+      if (el.classList.contains('on')) {
+        e.preventDefault();
+        el.closest('li')?.classList.toggle('on');
+      }
+    });
+  });
+</script>

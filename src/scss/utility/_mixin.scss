@@ -1,0 +1,78 @@
+@mixin po-all {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin po-x {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin po-y {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* =================== Font =================== */
+@mixin text-style($size, $weight) {
+  font-size: $size;
+  font-weight: $weight;
+}
+
+/* =================== Background =================== */
+@mixin bg-url($path, $img, $op-default: false, $op-p: null, $op-s: null) {
+  background-image: urlPath($path, $img);
+  background-repeat: no-repeat;
+
+  @if ($op-default) {
+    @include bg-op;
+  }
+
+  @if $op-p and $op-s {
+    @include bg-op($p: $op-p, $s: $op-s);
+  } @else if $op-p {
+    @include bg-op($p: $op-p);
+  } @else if $op-s {
+    @include bg-op($s: $op-s);
+  }
+}
+
+@mixin bg-op($p: center, $s: cover, $r: no-repeat) {
+  background-position: $p;
+  background-size: $s;
+  background-repeat: $r;
+}
+
+/* =================== 반응형 관련 =================== */
+@mixin media($px, $range: max) {
+  @if $range == max {
+    @media (max-width: $px) {
+      @content;
+    }
+  } @else if $range == min {
+    @media (min-width: $px) {
+      @content;
+    }
+  }
+}
+
+/* =================== 가상선택자 =================== */
+@mixin make-before($c: '', $d: block) {
+  &:before {
+    content: $c;
+    display: $d;
+    @content;
+  }
+}
+
+@mixin make-after($c: '', $d: block) {
+  &:after {
+    content: $c;
+    display: $d;
+    @content;
+  }
+}

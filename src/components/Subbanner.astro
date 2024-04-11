@@ -1,0 +1,20 @@
+---
+// 필요한 스타일 또는 스크립트를 여기에 추가할 수 있습니다.
+const { bannerItem } = Astro.props;
+---
+
+<div class="sub-banner" style={{ backgroundImage: `url(${bannerItem.url})` }}>
+  <div class="inner">
+    <div class="wrap">
+      <article>
+        <p class="sub-banner-tit f-pop">{bannerItem.title}</p>
+      </article>
+      <article>
+        <p class="sub-banner-txt f-pop">
+          {bannerItem.text}
+        </p>
+        <!-- <img class="" src=`${bannerItem.img}` alt="" /> -->
+      </article>
+    </div>
+  </div>
+</div>

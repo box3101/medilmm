@@ -1,0 +1,51 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ReviewItem from '../../components/ReviewItem.astro';
+import Subbanner from '../../components/Subbanner.astro';
+import ReviewItemSecond from '../../components/ReviewItemSecond.astro';
+import Pagination from '../../components/Pagination.astro';
+import '../../css/ui.css';
+
+const pageTitle = '보미오라 > 리뷰';
+const idName = 'bomi-product-review';
+const bannerItem = {
+  "url" : "../assets/img/sub-banner02.jpg",
+  "title" : "BOMIORA",
+  "text":  "REVIEW",
+  "img":"../assets/img/banner-star.svg"
+};
+const showCouponSection = true; // 렌더링 여부를 결정
+
+---
+
+<Layout pageTitle={pageTitle} idName={idName}>
+  <!-- 컨텐츠가 들어갈 부분 -->
+  <section class="bomi-product-review">
+    <Subbanner bannerItem={bannerItem} />
+
+    <div class="review-wrap inner sm">
+      <ul class="category">
+        <li class="on">
+          <a href="#">최신 등록순</a>
+        </li>
+        <li>
+          <a href="#">별점순</a>
+        </li>
+        <li>
+          <a href="#">서포터 리뷰</a>
+        </li>
+      </ul>
+
+      <div class="review-container">
+        <!-- 리뷰어 섹션 -->
+        <ReviewItem />
+        <ReviewItem />
+        <ReviewItemSecond showCouponSection={showCouponSection} />
+        <ReviewItemSecond showCouponSection={showCouponSection} />
+        <Pagination/>
+      </div>
+
+    </div>
+  </section>
+  <!-- 컨텐츠가 들어갈 부분 eee -->
+</Layout>

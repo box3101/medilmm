@@ -1,0 +1,58 @@
+---
+import Footer from './Footer.astro';
+import Header from './Header.astro';
+import TopMenu from '../components/TopMenu.astro';
+
+const { pageTitle, pageHeader, pageFooter, idName, pageWid } =
+  Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:title" content="medilmm" />
+    <meta
+      property="og:description"
+      content=""
+    />
+    <meta
+      property="og:image"
+      content="https://bomiora.kr/img/kakao_message_img_07.png"
+    />
+    <meta
+      name="keywords"
+      content=""
+    />
+    <!-- 스타일 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/ui.css" />
+    <!-- 스타일 eee -->
+  </head>
+  <body>
+    <main id={idName} class={idName}>
+      <div id="wrap" class={`${pageWid}`}>
+        <div class="content-body">
+          {pageHeader !== 'noHeader' && <Header />}
+          <div class="container">
+            <slot />
+          </div>
+          {pageFooter !== 'noFooter' && <Footer />}
+        </div>
+      </div>
+    </main>
+
+    <TopMenu />
+
+    <!-- 스크립트 -->
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="../assets/js/vendor/swiper.js"></script>
+    <script defer src="../assets/js/custom/ui.js"></script>
+    <!-- 스크립트 eee -->
+  </body>
+</html>
