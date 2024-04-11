@@ -1,0 +1,24 @@
+{
+	"img": {
+		"prefix": "img",
+		"body": [
+			"<img class='$1' src='../public/assets/images/$2' alt='$3'>"
+		],
+	},
+	"vedio": {
+		"prefix": "vedio",
+		"body": [
+			"<img class='$1' src='../public/assets/vedio/$2' alt='$3'>"
+		],
+	},
+	"pic": {
+		"prefix": "pic",
+		"body": [
+		"<picture>",
+			"<source media='(min-width: 1024px) srcset='../assets/img/$1'>",
+			"<source media='(min-width: 768px)' srcset='../assets/img/$2'>",
+			"<img src='$3' alt='$4'>",
+	 	"</picture>"
+		],
+	}
+}

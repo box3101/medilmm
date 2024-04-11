@@ -9,13 +9,12 @@ import '../../css/ui.css';
 const pageTitle = '보미오라 > 리뷰';
 const idName = 'bomi-product-review';
 const bannerItem = {
-  "url" : "../assets/img/sub-banner02.jpg",
-  "title" : "BOMIORA",
-  "text":  "REVIEW",
-  "img":"../assets/img/banner-star.svg"
+  url: '../assets/img/sub-banner02.jpg',
+  title: 'BOMIORA',
+  text: 'REVIEW',
+  img: '../assets/img/banner-star.svg',
 };
 const showCouponSection = true; // 렌더링 여부를 결정
-
 ---
 
 <Layout pageTitle={pageTitle} idName={idName}>
@@ -42,9 +41,8 @@ const showCouponSection = true; // 렌더링 여부를 결정
         <ReviewItem />
         <ReviewItemSecond showCouponSection={showCouponSection} />
         <ReviewItemSecond showCouponSection={showCouponSection} />
-        <Pagination/>
+        <Pagination />
       </div>
-
     </div>
   </section>
   <!-- 컨텐츠가 들어갈 부분 eee -->
