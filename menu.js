@@ -2,16 +2,15 @@ const menu = [
   {
     category: 'sub',
     title: 'Core Technology',
-    url: 'CoreTechnology',
+    url: 'MultiModalData',
     items: [
       { url: 'MultiModalData', title: 'Multi Modal Data' },
       { url: 'AboutMediLMM', title: 'About MediLMM' },
       { url: 'OurPlatform', title: 'Our Platform' },
     ],
-    active: 'on2',
+    active2: 'on',
   },
   {
-    active: 'on',
     category: 'sub',
     title: 'MediLMM CAD',
     url: 'SimpleModel',
@@ -21,6 +20,8 @@ const menu = [
       { url: 'CADCatch', title: 'CAD Catch' },
       { url: 'CADWrap', title: 'CAD Wrap' },
     ],
+    active: 'on',
+    active2: 'on',
   },
   {
     category: 'sub',
@@ -31,7 +32,7 @@ const menu = [
       { url: 'Board', title: 'BusinessStrategy' },
       { url: 'MarketingStrategy', title: 'Marketing Strategy' },
     ],
-    active: 'on2',
+    active2: 'on',
   },
   {
     category: 'sub',
@@ -41,13 +42,13 @@ const menu = [
       { url: 'MediLMMRoadmap', title: 'MediLMM Roadmap' },
       { url: 'FinancialPlan', title: 'Financial Plan' },
     ],
-    active: 'on2',
+    active2: 'on',
   },
   {
     category: 'sub',
     title: 'Contact us',
     url: 'Contactus',
-    active: 'on2',
+    active2: 'on',
     // items: [
     //   { url: 'MediLMMCEO', title: 'MediLMM CEO' },
     //   { url: 'Board', title: 'Board' },

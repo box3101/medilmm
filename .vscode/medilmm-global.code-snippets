@@ -1,11 +1,11 @@
 {
   "img": {
     "prefix": "img",
-    "body": ["<img class='$1' src='../public/assets/images/$2' alt='$3'>"]
+    "body": ["<img class='$1' src='../assets/images/$2' alt='$3'>"]
   },
   "vedio": {
     "prefix": "vedio",
-    "body": ["<img class='$1' src='../public/assets/vedio/$2' alt='$3'>"]
+    "body": ["<img class='$1' src='../assets/vedio/$2' alt='$3'>"]
   },
   "pic": {
     "prefix": "pic",

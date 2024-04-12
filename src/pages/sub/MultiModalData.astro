@@ -1,0 +1,20 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Subbanner from '../../components/Subbanner.astro';
+import '../../css/ui.css';
+
+const pageTitle = 'MEDILMM > MultiModalData';
+const idName = 'MultiModalData';
+const pageHeader = 'sub';
+const bannerItem = {
+  url: '../../public/assets/images/subbanner01.webp',
+  title: '123',
+  text: '123',
+};
+---
+
+<Layout pageTitle={pageTitle} idName={idName} pageHeader={pageHeader}>
+  <!-- 컨텐츠가 들어갈 부분 -->
+  <Subbanner bannerItem={bannerItem} />
+  <!-- 컨텐츠가 들어갈 부분 eee -->
+</Layout>

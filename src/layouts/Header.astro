@@ -1,14 +1,17 @@
 ---
 import menu from '../../menu.js';
 import '../css/ui.css';
+
+const { pageHeader } = Astro.props;
 ---
 
 <!-- header -->
-<header id="header" class="header">
+<header id="header" class={pageHeader !== 'sub' ? 'header' : 'header sub'}>
   <div class="inner">
     <h1 class="logo">
       <a href="../main/main.html">
-        <img class="" src="../public/assets/images/logo_blk.svg" alt="" />
+        <img class="main-img" src="../public/assets/images/logo_blk.svg" alt="" />
+        <img class="sub-img" src="../public/assets/images/logo_wh.svg" alt="" />
       </a>
     </h1>
     <!-- 모바일메뉴 -->
@@ -21,21 +24,19 @@ import '../css/ui.css';
       <div class="mobileNav">
         <ul class="mobileNavList">
           {
-            menu.map(({ category, title, items, active, url }) => {
+            menu.map(({ category, title, items, active2, url }) => {
               return (
                 <>
                   <li class="mobileNavItem">
-                    <a class={active === 'on' ? 'on' : ''} href={`../${category}/${url}.html`}>
+                    <a class={active2 === 'on' ? 'on' : ''} href={`../${category}/${url}.html`}>
                       {title}
                     </a>
                     {items && (
                       <ul class="dapth2">
-                        {items.map(function ({ url, title, active2 }) {
+                        {items.map(function ({ url, title }) {
                           return (
                             <li>
-                              <a class={active2 === 'on' ? 'on' : ''} href={`../${category}/${url}.html`}>
-                                {title}
-                              </a>
+                              <a href={`../${category}/${url}.html`}>{title}</a>
                             </li>
                           );
                         })}
@@ -61,10 +62,10 @@ import '../css/ui.css';
                   </a>
                   {items && (
                     <ul class="sub-menu">
-                      {items.map(function ({ url, title, active }) {
+                      {items.map(function ({ url, title, active2 }) {
                         return (
                           <li>
-                            <a class={active === 'on' ? 'on' : ''} href={`../${category}/${url}.html`}>
+                            <a class={active2 === 'on' ? 'on' : ''} href={`../${category}/${url}.html`}>
                               {title}
                             </a>
                           </li>
@@ -87,6 +88,11 @@ import '../css/ui.css';
 <script>
   document.querySelector('.menuToggle')?.addEventListener('click', () => {
     document.querySelector('.menuToggle')?.classList.toggle('open');
+    if (document.querySelector('.menuToggle')?.classList.contains('open')) {
+      document.querySelector('.sub-img')?.setAttribute('src', '../public/assets/images/logo_blk.svg');
+    } else {
+      document.querySelector('.sub-img')?.setAttribute('src', '../public/assets/images/logo_wh.svg');
+    }
   });
 
   const $$mobileNav = document.querySelectorAll('.mobileNavItem');
