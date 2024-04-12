@@ -1,0 +1,86 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../css/ui.css';
+import Subbanner from '../../components/Subbanner.astro';
+import SubTab from '../../components/SubTab.astro';
+
+const pageTitle = '메디 > Marketing Stategy';
+const idName = 'marketing-stategy';
+const bannerItem = {
+  url: '../assets/images/img_strategy_01.webp',
+  title: 'Marketing Stategy',
+  text: '인공지능 기술을 통한 의료, 바이오 시장',
+};
+
+const isActive = 'active03';
+const TabItem = {
+  firstName: 'Overview',
+  SecondName: 'Business Strategy',
+  ThirdName: 'Marketing Strategy',
+  url01: '/sub/Overview',
+  url02: '/sub/Board',
+  url03: '/sub/MarketingStrategy',
+};
+---
+
+<Layout pageTitle={pageTitle} idName={idName}>
+  <!-- 컨텐츠가 들어갈 부분 -->
+  <Subbanner bannerItem={bannerItem} />
+  <SubTab isActive={isActive} TabItem={TabItem} />
+  <div class="st-ms-top-wrap">
+    <div class="inner">
+      <p class="sub-page-ttl" data-aos="fade-up" data-aos-duration="1000">CRO 시장에 CAD&trade; 기술도입</p>
+      <p class="sub-page-desc" data-aos="fade-up" data-aos-duration="1000">
+        CADTM 기술을 통해 임상시험에 필요한 비용과 시간을 약 3/1가량 절감
+      </p>
+      <div class="st-ms-top-card-grp">
+        <div class="st-ms-top-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+          <div class="card-in">
+            <p class="ttl">비용이 수반되는 다단계 임상시험 단계</p>
+            <p class="list-txt mb">10~12년 이라는 긴 시간 소요</p>
+            <p class="list-txt">3천억 원에서 7천억 원 사이의 비용</p>
+          </div>
+        </div>
+        <div class="st-ms-top-card type-gradient" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+          <div class="card-in">
+            <p class="ttl">메디렘 CAD&trade; 기술을 통한 임상시험 단계</p>
+            <p class="list-txt mb">3년에서 4년의 짧은 시간 소요</p>
+            <p class="list-txt">1천억 원에서 2천4백억 원 사이의 비용</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="st-ms-bottom-wrap">
+    <div class="inner">
+      <p class="sub-page-ttl type-sm type-wh" data-aos="fade-up" data-aos-duration="1000">Integrated data platform</p>
+      <p class="sub-page-desc type-wh" data-aos="fade-up" data-aos-duration="1000">
+        파편화되어 있는 의료 데이터들을 통합 플랫폼 MediLMM에서 한 번에 제공이 가능합니다
+      </p>
+      <div class="st-ms-bottom-grp">
+        <div class="left">
+          <div class="img-grp">
+            <img src="../assets/images/img_strategy_06.svg" alt="" class="img" />
+          </div>
+          <p class="ttl">통합 데이터 플랫폼</p>
+        </div>
+        <div class="middle">
+          <i class="icon icon-arrow"></i>
+          <div class="middle-grp">
+            <p class="list">EMR</p>
+            <p class="list">OMICs data</p>
+            <p class="list">영상의학과 데이터</p>
+            <p class="list">Clinical trial data</p>
+          </div>
+          <i class="icon icon-arrow"></i>
+        </div>
+        <div class="right">
+          <div class="list">MIT SimPLE</div>
+          <div class="list">UVL Transformer</div>
+          <div class="list">MediLMM CAD Platform</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 컨텐츠가 들어갈 부분 eee -->
+</Layout>
