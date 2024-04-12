@@ -153,9 +153,15 @@
     // 스크롤 위치가 50px보다 크면 클래스를 추가합니다.
     if (window.pageYOffset > 50) {
       header.classList.add('on');
+      if (!document.querySelector('main').classList.contains('main')) {
+        header.classList.remove('sub');
+      }
     } else {
       // 스크롤 위치가 50px 이하면 클래스를 제거합니다.
       header.classList.remove('on');
+      if (!document.querySelector('main').classList.contains('main')) {
+        header.classList.add('sub');
+      }
     }
   });
 })();

@@ -23,17 +23,22 @@
     .mobileMenu .menuToggle .menuItem {
       background: #fff;
     }
+    .gnb > ul > li > a.on:after {
+      color: #fff;
+    }
   }
 
   &.on {
+    z-index: 9999;
+
     @include make-after {
       position: absolute;
       left: 0;
       top: 0;
       width: 100%;
       bottom: 0;
-      background: rgba(255, 255, 255, 1); /* 흰색 배경 */
-      filter: blur(1.875rem) brightness(1.5);
+      background: rgba(255, 255, 255, 0.4); /* 흰색 배경 */
+      filter: blur(1) brightness(1);
     }
   }
   .inner {
