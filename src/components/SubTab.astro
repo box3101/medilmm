@@ -4,10 +4,21 @@ const { isActive } = Astro.props;
 const { TabItem } = Astro.props;
 ---
 
-<div class="sub-tab-section">
+<div class="sub-tab-section" id={TabItem.firstName}>
   <div class="inner">
     <ul class="sub-tab-wrap">
-      <li class={`list ${isActive === 'active01' ? 'is-active' : ''}`}>
+      {
+        TabItem.map(function (item) {
+          return (
+            <li class={`list ${isActive === item.activeId ? 'is-active' : null}`}>
+              <a href={item.url} class="txt">
+                {item.name}
+              </a>
+            </li>
+          );
+        })
+      }
+      <!-- <li class={`list ${isActive === 'active01' ? 'is-active' : ''}`}>
         <a class="txt" href=`${TabItem.url01}`>{TabItem.firstName}</a>
       </li>
       <li class={`list ${isActive === 'active02' ? 'is-active' : ''}`}>
@@ -18,7 +29,7 @@ const { TabItem } = Astro.props;
       </li>
       <li class={`list ${isActive === 'active04' ? 'is-active' : ''}`}>
         <a class="txt" href=`${TabItem.url04}`>{TabItem.FourthName}</a>
-      </li>
+      </li> -->
     </ul>
   </div>
 </div>

@@ -8,12 +8,10 @@ const { bannerItem } = Astro.props;
       <article>
         <p class="sub-banner-tit f-pop">{bannerItem.title}</p>
       </article>
-      <article>
-        <p class="sub-banner-txt f-pop">
-          {bannerItem.text}
-        </p>
-        <!-- <img class="" src=`${bannerItem.img}` alt="" /> -->
-      </article>
+      <p class="sub-banner-txt">
+        {bannerItem.text}
+      </p>
+      <!-- <img class="" src=`${bannerItem.img}` alt="" /> -->
     </div>
   </div>
 </div>

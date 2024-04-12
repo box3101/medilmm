@@ -10,8 +10,8 @@ const { pageHeader } = Astro.props;
   <div class="inner">
     <h1 class="logo">
       <a href="../main/main.html">
-        <img class="main-img" src="../public/assets/images/logo_blk.svg" alt="" />
-        <img class="sub-img" src="../public/assets/images/logo_wh.svg" alt="" />
+        <img class="main-img" src="../assets/images/logo_blk.svg" alt="" />
+        <img class="sub-img" src="../assets/images/logo_wh.svg" alt="" />
       </a>
     </h1>
     <!-- 모바일메뉴 -->
@@ -89,9 +89,9 @@ const { pageHeader } = Astro.props;
   document.querySelector('.menuToggle')?.addEventListener('click', () => {
     document.querySelector('.menuToggle')?.classList.toggle('open');
     if (document.querySelector('.menuToggle')?.classList.contains('open')) {
-      document.querySelector('.sub-img')?.setAttribute('src', '../public/assets/images/logo_blk.svg');
+      document.querySelector('.sub-img')?.setAttribute('src', '../assets/images/logo_blk.svg');
     } else {
-      document.querySelector('.sub-img')?.setAttribute('src', '../public/assets/images/logo_wh.svg');
+      document.querySelector('.sub-img')?.setAttribute('src', '../assets/images/logo_wh.svg');
     }
   });
 

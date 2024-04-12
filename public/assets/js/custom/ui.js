@@ -96,7 +96,7 @@
       const p = box.querySelector('p');
       const txt = p.innerText;
 
-      let tags = '';
+      let tags = ' ';
 
       // 각 ariticle 안쪽의 h1 문자를 다시 반복돌면서 span으로 감싸는 문자열 생성
       for (const el of txt) {
@@ -110,7 +110,10 @@
       const $$span = p.querySelectorAll('span');
 
       $$span.forEach(function (el, idx) {
-        el.style.transitionDelay = 0.05 * idx + 's';
+        el.style.transitionDelay = 0.03 * idx + 's';
+        if (el.innerText === '') {
+          el.style.display = 'inline';
+        }
       });
     });
   }

@@ -26,7 +26,7 @@ const menu = [
   {
     category: 'sub',
     title: 'Strategy',
-    url: 'Strategy',
+    url: 'Overview',
     items: [
       { url: 'Overview', title: 'Overview' },
       { url: 'Board', title: 'BusinessStrategy' },
@@ -37,7 +37,7 @@ const menu = [
   {
     category: 'sub',
     title: 'Plan',
-    url: 'Plan',
+    url: 'MediLMMRoadmap',
     items: [
       { url: 'MediLMMRoadmap', title: 'MediLMM Roadmap' },
       { url: 'FinancialPlan', title: 'Financial Plan' },
