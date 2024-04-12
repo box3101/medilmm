@@ -462,14 +462,13 @@
 }
 
 .sub-banner .wrap {
-  margin-left: 2.6875rem;
   position: relative;
-  top: 1.25rem;
+  top: 3.3125rem;
 }
 .sub-banner {
   background-size: cover;
   background-position: center;
-  height: 18.75rem; /* 원하는 높이로 조정하세요 */
+  height: 28.938rem;
 }
 .sub-banner .inner {
   height: 100%;
@@ -479,10 +478,9 @@
 }
 .sub-banner-tit {
   /* Your styles here */
-  font-weight: 200;
-  font-size: 4.125rem;
+  font-weight: 600;
+  font-size: 3.125rem;
   color: #fff;
-  line-height: 1;
 }
 .sub-banner {
   p {
@@ -509,12 +507,11 @@
   }
 }
 .sub-banner-txt {
-  margin-top: -1.6875rem;
+  margin-top: 0.875rem;
   /* Your styles here */
-  font-size: 4.125rem;
-  font-weight: 800;
-  color: #fff;
-  line-height: 1;
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #d1e8ff;
   img {
     position: relative;
     top: -0.25rem;

@@ -1,0 +1,198 @@
+.sub-page-ttl {
+  font-size: 2.9375rem;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+
+  &.type-sm {
+    font-size: 2.8125rem;
+  }
+
+  &.type-wh {
+    color: #fff;
+  }
+}
+
+.sub-page-desc {
+  margin-top: 1.25rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+
+  &.type-wh {
+    color: #fff;
+  }
+}
+
+// overview
+.st-overview-wrap {
+  padding: 141px 0 147px;
+
+  .st-overview-img-grp {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 3.875rem;
+  }
+}
+
+// Marketing Strategy
+.st-ms-top-wrap {
+  padding: 10.1875rem 0 10rem;
+
+  .st-ms-top-card-grp {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2.5rem;
+    margin-top: 4.0625rem;
+
+    .st-ms-top-card {
+      overflow: hidden;
+      width: calc((100% - 2.5rem) / 2);
+      border: 2px solid transparent;
+      border-radius: 16px;
+      background-color: #fff;
+      box-shadow: 0px 3px 12px rgba(#000, 0.08);
+      text-align: center;
+
+      &.type-gradient {
+        background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #02c6ff 0%, #1c45f9 100%);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+
+        .ttl {
+          background: linear-gradient(to right, #02c6ff, #1c45f9);
+          // background: -webkit-linear-gradient(#02c6ff, #1c45f9);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-weight: 600;
+        }
+
+        .list-txt {
+          background-color: #f7fcff;
+        }
+      }
+
+      .card-in {
+        padding: 2.25rem 0.75rem 1.25rem;
+      }
+
+      .ttl {
+        padding-bottom: 2.0625rem;
+        font-size: 1.4375rem;
+        font-weight: 700;
+        color: #1c1c1c;
+      }
+
+      .list-txt {
+        width: 100%;
+        padding: 28px 0;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+        font-size: 1.25rem;
+        font-weight: 500;
+        color: #1c1c1c;
+
+        &.mb {
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
+}
+
+.st-ms-bottom-wrap {
+  @include bg-url(img, 'img_strategy_09.webp');
+
+  background-position: center center;
+  background-size: cover;
+
+  .st-ms-bottom-grp {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+      padding: 47px 53px 24px;
+      border-radius: 16px;
+      background: linear-gradient(to right, #02c6ff, #1c45f9);
+
+      .ttl {
+        position: relative;
+        padding-top: 27px;
+        margin-top: 27px;
+        font-size: 1.4375rem;
+        font-weight: 500;
+        color: #fff;
+
+        &::after {
+          content: '';
+          z-index: 1;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          width: 135%;
+          height: 1px;
+          background: linear-gradient(to right, transparent, #fff, transparent);
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    .middle {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 13px;
+      flex-grow: 1;
+      padding: 0 13px 0 10px;
+
+      .icon {
+        flex-shrink: 0;
+      }
+
+      .middle-grp {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 12px;
+        flex-grow: 1;
+        background: linear-gradient(to right, rgba(#fff, 0.05), transparent);
+
+        .list {
+          width: calc((100% - 12px) / 2);
+        }
+      }
+    }
+
+    .right {
+      flex-shrink: 0;
+
+      .list {
+        width: 330px;
+        height: 70px;
+        border-radius: 8px;
+        border: 2px solid transparent;
+        background-image: linear-gradient(#040404, #000103), linear-gradient(to right, #02c6ff 0%, #1c45f9 100%);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        line-height: 70px;
+        color: #fff;
+        text-align: center;
+
+        &:nth-child(2) {
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+}

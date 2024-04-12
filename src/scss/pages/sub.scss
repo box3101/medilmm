@@ -759,7 +759,7 @@ section.bomi-product-list {
           margin-bottom: 0.6125rem;
         }
 
-        .review-card__txt-wrap{
+        .review-card__txt-wrap {
           margin-top: 5px;
         }
         .review-card__txt {
@@ -875,9 +875,11 @@ section.bomi-product-list {
     }
     .profile__tags {
       align-items: center;
-      position: relative; top: -2px;
+      position: relative;
+      top: -2px;
       @include media($tab, max) {
-        top: 0; left: -1px;
+        top: 0;
+        left: -1px;
       }
       .profile__tag.profile__tag {
         display: flex;
@@ -896,7 +898,7 @@ section.bomi-product-list {
         &.bg-blue {
           background: #2c3ba1;
         }
-        &.bg-main{
+        &.bg-main {
           background: $clr-pri;
         }
       }
@@ -1055,27 +1057,42 @@ section.bomi-product-list {
       box-shadow: none;
     }
   }
-  .review-detail{
-    .row{
+  .review-detail {
+    .row {
       margin-bottom: 120px;
-      &:last-of-type{margin-bottom: 0;}
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
   }
-  .help_btn{
+  .help_btn {
     display: inline-block;
-    width: 266px; height: 66px; line-height: 66px;
-    display: flex; align-items: center; justify-content: center;
-    position: relative; left: 50%; transform: translateX(-50%);
-    background: #FFF1F6; color: $clr-pri; border-radius: 6px;
-    font-size: 22px; font-weight: 500;
-    &:hover{
+    width: 266px;
+    height: 66px;
+    line-height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff1f6;
+    color: $clr-pri;
+    border-radius: 6px;
+    font-size: 22px;
+    font-weight: 500;
+    &:hover {
       box-shadow: none;
     }
-    img{
-      display: inline-block;margin-left: 14px; margin-right: 5px;
+    img {
+      display: inline-block;
+      margin-left: 14px;
+      margin-right: 5px;
     }
-    .help_count_num{
-      font-size: 23px; font-weight: 500; color: $clr-pri;
+    .help_count_num {
+      font-size: 23px;
+      font-weight: 500;
+      color: $clr-pri;
     }
   }
 }
@@ -1205,7 +1222,7 @@ section.bomi-product-list {
           padding: 0.3125rem 0.375rem;
           display: flex;
           border-radius: 0.5rem;
-          > div  {
+          > div {
             width: 100%;
             display: flex;
             gap: 0.3125rem;
@@ -1593,15 +1610,18 @@ section.bomi-product-list {
 */ ////////////////////////////////////////////////////////
 
 @include media($web, max) {
-  .bomi-product-review .help_btn img{
-    position: relative; 
+  .bomi-product-review .help_btn img {
+    position: relative;
     top: -2px;
   }
-  .bomi-product-review .help_btn .help_count_num{
-    font-size: 18px; font-weight: 500;
+  .bomi-product-review .help_btn .help_count_num {
+    font-size: 18px;
+    font-weight: 500;
   }
-  .bomi-product-review .help_btn{
-    height: 54px; font-size: 18px; font-weight: 500;
+  .bomi-product-review .help_btn {
+    height: 54px;
+    font-size: 18px;
+    font-weight: 500;
     max-width: 100%;
     width: 100%;
   }
@@ -1622,7 +1642,9 @@ section.bomi-product-list {
   }
 }
 @include media($tab, max) {
-  .bomi-product-review .profile .profile__rating .wrap.bg-on{margin-left: 0;}
+  .bomi-product-review .profile .profile__rating .wrap.bg-on {
+    margin-left: 0;
+  }
   .bomi-product-review .profile-review .link img {
     position: relative;
     top: -1px;
@@ -2213,12 +2235,7 @@ section.bomi-product-list {
   .tester-mission {
     max-width: 100%;
   }
-  #bomi-product-list
-    .review__tab-content
-    .review-container
-    .review-bars
-    .review-bar
-    .review-bar-bg {
+  #bomi-product-list .review__tab-content .review-container .review-bars .review-bar .review-bar-bg {
     flex: 1;
   }
   // #bomi-product-list .review__tab-content .review-container {
@@ -2310,5 +2327,63 @@ section.bomi-product-list {
   .bomi-intro .sec1 {
     @include bg-url('img', 'mo-about-main.png');
     height: calc(100vh - 65px);
+  }
+}
+
+/* 서브 메뉴 */
+.sub-tab-section {
+  background-color: #f6f6f6;
+
+  .sub-tab-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+    padding: 1.3125rem 0;
+
+    .list {
+      &.is-active {
+        .txt {
+          position: relative;
+          color: $clr-sec;
+
+          &::after {
+            content: '';
+            z-index: 1;
+            position: absolute;
+            top: auto;
+            left: 0;
+            bottom: -21px;
+            width: 100%;
+            height: 2px;
+            background-color: $clr-sec;
+          }
+        }
+      }
+    }
+
+    .txt {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: #c1c1c1;
+      cursor: pointer;
+
+      &.is-active {
+        position: relative;
+        color: $clr-sec;
+
+        &::after {
+          content: '';
+          z-index: 1;
+          position: absolute;
+          top: auto;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 2px;
+          background-color: $clr-sec;
+        }
+      }
+    }
   }
 }
