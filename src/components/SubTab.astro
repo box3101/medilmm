@@ -1,0 +1,24 @@
+---
+// 필요한 스타일 또는 스크립트를 여기에 추가할 수 있습니다.
+const { isActive } = Astro.props;
+const { TabItem } = Astro.props;
+---
+
+<div class="sub-tab-section">
+  <div class="inner">
+    <ul class="sub-tab-wrap">
+      <li class={`list ${isActive === 'active01' ? 'is-active' : ''}`}>
+        <a class="txt" href=`${TabItem.url01}`>{TabItem.firstName}</a>
+      </li>
+      <li class={`list ${isActive === 'active02' ? 'is-active' : ''}`}>
+        <a class="txt" href=`${TabItem.url02}`>{TabItem.SecondName}</a>
+      </li>
+      <li class={`list ${isActive === 'active03' ? 'is-active' : ''}`}>
+        <a class="txt" href=`${TabItem.url03}`>{TabItem.ThirdName}</a>
+      </li>
+      <li class={`list ${isActive === 'active04' ? 'is-active' : ''}`}>
+        <a class="txt" href=`${TabItem.url04}`>{TabItem.FourthName}</a>
+      </li>
+    </ul>
+  </div>
+</div>

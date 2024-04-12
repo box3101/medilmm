@@ -1,0 +1,32 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../css/ui.css';
+import Subbanner from '../../components/Subbanner.astro';
+import SubTab from '../../components/SubTab.astro';
+
+const pageTitle = '메디 > Board';
+const idName = 'board';
+const bannerItem = {
+  url: '../assets/images/img_strategy_01.webp',
+  title: 'Business Stategy',
+  text: 'Cleansing&Analysis Data를 제약회사와 연구기관, CRO로 전송하여 <br>임상시험 데이터 시장과 CRO 서비스 시장으로 메디렘 기술 도입',
+};
+
+const isActive = 'active02';
+const TabItem = {
+  firstName: 'Overview',
+  SecondName: 'Business Strategy',
+  ThirdName: 'Marketing Strategy',
+  url01: '/sub/Overview',
+  url02: '/sub/Board',
+  url03: '/sub/MarketingStrategy',
+};
+---
+
+<Layout pageTitle={pageTitle} idName={idName}>
+  <!-- 컨텐츠가 들어갈 부분 -->
+  <Subbanner bannerItem={bannerItem} />
+  <SubTab isActive={isActive} TabItem={TabItem} />
+  <div class="inner">sd</div>
+  <!-- 컨텐츠가 들어갈 부분 eee -->
+</Layout>
