@@ -1,0 +1,36 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../css/ui.css';
+import Subbanner from '../../components/Subbanner.astro';
+import SubTab from '../../components/SubTab.astro';
+
+const pageTitle = 'MediLMM Roadmap';
+const idName = 'roadmap';
+const bannerItem = {
+  url: '../assets/images/img_plan_01.webp',
+  title: 'MediLMM Roadmap',
+  text: '메디렘의 사업 로드맵',
+};
+
+const isActive = 'active01';
+const TabItem = [
+  { name: 'MediLMM Roadmap', url: './MediLMMRoadmap.html', activeId: 'active01' },
+  { name: 'Financial Plan', url: './FinancialPlan.html', activeId: 'active02' },
+];
+---
+
+<Layout pageTitle={pageTitle} idName={idName}>
+  <!-- 컨텐츠가 들어갈 부분 -->
+  <Subbanner bannerItem={bannerItem} />
+  <SubTab isActive={isActive} TabItem={TabItem} />
+  <div class="inner">
+    <div class="pl-roadmap-wrap">
+      <p class="sub-page-ttl" data-aos="fade-up" data-aos-duration="1000">Business plan</p>
+      <p class="sub-page-desc" data-aos="fade-up" data-aos-duration="1000">메디렘 사업 로드맵 소개</p>
+      <div class="img-grp" data-aos="fade-up" data-aos-duration="1000">
+        <img class="img" src="../assets/images/img_plan_02.webp" alt="메디램 로드맵 테이블" />
+      </div>
+    </div>
+  </div>
+  <!-- 컨텐츠가 들어갈 부분 eee -->
+</Layout>

@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../css/ui.css';
+import Subbanner from '../../components/Subbanner.astro';
+import SubTab from '../../components/SubTab.astro';
+
+const pageTitle = 'Financial Plan';
+const idName = 'roadmap';
+const bannerItem = {
+  url: '../assets/images/img_plan_01.webp',
+  title: 'Financial Plan',
+  text: 'Cleansing&Analysis Data를 제약회사와 연구기간 임상시험 데이터 시장과 CRO 서비스',
+};
+
+const isActive = 'active02';
+const TabItem = [
+  { name: 'MediLMM Roadmap', url: './MediLMMRoadmap.html', activeId: 'active01' },
+  { name: 'Financial Plan', url: './FinancialPlan.html', activeId: 'active02' },
+];
+---
+
+<Layout pageTitle={pageTitle} idName={idName}>
+  <!-- 컨텐츠가 들어갈 부분 -->
+  <Subbanner bannerItem={bannerItem} />
+  <SubTab isActive={isActive} TabItem={TabItem} />
+  <div class="pl-financial-section">
+    <div class="pl-financial-top-wrap">
+      <p class="sub-page-ttl" data-aos="fade-up" data-aos-duration="1000">중장기 성장 Milestone</p>
+      <p class="sub-page-desc" data-aos="fade-up" data-aos-duration="1000">
+        의약을 넘어 진단보조 / 약물감시 분야까지의 진출
+      </p>
+      <div class="gif-grp" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+        <img class="gif" src="../assets/images/img_plan_03.gif" alt="메디램 로드맵 테이블" />
+      </div>
+    </div>
+    <div class="pl-finanial-bottom-wrap">
+      <div class="inner">
+        <p class="sub-page-ttl" data-aos="fade-up" data-aos-duration="1000">향후 5년 예상 매출</p>
+        <p class="sub-page-desc" data-aos="fade-up" data-aos-duration="1000">
+          글로벌 기업으로서의 성장을 이루어갈 미래
+        </p>
+        <div class="img-grp-01">
+          <img src="../assets/images/img_plan_04.webp" class="img" data-aos="fade-up" data-aos-duration="1000" />
+        </div>
+        <div class="img-grp-02">
+          <img src="../assets/images/img_plan_05.webp" class="img" data-aos="fade-up" data-aos-duration="1000" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 컨텐츠가 들어갈 부분 eee -->
+</Layout>

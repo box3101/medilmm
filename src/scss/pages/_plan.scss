@@ -1,0 +1,40 @@
+// roadmap
+.pl-roadmap-wrap {
+  padding: 140px 0 182px;
+
+  .img-grp {
+    margin-top: 19px;
+  }
+}
+
+// financial
+.pl-financial-section {
+  padding: 140px 0;
+
+  .gif-grp {
+    position: relative;
+    padding-top: 36.259%;
+    margin-top: 40px;
+
+    .gif {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .pl-finanial-bottom-wrap {
+    padding-top: 200px;
+
+    p {
+      text-align: left;
+    }
+
+    .img-grp-01 {
+      margin-top: -68px;
+    }
+  }
+}

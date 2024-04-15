@@ -4,23 +4,21 @@ import '../../css/ui.css';
 import Subbanner from '../../components/Subbanner.astro';
 import SubTab from '../../components/SubTab.astro';
 
-const pageTitle = '메디 > Marketing Stategy';
+const pageTitle = 'MEDILMM > Marketing Stategy';
 const idName = 'marketing-stategy';
+const pageHeader = 'sub';
 const bannerItem = {
   url: '../assets/images/img_strategy_01.webp',
   title: 'Marketing Stategy',
   text: '인공지능 기술을 통한 의료, 바이오 시장',
 };
 
-const isActive = 'active03';
-const TabItem = {
-  firstName: 'Overview',
-  SecondName: 'Business Strategy',
-  ThirdName: 'Marketing Strategy',
-  url01: '/sub/Overview',
-  url02: '/sub/Board',
-  url03: '/sub/MarketingStrategy',
-};
+const isActive = 'active01';
+const TabItem = [
+  { name: 'Overview', url: './Overview.html', activeId: 'active01' },
+  { name: 'Business Strategy', url: './Board.html', activeId: 'active02' },
+  { name: 'Marketing Strategy', url: './MarketingStrategy.html', activeId: 'active03' },
+];
 ---
 
 <Layout pageTitle={pageTitle} idName={idName}>
@@ -65,14 +63,14 @@ const TabItem = {
           <p class="ttl">통합 데이터 플랫폼</p>
         </div>
         <div class="middle">
-          <i class="icon icon-arrow"></i>
+          <i class="icon icon-arrow scroll-horizontal-img"></i>
           <div class="middle-grp">
             <p class="list">EMR</p>
             <p class="list">OMICs data</p>
             <p class="list">영상의학과 데이터</p>
             <p class="list">Clinical trial data</p>
           </div>
-          <i class="icon icon-arrow"></i>
+          <i class="icon icon-arrow scroll-horizontal-img"></i>
         </div>
         <div class="right">
           <div class="list">MIT SimPLE</div>
