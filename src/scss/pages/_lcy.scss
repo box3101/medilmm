@@ -328,8 +328,8 @@ body.isOpen {
 
   &__close {
     position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 36px;
+    right: 51px;
     cursor: pointer;
   }
   .modal__bg {
@@ -366,6 +366,72 @@ body.isOpen {
 
     .modal__img {
       img {
+      }
+    }
+  }
+}
+
+.UVLTransformer {
+  .sub-inner {
+    padding-bottom: 8.75rem;
+  }
+  section.se02 {
+    padding: 113px 0;
+    @include bg-url('img', 'p2_s2_bg.webp');
+    background-size: cover;
+    z-index: 13;
+    position: relative;
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #02c6ff;
+    }
+
+    h2 {
+      margin-top: 10px;
+      font-size: 50px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    ul {
+      width: 66.666667%; /* 800/1200 */
+      margin-top: 60px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 11px;
+      li {
+        flex: 1 1 calc(50% - 5.5px);
+        border-radius: 7px;
+        height: 108px;
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+        position: relative;
+        margin-bottom: 10px;
+        @include bg-url('img', 'bg-uvl.png');
+        &:last-of-type {
+          margin-bottom: 0;
+          flex: 1 1 100%;
+        }
+        dl {
+          position: relative;
+          z-index: 10;
+          dt {
+            font-size: 20px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 10px;
+            line-height: 1;
+          }
+
+          dd {
+            line-height: 1;
+            font-size: 18px;
+            font-weight: 400;
+            color: #fff;
+          }
+        }
       }
     }
   }

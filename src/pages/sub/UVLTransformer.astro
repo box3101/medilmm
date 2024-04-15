@@ -5,14 +5,13 @@ import SubTab from '../../components/SubTab.astro';
 import Modal from '../../components/Modal.astro';
 import '../../css/ui.css';
 
-const pageTitle = 'MEDILMM > SimpleModel';
-const idName = 'MedilmmCAD';
+const pageTitle = 'MEDILMM > UVLTransformer';
+const idName = 'UVLTransformer';
 const pageHeader = 'sub';
 const bannerItem = {
   url: '../../public/assets/images/img_medilmmCAD.webp',
-  title: 'SimpleModel',
-  text: `추가적인 학습 데이터가 없어도 스스로 학습하는 유사 데이터 라벨링 기법
-학습 데이터의 정확도를 자체적으로 높이는 드롭아웃 방식 활용`,
+  title: 'UVLTransformer',
+  text: `CADTM의 두번째 기초 기술`,
 };
 
 const isActive = 'active02';
@@ -36,7 +35,58 @@ const TabItem = [
         이미지 - 텍스트 통합 데이터 변환 처리 기술을 보유하고 있습니다
       </p>
     </div>
+
+    <img
+      data-aos="fade-up"
+      data-aos-delay="400"
+      data-aos-duration="1000"
+      class=""
+      src="../assets/images/p2_s1_1.webp"
+      alt=""
+    />
   </div>
+
+  <section class="se02">
+    <div class="inner">
+      <h3>MEDILMM</h3>
+      <h2>UVL Transformer 핵심 구성 요소</h2>
+      <ul>
+        <li>
+          <dl>
+            <dt>트랜스포머 아키텍쳐</dt>
+            <dd>자기주의 메커니즘을 사용한 데이터 관계 학습</dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt>멀티 모달 학습</dt>
+            <dd>시각 데이터와 언어 데이터를 동시에 처리</dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt>언어처리</dt>
+            <dd>
+              텍스트를 토큰화해 처리하고 이미지나 비디오 <br />
+              데이터와의 연관성 파악
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt>연속 학습 및 적응성</dt>
+            <dd>새로운 데이터나 시나리오에 대해 지속적으로 학습하고 적응</dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt>시각적 특징 추출</dt>
+            <dd>컨볼루셔널 신경망(CNN)과 비전 트랜스포머 기술(ViT)을 활용한 시각적 특징 추출</dd>
+          </dl>
+        </li>
+      </ul>
+    </div>
+  </section>
   <!-- 컨텐츠가 들어갈 부분 eee -->
 
   <Modal />
