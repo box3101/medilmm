@@ -4,8 +4,9 @@ import '../../css/ui.css';
 import Subbanner from '../../components/Subbanner.astro';
 import SubTab from '../../components/SubTab.astro';
 
-const pageTitle = '메디 > Overview';
+const pageTitle = 'MEDILMM > Overview';
 const idName = 'overview';
+const pageHeader = 'sub';
 const bannerItem = {
   url: '../assets/images/img_strategy_01.webp',
   title: 'Overview',
@@ -13,14 +14,11 @@ const bannerItem = {
 };
 
 const isActive = 'active01';
-const TabItem = {
-  firstName: 'Overview',
-  SecondName: 'Business Strategy',
-  ThirdName: 'Marketing Strategy',
-  url01: '/sub/Overview',
-  url02: '/sub/Board',
-  url03: '/sub/MarketingStrategy',
-};
+const TabItem = [
+  { name: 'Overview', url: './Overview.html', activeId: 'active01' },
+  { name: 'Business Strategy', url: './Board.html', activeId: 'active02' },
+  { name: 'Marketing Strategy', url: './MarketingStrategy.html', activeId: 'active03' },
+];
 ---
 
 <Layout pageTitle={pageTitle} idName={idName}>
