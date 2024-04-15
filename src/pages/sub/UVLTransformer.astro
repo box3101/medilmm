@@ -1,0 +1,43 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Subbanner from '../../components/Subbanner.astro';
+import SubTab from '../../components/SubTab.astro';
+import Modal from '../../components/Modal.astro';
+import '../../css/ui.css';
+
+const pageTitle = 'MEDILMM > SimpleModel';
+const idName = 'MedilmmCAD';
+const pageHeader = 'sub';
+const bannerItem = {
+  url: '../../public/assets/images/img_medilmmCAD.webp',
+  title: 'SimpleModel',
+  text: `추가적인 학습 데이터가 없어도 스스로 학습하는 유사 데이터 라벨링 기법
+학습 데이터의 정확도를 자체적으로 높이는 드롭아웃 방식 활용`,
+};
+
+const isActive = 'active02';
+const TabItem = [
+  { name: 'SimPLE Model', url: './SimpleModel.html', activeId: 'active01' },
+  { name: 'UVL Transformer', url: './UVLTransformer.html', activeId: 'active02' },
+  { name: 'CAD Catch', url: './CADCatch.html', activeId: 'active03', on: 'on' },
+  { name: 'CAD Wrap', url: './CADWrap.html', activeId: 'active04', on: 'on' },
+];
+---
+
+<Layout pageTitle={pageTitle} idName={idName} pageHeader={pageHeader}>
+  <!-- 컨텐츠가 들어갈 부분 -->
+  <Subbanner bannerItem={bannerItem} />
+  <SubTab isActive={isActive} TabItem={TabItem} />
+
+  <div class="sub-inner inner">
+    <div class="sub-title-wrap custom tac">
+      <h2 data-aos="fade-up" data-aos-delay="" data-aos-duration="1000">UVL Transformer Technology</h2>
+      <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+        이미지 - 텍스트 통합 데이터 변환 처리 기술을 보유하고 있습니다
+      </p>
+    </div>
+  </div>
+  <!-- 컨텐츠가 들어갈 부분 eee -->
+
+  <Modal />
+</Layout>

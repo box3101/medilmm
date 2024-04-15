@@ -141,7 +141,6 @@
     padding-bottom: 17px;
     background: #f6f8fc;
     border-radius: 12px;
-    margin-top: 53px;
     .desc-txt {
       border-radius: 0 0 8px 8px;
       background: rgb(2, 198, 255);
@@ -293,8 +292,8 @@ ul.check-menu {
   @include make-before {
     display: inline-block;
     content: 'TM';
-    right: -15px;
-    font-size: 13px;
+    right: -0.9375rem;
+    font-size: 0.8125rem;
     font-weight: 500;
     color: #c1c1c1;
     position: absolute;
@@ -303,6 +302,73 @@ ul.check-menu {
 
 .sub-tab-section .sub-tab-wrap .list.is-active .txt.on::before {
   color: $clr-sec;
+}
+
+body.isOpen {
+  overflow-y: hidden;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  visibility: hidden; /* Initially hidden */
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+
+  &.isOpen {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+  }
+  .modal__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+  }
+
+  .modal__cnt {
+    position: relative;
+    z-index: 11;
+    background: #fff;
+    max-width: 75rem;
+    border-radius: 1.25rem;
+    padding: 3.5625rem 3.25rem;
+    text-align: center;
+    .modal__text-wrap {
+      h3 {
+      }
+
+      h2 {
+        margin-top: 0.6875rem;
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: #000;
+      }
+      padding-bottom: 1.6875rem;
+      border-bottom: 0.0625rem solid #dfdfdf;
+    }
+
+    .modal__img {
+      img {
+      }
+    }
+  }
 }
 
 @include media($tab, max) {

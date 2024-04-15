@@ -164,4 +164,43 @@
       }
     }
   });
+
+  /* ///////////////////////////////////////////////////////
+   공통 모달
+  */ ////////////////////////////////////////////////////////
+  document.addEventListener('DOMContentLoaded', function (e) {
+    const cardList_a = document.querySelectorAll('.card-list a');
+    const modal = document.querySelector('.modal');
+    const body = document.querySelector('body');
+    const closeBtn = document.querySelector('.modal__close');
+
+    const modalItem = [
+      {
+        title: `추가적인 학습 데이터가 없어도 스스로 학습하는 유사 데이터 라벨링 기법`,
+        imgUrl: '../assets/images/p1_modal1.webp',
+      },
+      {
+        title: `학습 데이터의 정확도를 자체적으로 높이는 드롭아웃 방식 활용`,
+        imgUrl: '../assets/images/p1_modal2.webp',
+      },
+      {
+        title: `GLUE* 지표를 통해 NLU 모델로서의 성능이 확인된 모델`,
+        imgUrl: '../assets/images/p1_modal3.webp',
+      },
+    ];
+
+    cardList_a.forEach((el, idx) => {
+      el.addEventListener('click', (e) => {
+        body?.classList.add('isOpen');
+        modal?.classList.add('isOpen');
+        modal.querySelector('h2').innerText = modalItem[idx].title;
+        modal.querySelector('.modal__img img').setAttribute('src', modalItem[idx].imgUrl);
+      });
+    });
+
+    closeBtn?.addEventListener('click', () => {
+      body?.classList.remove('isOpen');
+      modal?.classList.remove('isOpen');
+    });
+  });
 })();

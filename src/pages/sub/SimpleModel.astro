@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Subbanner from '../../components/Subbanner.astro';
 import SubTab from '../../components/SubTab.astro';
+import Modal from '../../components/Modal.astro';
 import '../../css/ui.css';
 
 const pageTitle = 'MEDILMM > SimpleModel';
@@ -35,7 +36,7 @@ const TabItem = [
 
     <ul class="card-list flx col33">
       <li class="card" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
-        <a href="#">
+        <a href="#none">
           <div class="image-cnt" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
             <img class="image-default" src="../assets/images/p1_1.webp" alt="" />
             <img class="image-hover" src="../assets/images/p1_1_gif.gif" alt="Hover Image" />
@@ -52,7 +53,7 @@ const TabItem = [
         </a>
       </li>
       <li class="card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-        <a href="#">
+        <a href="#none">
           <div class="image-cnt" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
             <img class="image-default" src="../assets/images/p1_2.webp" alt="" />
             <img class="image-hover" src="../assets/images/p1_2_gif.gif" alt="Hover Image" />
@@ -68,7 +69,7 @@ const TabItem = [
         </a>
       </li>
       <li class="card" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
-        <a href="#">
+        <a href="#none">
           <div class="image-cnt" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
             <img class="image-default" src="../assets/images/p1_3.webp" alt="" />
             <img class="image-hover" src="../assets/images/p1_3_gif.gif" alt="Hover Image" />
@@ -85,4 +86,6 @@ const TabItem = [
     </ul>
   </div>
   <!-- 컨텐츠가 들어갈 부분 eee -->
+
+  <Modal />
 </Layout>
