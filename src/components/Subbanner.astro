@@ -5,11 +5,22 @@ const { bannerItem } = Astro.props;
 <div class="sub-banner" style={{ backgroundImage: `url(${bannerItem.url})` }}>
   <div class="inner">
     <div class="wrap">
-      <article>
-        <p class="sub-banner-tit f-pop">{bannerItem.title}</p>
-      </article>
-      <p class="sub-banner-txt">{bannerItem.text}</p>
-      <!-- <img class="" src=`${bannerItem.img}` alt="" /> -->
+      <div class="div" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
+        <article>
+          <p class="sub-banner-tit f-pop">{bannerItem.title}</p>
+        </article>
+        {
+          bannerItem.moText ? (
+            <>
+              <p class="sub-banner-txt is-tab-hide">{bannerItem.text}</p>
+              <p class="sub-banner-txt is-tab-show">{bannerItem.moText}</p>
+            </>
+          ) : (
+            <p class="sub-banner-txt">{bannerItem.text}</p>
+          )
+        }
+        <!-- <img class="" src=`${bannerItem.img}` alt="" /> -->
+      </div>
     </div>
   </div>
 </div>

@@ -11,7 +11,7 @@ const { TabItem } = Astro.props;
         TabItem.map(function (item) {
           return (
             <li class={`list ${isActive === item.activeId ? 'is-active' : null}`}>
-              <a href={item.url} class="txt">
+              <a href={item.url} class={`txt ${item.on && 'on'}`}>
                 {item.name}
               </a>
             </li>

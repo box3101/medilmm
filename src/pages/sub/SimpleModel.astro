@@ -1,0 +1,88 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Subbanner from '../../components/Subbanner.astro';
+import SubTab from '../../components/SubTab.astro';
+import '../../css/ui.css';
+
+const pageTitle = 'MEDILMM > SimpleModel';
+const idName = 'MedilmmCAD';
+const pageHeader = 'sub';
+const bannerItem = {
+  url: '../../public/assets/images/img_medilmmCAD.webp',
+  title: 'SimpleModel',
+  text: `추가적인 학습 데이터가 없어도 스스로 학습하는 유사 데이터 라벨링 기법
+학습 데이터의 정확도를 자체적으로 높이는 드롭아웃 방식 활용`,
+};
+
+const isActive = 'active01';
+const TabItem = [
+  { name: 'SimPLE Model', url: './SimpleModel.html', activeId: 'active01' },
+  { name: 'UVL Transformer', url: './UVLTransformer.html', activeId: 'active02' },
+  { name: 'CAD Catch', url: './CADCatch.html', activeId: 'active03', on: 'on' },
+  { name: 'CAD Wrap', url: './CADWrap.html', activeId: 'active04', on: 'on' },
+];
+---
+
+<Layout pageTitle={pageTitle} idName={idName} pageHeader={pageHeader}>
+  <!-- 컨텐츠가 들어갈 부분 -->
+  <Subbanner bannerItem={bannerItem} />
+  <SubTab isActive={isActive} TabItem={TabItem} />
+
+  <div class="sub-inner inner">
+    <div class="com-title">
+      <h1 class="f-pop" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">SimPLE Model Point</h1>
+    </div>
+
+    <ul class="card-list flx col33">
+      <li class="card" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
+        <a href="#">
+          <div class="image-cnt" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+            <img class="image-default" src="../assets/images/p1_1.webp" alt="" />
+            <img class="image-hover" src="../assets/images/p1_1_gif.gif" alt="Hover Image" />
+          </div>
+          <h2 class="f-pop" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
+            Similar Data <br />
+            Labeling
+          </h2>
+          <p data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
+            추가적인 학습 데이터가 없어도 스스로 <br />
+            학습하는 유사 데이터 라벨링 기법
+          </p>
+          <button data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">See More +</button>
+        </a>
+      </li>
+      <li class="card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+        <a href="#">
+          <div class="image-cnt" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+            <img class="image-default" src="../assets/images/p1_2.webp" alt="" />
+            <img class="image-hover" src="../assets/images/p1_2_gif.gif" alt="Hover Image" />
+          </div>
+
+          <h2 class="f-pop" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">Dropout Method</h2>
+          <p data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
+            학습 데이터의 정확도를 높이는 <br />
+            드롭아웃 방식 활용으로 과적합 방지 <br />
+            앙상블 효과 계산 효율성 증대
+          </p>
+          <button data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">See More +</button>
+        </a>
+      </li>
+      <li class="card" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
+        <a href="#">
+          <div class="image-cnt" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+            <img class="image-default" src="../assets/images/p1_3.webp" alt="" />
+            <img class="image-hover" src="../assets/images/p1_3_gif.gif" alt="Hover Image" />
+          </div>
+          <h2 class="f-pop" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">NLU Model</h2>
+          <p data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
+            GLUE* 지표를 통해 NLU 모델로서 <br />
+            성능이 확인된 모델로 세 가지 <br />
+            Task에서 우수한 결과 도출
+          </p>
+          <button data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">See More +</button>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- 컨텐츠가 들어갈 부분 eee -->
+</Layout>

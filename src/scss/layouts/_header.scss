@@ -532,6 +532,9 @@
   background-size: cover;
   background-position: center;
   height: 28.938rem;
+  @include media($tab, max) {
+    height: 250px;
+  }
 }
 .sub-banner .inner {
   height: 100%;
@@ -544,6 +547,11 @@
   font-weight: 600;
   font-size: 3.125rem;
   color: #fff;
+
+  @include media($tab, max) {
+    font-size: 35px;
+    text-align: center;
+  }
 }
 .sub-banner {
   p {
@@ -590,5 +598,9 @@
   }
   .mobileNav > ul > li.on .dapth2 li > a {
     font-size: 16px;
+  }
+  .sub-banner-txt {
+    font-size: 15px;
+    text-align: center;
   }
 }

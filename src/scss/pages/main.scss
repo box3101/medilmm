@@ -4,7 +4,7 @@ section.visual {
   overflow: hidden;
 
   @include media($tab, max) {
-    height: 100vh;
+    height: calc(100vh + 69px);
   }
   .video-container {
     position: absolute;

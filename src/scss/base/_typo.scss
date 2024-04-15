@@ -72,9 +72,14 @@
 }
 
 .sub-title-wrap {
+  &.custom p {
+    @include make-before {
+      display: none;
+    }
+  }
   h2 {
     font-size: 50px;
-    font-weight: 600;
+    font-weight: 700;
     color: #000;
   }
   p {

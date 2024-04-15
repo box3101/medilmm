@@ -8,10 +8,12 @@ const pageTitle = 'MEDILMM > MultiModalData';
 const idName = 'MultiModalData';
 const pageHeader = 'sub';
 const bannerItem = {
-  url: '../../public/assets/images/subbanner01.webp',
+  url: '../../public/assets/images/img_coreTechnology.webp',
   title: 'Multi Modal Data',
   text: `기존의 한정적인 데이터 처리와 AI 기술을 뛰어넘어
         멀티 모달 데이터를 수집, 변환, 처리하여 최신 생성형 AI 기술에 최적화`,
+  moText: `한정적 데이터 처리와 AI 기술을 뛰어넘어 멀티모달
+데이터를 수집, 변환, 처리해 생성형 AI 기술 최적화`,
 };
 
 const isActive = 'active01';
@@ -27,41 +29,49 @@ const TabItem = [
   <Subbanner bannerItem={bannerItem} />
   <SubTab isActive={isActive} TabItem={TabItem} />
 
-  <div class="sub-inner">
+  <div class="MultiModalData sub-inner">
     <section class="sub01-1 inner">
       <div class="sub-title-wrap">
-        <h2>Isolated Hard Work</h2>
-        <p>여러 데이터 레이크로 깊숙히 사람의 열정을 상상한 멀티모달 데이터</p>
+        <h2 data-aos="fade-up" data-aos-delay="" data-aos-duration="1000">Isolated Hard Work</h2>
+        <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+          여러 데이터 타입으로 쪼개져서 서로의 연관성을 상실한 멀티모달 데이터
+        </p>
       </div>
-      <img class="sub01-1-img mt35" src="../assets/images/p1_s1_1.webp" alt="" />
-      <div class="sub-title-wrap mt80">
+      <div class="mt50">
+        <picture>
+          <source media="(min-width: 600px)" srcset="../assets/images/p1_s1_1.webp" />
+          <img src="../assets/images/p1_s1_1_mo.jpg" alt="" />
+        </picture>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="" data-aos-duration="1000" class="sub-title-wrap mt80">
         <p>분석 업무에 따라 개별로 따라하는 AI 모델링</p>
       </div>
       <div class="task-modeling">
-        <div class="txt-wrap">
+        <div class="txt-wrap" data-aos="fade-right" data-aos-delay="" data-aos-duration="1000">
           <h3 class="f-pop">Clinical or <br /> Operational <br /> Task Modeling</h3>
           <p class="f-pop">(e.g., Classification <br /> or Regression)</p>
         </div>
         <div class="model-cards">
-          <div class="card">
+          <div class="card" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
             <div class="icon linear-models">
               <img class="" src="../assets/images/p1_s1_2.webp" alt="" />
             </div>
             <p class="f-pop">Linear Models</p>
           </div>
-          <div class="card">
+          <div class="card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
             <div class="icon svm-clustering">
               <img class="" src="../assets/images/p1_s1_3.webp" alt="" />
             </div>
             <p class="f-pop">SVM, Clustering...</p>
           </div>
-          <div class="card">
+          <div class="card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
             <div class="icon tree-based-models">
               <img class="" src="../assets/images/p1_s1_4.webp" alt="" />
             </div>
             <p class="f-pop">Tree-based Models <span class="f-pop">(e.g., XGBoost)</span></p>
           </div>
-          <div class="card">
+          <div class="card" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
             <div class="icon neural-networks">
               <img class="" src="../assets/images/p1_s1_5.webp" alt="" />
             </div>
@@ -72,26 +82,33 @@ const TabItem = [
     </section>
     <section class="sub01-2">
       <div class="inner">
-        <div class="sub-title-wrap tac">
+        <div class="sub-title-wrap tac" data-aos="fade-up" data-aos-delay="" data-aos-duration="1000">
           <h2>Multimodal Data Fusion</h2>
         </div>
         <ul class="check-menu">
-          <li>
+          <li data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
             <span class="checkmark">
               <img class="" src="../assets/images/p2_check.svg" alt="" />
             </span>
             Data Modeling
           </li>
-          <li>
+          <li data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
             <span class="checkmark">
               <img class="" src="../assets/images/p2_check.svg" alt="" />
             </span>
             Opportunities
           </li>
         </ul>
-        <img class="" src="../assets/images/p1_s2_1.webp" alt="" />
+        <img
+          data-aos="fade-up"
+          data-aos-delay="300"
+          data-aos-duration="1000"
+          class=""
+          src="../assets/images/p1_s2_1.webp"
+          alt=""
+        />
 
-        <div class="btn">Multimodal LLM Platform</div>
+        <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000" class="btn">Multimodal LLM Platform</div>
       </div>
     </section>
   </div>

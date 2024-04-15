@@ -4,14 +4,14 @@ import Subbanner from '../../components/Subbanner.astro';
 import SubTab from '../../components/SubTab.astro';
 import '../../css/ui.css';
 
-const pageTitle = 'MEDILMM > MultiModalData';
-const idName = 'MultiModalData';
+const pageTitle = 'MEDILMM > Our Platform';
+const idName = 'Our Platform';
 const pageHeader = 'sub';
 const bannerItem = {
-  url: '../../public/assets/images/subbanner01.webp',
-  title: 'Multi Modal Data',
-  text: `기존의 한정적인 데이터 처리와 AI 기술을 뛰어넘어
-멀티 모달 데이터를 수집, 변환, 처리하여 최신 생성형 AI 기술에 최적화`,
+  url: '../../public/assets/images/img_coreTechnology.webp',
+  title: 'Our Platform',
+  text: `메디렘 CAD 플랫폼은 UVL트랜스포머와 MIT의 SimPLE로 경량화 및
+파인튜닝된 LMM을 바탕으로 메디컬 도메인에 특화된 Generative AI 솔루션을 제공`,
 };
 
 const isActive = 'active03';
@@ -26,5 +26,115 @@ const TabItem = [
   <!-- 컨텐츠가 들어갈 부분 -->
   <Subbanner bannerItem={bannerItem} />
   <SubTab isActive={isActive} TabItem={TabItem} />
+
+  <div class="About sub-inner inner">
+    <div class="sub-title-wrap custom tac">
+      <h2 data-aos="fade-up" data-aos-delay="" data-aos-duration="1000">메디렘, AI 필터링 기술</h2>
+      <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+        방대한 해외 의료 데이터를 자사 AI로 클렌징, 필터링하여 <br />
+        글로벌 데이터 파이프라인과 DB 분석 기술을 통해 선별 데이터를 제공
+      </p>
+    </div>
+
+    <div class="model-list-wrap">
+      <div class="desc-txt" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
+        <img class="" src="../assets/images/p3_logo.svg" alt="" />
+        <span class="bar">|</span>
+        MIT SimPLE model
+      </div>
+      <ul class="list">
+        <li data-aos="fade-up" data-aos-delay="" data-aos-duration="1000">
+          <dl>
+            <dt>하버드 의대</dt>
+            <dd>
+              <ul>
+                <li>· 의대 데이터로 PoC 진행 예정</li>
+                <li>· Mou를 통한 공동 사업 진행 예정</li>
+              </ul>
+            </dd>
+          </dl>
+        </li>
+        <li data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000">
+          <dl>
+            <dt>하버드 보건대</dt>
+            <dd>
+              <ul>
+                <li>· 기술 조언 및 공동 PoC</li>
+                <li>· 펀딩 여부 / 사업 참여 여부 판단 중</li>
+              </ul>
+            </dd>
+          </dl>
+        </li>
+        <li data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+          <dl>
+            <dt>분당서울대학교 병원</dt>
+            <dd>
+              <ul>
+                <li>· 병원 데이터로 PoC 진행 여부 고려 중</li>
+                <li>· 사업 투자 여부 고려 중</li>
+              </ul>
+            </dd>
+          </dl>
+        </li>
+        <li data-aos="fade-up" data-aos-delay="450" data-aos-duration="1000">
+          <dl>
+            <dt>씨젠의료재단</dt>
+            <dd>
+              <ul>
+                <li>· 의료 재단 데이터로 PoC 진행 예정</li>
+                <li>· Mou를 통한 공동사업 진행 예정</li>
+                <li>· 사업에 투자 여부 고려 중</li>
+              </ul>
+            </dd>
+          </dl>
+        </li>
+      </ul>
+    </div>
+
+    <div class="arrow-container tac">
+      <img class="" src="../assets/images/p3_arrow.svg" alt="" />
+    </div>
+
+    <div class="model-list-wrap second">
+      <div class="desc-txt" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
+        Cleansing & Analysis를 통한 선별 데이터 제공
+      </div>
+      <ul class="list">
+        <li data-aos="fade-up" data-aos-delay="" data-aos-duration="1000">
+          <dl>
+            <dt>
+              <img class="" src="../assets/images/p3_icon1.svg" alt="" />
+              병원 (맞춤의료)
+            </dt>
+          </dl>
+        </li>
+        <li data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000">
+          <dl>
+            <dt>
+              <img class="" src="../assets/images/p3_icon2.svg" alt="" />
+              CRO 회사
+            </dt>
+          </dl>
+        </li>
+        <li data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+          <dl>
+            <dt>
+              <img class="" src="../assets/images/p3_icon3.svg" alt="" />
+              의료기기 제조사
+            </dt>
+          </dl>
+        </li>
+        <li data-aos="fade-up" data-aos-delay="450" data-aos-duration="1000">
+          <dl>
+            <dt>
+              <img class="" src="../assets/images/p3_icon4.svg" alt="" />
+              제약회사
+            </dt>
+          </dl>
+        </li>
+      </ul>
+    </div>
+  </div>
+
   <!-- 컨텐츠가 들어갈 부분 eee -->
 </Layout>
