@@ -1,0 +1,65 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../css/ui.css';
+import Subbanner from '../../components/Subbanner.astro';
+import SubTab from '../../components/SubTab.astro';
+
+const pageTitle = 'Contact';
+const idName = 'contact';
+const bannerItem = {
+  url: '../assets/images/img_board_01.webp',
+  title: 'Contact',
+  text: '메디렘에게 궁금한 점을 자유롭게 문의해보세요',
+};
+
+const isActive = 'active03';
+const TabItem = [
+  { name: 'MediLMM CEO', url: './MediLMMCEO.html', activeId: 'active01' },
+  { name: 'Board', url: './Board.html', activeId: 'active02' },
+  { name: 'Contact', url: './Contact.html', activeId: 'active03' },
+];
+---
+
+<Layout pageTitle={pageTitle} idName={idName}>
+  <!-- 컨텐츠가 들어갈 부분 -->
+  <Subbanner bannerItem={bannerItem} />
+  <SubTab isActive={isActive} TabItem={TabItem} />
+  <div class="co-contact-section">
+    <div class="inner">
+      <div class="co-contact-info-wrap">
+        <div class="ttl-grp">
+          <div>
+            <p class="tt">MEDILMM</p>
+            <p class="ttl">
+              메디렘은 최고의<br />
+              의료정보 제공을 목표로<br />
+              나아가고 있습니다
+            </p>
+          </div>
+          <div>
+            <p class="info-ttl">office information</p>
+            <div class="info-list">
+              <span class="info-tt">Adress.</span>
+              <span class="info-desc">서울시 강남구 테헤란로, 82길 15 349호</span>
+            </div>
+            <div class="info-list">
+              <span class="info-tt">Email.</span>
+              <span class="info-desc">yssuh@medilmm.com</span>
+            </div>
+            <div class="info-list">
+              <span class="info-tt">Call.</span>
+              <span class="info-desc">02-5220-2593</span>
+            </div>
+          </div>
+        </div>
+        <video class="video-grp" autoplay loop muted>
+          <source class="video" src="../assets/video/p3_s1.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+    <div class="co-contact-wrap">
+      <div class="inner"></div>
+    </div>
+  </div>
+</Layout>
+<!-- 컨텐츠가 들어갈 부분 eee -->

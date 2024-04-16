@@ -1,0 +1,31 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../css/ui.css';
+import Subbanner from '../../components/Subbanner.astro';
+import SubTab from '../../components/SubTab.astro';
+
+const pageTitle = 'MediLMMCEO';
+const idName = 'ceo';
+const bannerItem = {
+  url: '../assets/images/img_board_01.webp',
+  title: 'Board',
+  text: '메디렘의 다양한 소식들 확인',
+};
+
+const isActive = 'active02';
+const TabItem = [
+  { name: 'MediLMM CEO', url: './MediLMMCEO.html', activeId: 'active01' },
+  { name: 'Board', url: './Board.html', activeId: 'active02' },
+  { name: 'Contact', url: './Contact.html', activeId: 'active03' },
+];
+---
+
+<Layout pageTitle={pageTitle} idName={idName}>
+  <!-- 컨텐츠가 들어갈 부분 -->
+  <Subbanner bannerItem={bannerItem} />
+  <SubTab isActive={isActive} TabItem={TabItem} />
+  <div class="co-board-detail-section">
+    <div class="inner"></div>
+  </div>
+</Layout>
+<!-- 컨텐츠가 들어갈 부분 eee -->

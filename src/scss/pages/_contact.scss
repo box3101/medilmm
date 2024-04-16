@@ -1,0 +1,356 @@
+// MediLMM CEO
+.co-ceo-wrap {
+  padding-top: 198px;
+
+  .ttl-grp {
+    position: relative;
+
+    .ttl {
+      margin-bottom: 72px;
+      font-size: 2.9375rem;
+      font-weight: 700;
+      color: #000;
+    }
+
+    .video-grp {
+      position: absolute;
+      z-index: -1;
+      top: 57px;
+      left: 155px;
+      transform: rotate(-8deg);
+      width: 34.9375rem;
+      height: 6.5625rem;
+
+      .video {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .desc {
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #000;
+
+    &.type-02 {
+      margin: 30px 0;
+    }
+
+    .bold-txt {
+      font-weight: 700;
+    }
+
+    .highlight {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: auto;
+        bottom: -6px;
+        left: -3px;
+        width: 102%;
+        height: 18px;
+        background-color: rgba(#02c6ff, 0.15);
+      }
+    }
+  }
+}
+
+.co-ceo-career-wrap {
+  padding: 49px 0;
+  margin-top: 55px;
+  background-color: #eff4f8;
+  border-radius: 10px 10px 0 0;
+
+  .co-ceo-career-conts {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 55px;
+
+    .img-grp {
+      position: absolute;
+      top: auto;
+      right: -23px;
+      bottom: -51px;
+      left: auto;
+    }
+  }
+
+  .ttl-grp {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+
+    .line {
+      width: 22px;
+      height: 5px;
+      background-color: #02c6ff;
+      transform: rotate(-45deg);
+    }
+
+    .ttl {
+      font-size: 23px;
+      font-weight: 700;
+      color: #000;
+    }
+  }
+
+  .career-list {
+    .txt {
+      margin-top: 14px;
+      font-size: 1.1875rem;
+      font-weight: 400;
+      color: #000;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+// board
+.co-board-section {
+  padding: 110px 0 180px;
+
+  .co-board-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 55px;
+
+    .img-grp {
+      width: 700px;
+      height: 408px;
+      flex-shrink: 0;
+
+      .img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .ttl {
+      overflow: hidden;
+      display: -webkit-box;
+      font-size: 2.9375rem;
+      font-weight: 700;
+      color: #000;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 3;
+      word-wrap: break-word;
+      white-space: normal;
+      -webkit-box-orient: vertical;
+      word-break: keep-all; // 문단으로 끊어져서 줄바꿈 됨
+    }
+
+    .desc {
+      overflow: hidden;
+      display: -webkit-box;
+      margin-top: 26px;
+      font-size: 1.4375rem;
+      font-weight: 500;
+      color: rgba(#000, 0.7);
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 4;
+      word-wrap: break-word;
+      white-space: normal;
+      -webkit-box-orient: vertical;
+      word-break: keep-all; // 문단으로 끊어져서 줄바꿈 됨
+    }
+  }
+
+  .co-board-news-wrap {
+    padding-top: 150px;
+
+    .ttl {
+      margin-bottom: 50px;
+      font-family: 'pretendard' sans-serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: #000;
+    }
+
+    .co-board-news-conts {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 30px;
+      flex-wrap: wrap;
+
+      .grp {
+        width: calc((100% - 60px) / 3);
+        cursor: pointer;
+
+        .tt {
+          overflow: hidden;
+          display: -webkit-box;
+          margin-top: 20px;
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: #000;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 2;
+          word-wrap: break-word;
+          white-space: normal;
+          -webkit-box-orient: vertical;
+          word-break: keep-all; // 문단으로 끊어져서 줄바꿈 됨
+        }
+
+        .date-grp {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 8px;
+          margin-top: 16px;
+
+          .date {
+            font-size: 18px;
+            font-weight: 500;
+            color: rgba(#5d5d5d, 0.7);
+          }
+        }
+      }
+    }
+  }
+}
+
+// contact
+.co-contact-section {
+  .co-contact-info-wrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 35px;
+    padding: 130px 0 158px;
+
+    .ttl-grp {
+      flex-shrink: 0;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+      gap: 116px;
+    }
+
+    .tt {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #02c6ff;
+    }
+
+    .ttl {
+      font-size: 2.9375rem;
+      font-weight: 700;
+      color: #000;
+    }
+
+    .info-ttl {
+      position: relative;
+      padding-left: 13px;
+      margin-bottom: 21px;
+      font-size: 1.5625rem;
+      font-weight: 600;
+      color: #000;
+
+      &::before {
+        content: '';
+        z-index: 1;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 4px;
+        height: 26px;
+        background-color: #02c6ff;
+        transform: translateY(-50%);
+      }
+    }
+
+    .info-list {
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .info-tt {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: rgba(#000, 0.49);
+      }
+
+      .info-desc {
+        margin-left: 12px;
+        font-size: 1.125rem;
+        font-weight: 400;
+        color: #000;
+      }
+    }
+  }
+
+  .co-contact-wrap {
+    @include bg-url(img, 'p3_bg.webp');
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+// error page
+.page-error-section {
+  @include bg-url(img, 'error_bg.webp');
+
+  padding: 243px 0 189px;
+  background-size: cover;
+
+  .img-grp-01 {
+    width: 161px;
+    height: 108px;
+    margin: 0 auto;
+  }
+
+  .img-grp-02 {
+    width: 300px;
+    height: 244px;
+    margin: 36px auto 0;
+  }
+
+  .img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .error-ttl-grp {
+    width: 600px;
+    padding: 38px;
+    margin: -45px auto 0;
+    border-radius: 15px;
+    border: 1px solid #fff;
+    background-color: rgba(#fff, 0.4);
+    text-align: center;
+
+    .error-ttl {
+      font-size: 1.625rem;
+      font-weight: 700;
+      color: #000;
+    }
+
+    .error-desc {
+      margin-top: 20px;
+      font-size: 1.125rem;
+      font-weight: 500;
+      color: #2e2e2e;
+    }
+  }
+}

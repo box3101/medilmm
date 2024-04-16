@@ -1,0 +1,83 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../css/ui.css';
+import Subbanner from '../../components/Subbanner.astro';
+import SubTab from '../../components/SubTab.astro';
+
+const pageTitle = 'MediLMMCEO';
+const idName = 'ceo';
+const bannerItem = {
+  url: '../assets/images/img_board_01.webp',
+  title: 'MediLMMCEO',
+  text: '메디렘의 시작, CEO소개',
+};
+
+const isActive = 'active01';
+const TabItem = [
+  { name: 'MediLMM CEO', url: './MediLMMCEO.html', activeId: 'active01' },
+  { name: 'Board', url: './Board.html', activeId: 'active02' },
+  { name: 'Contact', url: './Contact.html', activeId: 'active03' },
+];
+---
+
+<Layout pageTitle={pageTitle} idName={idName}>
+  <!-- 컨텐츠가 들어갈 부분 -->
+  <Subbanner bannerItem={bannerItem} />
+  <SubTab isActive={isActive} TabItem={TabItem} />
+  <div class="co-ceo-section">
+    <div class="co-ceo-wrap">
+      <div class="inner">
+        <div class="ttl-grp">
+          <p class="ttl">
+            안녕하세요 메디렘 대표<br />
+            서영상 입니다
+          </p>
+          <video class="video-grp" autoplay loop muted>
+            <source class="video" src="../assets/video/video_ceo_01.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <p class="desc">
+          저희 메디렘은 의료 헬스케어(Medi)와 거대 멀티 모달 모델(LMM)의 결합으로 네이밍<br />
+          되었으며 <strong class="bold-txt highlight"
+            >거대 멀티 모달 모델을 통하여 의료 헬스케어 서비스를 제공한다는 포부를 담고 있습니다</strong
+          >
+        </p>
+        <p class="desc type-02">
+          최근 인공지능과 챗 gpt에 대한 서적을 집필했으며 <strong class="bold-txt">헬스케어와 인공지능 분야</strong
+          >에<br />
+          독보적인 지식을 보유하고 있습니다. 네이처지에 논문이 실리고 코로나 관련 보고서가<br />
+          질병 정부에서 국가 정책 가이드 라인드로 채택이 되는 등의 트랙 레코드를<br />
+          바탕으로 <strong class="bold-txt">헬스케어 관련 분야의 풍부한 지식을 보유하고 있습니다</strong>
+        </p>
+
+        <p class="desc type-03">
+          특히, 임상 분야에 획기적인 생성형 AI 기반의 DX를 선두 하기 위해 보유한 지식과<br />
+          네트워크, 인프라를 기반으로 사업을 시작했으며 현재는 AI CRO에 관련된 최신<br />
+          <strong class="highlight">인공지능 기술을 적용한 솔루션을 개발하고 있습니다</strong>
+        </p>
+      </div>
+    </div>
+    <div class="co-ceo-career-wrap">
+      <div class="inner">
+        <div class="co-ceo-career-conts">
+          <div class="img-grp">
+            <img class="img" src="../assets/images/img_ceo_01.webp" alt="" />
+          </div>
+          <div class="ttl-grp">
+            <span class="line"></span>
+            <p class="ttl">주요 경력</p>
+          </div>
+          <div class="career-list">
+            <p class="txt">· &nbsp;前 씨젠 연구소장</p>
+            <p class="txt">· &nbsp;MIT 인공지능 과정 수료</p>
+            <p class="txt">· &nbsp;존슨앤웨일즈 대학 학사, 정보과학</p>
+            <p class="txt">· &nbsp;하버드대 박사 수료, Population Health</p>
+            <p class="txt">· &nbsp;하버드대학 석사, Epidemiology</p>
+            <p class="txt">· &nbsp;현 MEDILMM 대표</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+<!-- 컨텐츠가 들어갈 부분 eee -->

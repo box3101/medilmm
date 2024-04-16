@@ -4,20 +4,19 @@ import '../../css/ui.css';
 import Subbanner from '../../components/Subbanner.astro';
 import SubTab from '../../components/SubTab.astro';
 
-const pageTitle = 'MEDILMM > Board';
-const idName = 'board';
-const pageHeader = 'sub';
+const pageTitle = 'MediLMMCEO';
+const idName = 'ceo';
 const bannerItem = {
-  url: '../assets/images/img_strategy_01.webp',
-  title: 'Business Stategy',
-  text: 'Cleansing&Analysis Data를 제약회사와 연구기관, CRO로 전송하여 <br>임상시험 데이터 시장과 CRO 서비스 시장으로 메디렘 기술 도입',
+  url: '../assets/images/img_board_01.webp',
+  title: 'Board',
+  text: '메디렘의 다양한 소식들 확인',
 };
 
 const isActive = 'active02';
 const TabItem = [
-  { name: 'Overview', url: './Overview.html', activeId: 'active01' },
-  { name: 'Business Strategy', url: './Board.html', activeId: 'active02' },
-  { name: 'Marketing Strategy', url: './MarketingStrategy.html', activeId: 'active03' },
+  { name: 'MediLMM CEO', url: './MediLMMCEO.html', activeId: 'active01' },
+  { name: 'Board', url: './Board.html', activeId: 'active02' },
+  { name: 'Contact', url: './Contact.html', activeId: 'active03' },
 ];
 ---
 
@@ -25,109 +24,41 @@ const TabItem = [
   <!-- 컨텐츠가 들어갈 부분 -->
   <Subbanner bannerItem={bannerItem} />
   <SubTab isActive={isActive} TabItem={TabItem} />
-  <div class="st-bs-top-wrap">
+  <div class="co-board-section">
     <div class="inner">
-      <p class="sub-page-ttl" data-aos="fade-up" data-aos-duration="1000">Estimated bm structure</p>
-      <p class="sub-page-desc" data-aos="fade-up" data-aos-duration="1000">글로벌 헬스 데이터 확보를 목표로 합니다</p>
-      <div class="sb-bs-top-conts" data-aos="fade-up" data-aos-duration="1000">
-        <div class="grp">
-          <div class="card">
-            <p class="txt">소비자</p>
-            <p class="txt mt">해외 협력 업체</p>
-          </div>
-          <i class="icon icon-arrow-sm scroll-horizontal-img"></i>
-          <p class="circle type-01">
-            사용자<br />건강 데이터
-          </p>
-          <i class="icon icon-arrow scroll-horizontal-img"></i>
-          <div class="lg-circle-grp">
-            <div class="lg-circle">
-              <div class="img-grp">
-                <img class="img" src="../assets/images/img_strategy_06.svg" alt="" />
-              </div>
-              <span class="ani-circle type-01"></span>
-              <span class="ani-circle type-02"></span>
-            </div>
-          </div>
-          <span class="icon-reverse">
-            <i class="icon icon-arrow scroll-horizontal-img"></i>
-          </span>
-          <p class="circle type-02">
-            건강<br />데이터 구매
-          </p>
-          <span class="icon-reverse">
-            <i class="icon icon-arrow-sm scroll-horizontal-img"></i>
-          </span>
-          <div class="card type-gradient">
-            <p class="txt">제약회사</p>
-            <p class="txt mt">연구기관</p>
-            <p class="txt mt">CRO</p>
-          </div>
+      <div class="co-board-wrap">
+        <div class="img-grp">
+          <img class="img" src="../assets/images/p2_detail.webp" alt="" />
         </div>
-        <div class="grp-02">
-          <div class="all">
-            <div class="left">
-              <div class="icon-bottom">
-                <i class="icon icon-arrow scroll-horizontal-img"></i>
-              </div>
-              <p class="ttl-card type-01">사용자 개인정보 비식별화 후 데이터 저장</p>
-              <div class="icon-bottom">
-                <i class="icon icon-arrow-sm scroll-horizontal-img"></i>
-              </div>
+        <div>
+          <p class="ttl">
+            혁신적인 데이터 활용,<br />
+            메디렘을 소개합니다.
+          </p>
+          <p class="desc">
+            저희 메디렘은 의료 헬스케어(Medi)와 거대 멀티<br />
+            모달 모델(LMM)의 결합으로 네이밍 되었으며 거대<br />
+            멀티 모달 모델을 통하여 의료 헬스케어 서비스를<br />
+            제공한다는 포부를 담고 있습니다. 내용 4줄까지 제공한다는 포부를 담고 있습니다. 내용 4줄까지
+          </p>
+        </div>
+      </div>
+      <div class="co-board-news-wrap">
+        <p class="ttl">Upcoming News</p>
+        <div class="co-board-news-conts">
+          <div class="grp">
+            <div class="img-grp">
+              <img class="img" src="../assets/images/p2_2.webp" />
             </div>
-            <div class="grp type-bottom">
-              <p class="ttl-card type-02">Cleansing & Analysis Data</p>
-              <span class="line"></span>
-              <p class="ttl-card type-01">비식별된 사용자 건강 데이터 전송</p>
-              <span class="line type-02">
-                <div class="icon-top">
-                  <i class="icon icon-arrow-sm scroll-horizontal-img"></i>
-                </div>
-              </span>
+            <p class="tt">[메디렘 소개] 데이터 보안의 새로운 혁신, 메디렘이란?</p>
+            <div class="date-grp">
+              <i class="icon icon-date"></i>
+              <p class="date">2024.02.29</p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="st-bs-bottom-wrap">
-    <div class="inner">
-      <p class="sub-page-ttl type-wh" data-aos="fade-up" data-aos-duration="1000">Target market</p>
-      <p class="sub-page-desc type-wh" data-aos="fade-up" data-aos-duration="1000">
-        거래 규모를 기준으로 2025년 기준 7,314억 달러, 임상시험 CRO 서비스를 꿈꿉니다
-      </p>
-      <div class="st-bs-conts">
-        <div class="grp" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-          <p class="step">STEP 01</p>
-          <p class="num"><strong class="lg">500</strong> 억 달러</p>
-          <p class="ttl">10% : 임상시험 데이터 서비스 시장</p>
-          <p class="txt">
-            국내제약, 바이오, 연구기관 (대학포함) <br />
-            및 주요 병원 시장의 20% 점유
-          </p>
-        </div>
-        <div class="grp type-02" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-          <p class="step">STEP 02</p>
-          <p class="num"><strong class="lg">5,250</strong> 억 달러</p>
-          <p class="ttl">임상시험 데이터 서비스 시장</p>
-          <p class="txt">
-            2020년 : 50억 달러에서 연평균 32.2% <br />
-            성장 전망 (글로벌 시장)​ <br />
-            국내 시장 : 글로벌 시장에서의 <br />
-            국내 임상등록비율 3.2%를 적용, 분석​
-          </p>
-        </div>
-        <div class="grp" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-          <p class="step">STEP 03</p>
-          <p class="num"><strong class="lg">7,314</strong> 억 달러</p>
-          <p class="ttl">임상시험 CRO 서비스 시장</p>
-          <p class="txt">
-            2018년 : 4,551억 원에서 <br />
-            연평균 11.5% 성장 전망​
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- 컨텐츠가 들어갈 부분 eee -->
 </Layout>
+<!-- 컨텐츠가 들어갈 부분 eee -->

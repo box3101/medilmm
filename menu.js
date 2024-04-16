@@ -29,7 +29,7 @@ const menu = [
     url: 'Overview',
     items: [
       { url: 'Overview', title: 'Overview' },
-      { url: 'Board', title: 'BusinessStrategy' },
+      { url: 'BusinessStrategy', title: 'BusinessStrategy' },
       { url: 'MarketingStrategy', title: 'Marketing Strategy' },
     ],
     active2: 'on',
@@ -49,11 +49,21 @@ const menu = [
     title: 'Contact us',
     url: 'Contactus',
     active2: 'on',
-    // items: [
-    //   { url: 'MediLMMCEO', title: 'MediLMM CEO' },
-    //   { url: 'Board', title: 'Board' },
-    //   { url: 'Contact', title: 'Contact' },
-    // ],
+    items: [
+      { url: 'MediLMMCEO', title: 'MediLMM CEO' },
+      { url: 'Board', title: 'Board' },
+      { url: 'BoardDetail', title: 'Board Detail' },
+      { url: 'Contact', title: 'Contact' },
+    ],
+  },
+  {
+    category: 'sub',
+    title: 'error',
+    url: 'PageError',
+    items: [
+      { url: 'PageError', title: 'Page Error' },
+      { url: 'ServerError', title: 'Server Error' },
+    ],
   },
 ];
 
