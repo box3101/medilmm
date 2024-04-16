@@ -100,6 +100,12 @@
               top: 1.75rem;
               right: 0.8125rem;
             }
+            &:hover {
+              @include make-after {
+                content: 'TM';
+                color: $clr-sec;
+              }
+            }
           }
 
           &.on2 {
@@ -547,6 +553,21 @@
   font-weight: 600;
   font-size: 3.125rem;
   color: #fff;
+  display: inline;
+  position: relative;
+
+  &.on {
+    @include make-after {
+      display: inline-block;
+      content: 'TM';
+      top: 0.5em;
+      right: -1.8375rem;
+      font-size: 1.325rem;
+      font-weight: 600;
+      color: #fff;
+      position: absolute;
+    }
+  }
 
   @include media($tab, max) {
     font-size: 35px;
@@ -585,9 +606,13 @@
   color: #d1e8ff;
   white-space: pre-line;
   line-height: 1.5;
+  display: inline-block;
   img {
     position: relative;
     top: -0.25rem;
+  }
+  em {
+    font-size: 0.9rem;
   }
 }
 

@@ -7,7 +7,12 @@ const { bannerItem } = Astro.props;
     <div class="wrap">
       <div class="div" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
         <article>
-          <p class="sub-banner-tit f-pop">{bannerItem.title}</p>
+          {
+            bannerItem.isActive == true ?
+            <p class=`sub-banner-tit on f-pop`>{bannerItem.title}</p>
+            :
+            <p class=`sub-banner-tit f-pop`>{bannerItem.title}</p>
+          }
         </article>
         {
           bannerItem.moText ? (
@@ -16,7 +21,9 @@ const { bannerItem } = Astro.props;
               <p class="sub-banner-txt is-tab-show">{bannerItem.moText}</p>
             </>
           ) : (
-            <p class="sub-banner-txt">{bannerItem.text}</p>
+            <p class="sub-banner-txt">
+              {bannerItem.text}{bannerItem.cmText && <em><sup>TM</sup></em>}
+            </p>
           )
         }
         <!-- <img class="" src=`${bannerItem.img}` alt="" /> -->

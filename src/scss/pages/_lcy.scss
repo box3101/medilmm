@@ -293,7 +293,7 @@ ul.check-menu {
     display: inline-block;
     content: 'TM';
     right: -0.9375rem;
-    font-size: 0.8125rem;
+    font-size: 0.7125rem;
     font-weight: 500;
     color: #c1c1c1;
     position: absolute;
@@ -381,6 +381,18 @@ body.isOpen {
     background-size: cover;
     z-index: 13;
     position: relative;
+    .inner {
+      position: relative;
+      @include make-before {
+        width: 520px;
+        height: 390px;
+        position: absolute;
+        bottom: -30px;
+        right: 0;
+        @include bg-url('img', 'p2_s2_mockup.webp');
+        z-index: 10;
+      }
+    }
     h3 {
       font-size: 20px;
       font-weight: 600;
@@ -400,6 +412,7 @@ body.isOpen {
       display: flex;
       flex-wrap: wrap;
       gap: 11px;
+      position: relative;
       li {
         flex: 1 1 calc(50% - 5.5px);
         border-radius: 7px;
@@ -409,10 +422,13 @@ body.isOpen {
         padding-left: 30px;
         position: relative;
         margin-bottom: 10px;
-        @include bg-url('img', 'bg-uvl.png');
+        @include bg-url('img', 'bg-uvl.png', 'cover');
+        background-position: top;
         &:last-of-type {
           margin-bottom: 0;
           flex: 1 1 100%;
+          @include bg-url('img', 'bg-uvl-last.png', 'cover');
+          background-position: top;
         }
         dl {
           position: relative;
@@ -433,6 +449,139 @@ body.isOpen {
           }
         }
       }
+    }
+  }
+}
+
+.CADCatchTM {
+  .se01 {
+    padding-bottom: 162px;
+    .analyzing-wrap {
+      padding: 28px 51px;
+      max-width: 730px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 3px 5px 15px rgba(76, 77, 80, 0.09);
+      margin-top: -100px;
+      position: relative;
+      .flx {
+        .img {
+          img {
+            width: 88px;
+          }
+        }
+
+        .txt-wrap {
+          .tit {
+            font-size: 22px;
+            font-weight: 500;
+            color: #000;
+            margin-bottom: 17px;
+          }
+
+          .loading.flx.ais.gap8 {
+            width: 100%;
+            display: flex;
+            gap: 8px;
+          }
+
+          .loading.flx.ais.gap8 img {
+            margin-top: 7px;
+            width: 20px;
+            animation: spin 2s linear infinite;
+
+            @keyframes spin {
+              from {
+                transform: rotate(0deg);
+              }
+              to {
+                transform: rotate(360deg);
+              }
+            }
+          }
+
+          .loading.flx.ais.gap8 .txt-wrap {
+            width: 100%;
+          }
+
+          .loading.flx.ais.gap8 p {
+            font-size: 21px;
+            font-weight: 600;
+            color: $clr-sec; /* Replace with actual color value */
+          }
+
+          .loading.flx.ais.gap8 .bar {
+            margin-top: 12px;
+            width: 100%;
+            height: 4px;
+            border-radius: 5px;
+            background: #eee;
+            overflow: hidden;
+            position: relative;
+          }
+
+          .loading.flx.ais.gap8 .bar::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: $clr-sec;
+            animation: fillEffect 2s infinite linear;
+          }
+
+          @keyframes fillEffect {
+            0% {
+              transform: translateX(-100%);
+            }
+            100% {
+              transform: translateX(100%);
+            }
+          }
+        }
+      }
+    }
+  }
+  .se02 {
+    padding: 181px 0;
+    @include bg-url('img', 'CADCatchTM-bg.jpg', 'cover');
+    .section-cnt {
+      padding: 23px 13px;
+      padding-bottom: 14px;
+      max-width: 620px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      h2 {
+        font-size: 25px;
+        font-weight: 700;
+        color: #fff;
+        text-align: center;
+      }
+      .buttons-cnt {
+        display: flex;
+        gap: 10px;
+        margin-top: 21px;
+        li {
+          flex: 0 0 calc(25% - (10px * 3 / 4));
+          text-align: center;
+          height: 70px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 18px;
+          font-weight: 500;
+          color: #fff;
+          background: #000;
+          border-radius: 6px;
+        }
+      }
+    }
+    .icon-arrow {
+      opacity: 1;
     }
   }
 }

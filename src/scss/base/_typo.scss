@@ -73,6 +73,11 @@
 
 .sub-title-wrap {
   margin-bottom: 53px;
+  &.c-white {
+    > * {
+      color: #fff;
+    }
+  }
   &.custom p {
     @include make-before {
       display: none;
