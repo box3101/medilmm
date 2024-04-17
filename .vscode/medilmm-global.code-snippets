@@ -60,5 +60,9 @@
   "bb": {
     "prefix": "bb",
     "body": ["border-bottom: 1px solid $1;"]
+  },
+  "pc": {
+    "prefix": "pc",
+    "body": ["place-content: center;"]
   }
 }

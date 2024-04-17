@@ -7,7 +7,7 @@
       padding: 2.5625rem 3.9375rem;
       border-radius: 0.625rem;
       background: #f0f3f7;
-      margin-top: 2.1875rem;
+      margin-top: -1rem;
       gap: 4.375rem;
       box-sizing: border-box;
       h3 {
@@ -280,9 +280,11 @@ ul.check-menu {
   margin-top: 1.875rem;
   margin-bottom: 4.375rem;
   li {
+    font-size: 25px;
+    font-weight: 600;
     .checkmark {
       display: inline-block;
-      margin-right: 0.75rem;
+      margin-right: 0.25rem;
     }
   }
 }
@@ -756,18 +758,240 @@ body.isOpen {
   }
 }
 
+/* ///////////////////////////////////////////////////////
+web
+*/ ////////////////////////////////////////////////////////
+@include media($web, max) {
+  .MultiModalData .sub-inner img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%) translateZ(0) !important;
+    width: 100%;
+  }
+  .web-w100 {
+    width: 100%;
+  }
+  .MultiModalData .sub01-1 .task-modeling {
+    flex-direction: column;
+    padding: 20px 12px;
+    padding-bottom: 15px;
+  }
+  .MultiModalData .sub01-1 .task-modeling h3 {
+    text-align: center;
+    line-height: 1.5;
+  }
+  .MultiModalData .sub01-1 .task-modeling p {
+    text-align: center;
+  }
+  .modal__img img {
+    width: 100%;
+  }
+  .modal .modal__cnt {
+    max-width: 100%;
+    width: 90%;
+  }
+}
+
+/* ///////////////////////////////////////////////////////
+tab
+*/ ////////////////////////////////////////////////////////
 @include media($tab, max) {
+  .modal__img {
+    overflow-y: scroll;
+    height: calc(85vh - 300px);
+  }
+  .modal__close {
+    z-index: 1;
+    top: -17px;
+    right: -15px;
+    width: 34px;
+    height: 34px;
+    font-size: 0px;
+    text-indent: -9999px;
+    @include bg-url('img', 'mo_pop_close.svg');
+  }
+  .modal .modal__cnt {
+    max-height: 85vh;
+  }
+  .About .model-list-wrap.second ul.list > li dt {
+    place-content: center;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .About .model-list-wrap.second ul.list > li {
+    display: flex;
+    justify-content: start;
+    height: 65px;
+    padding-left: 25px;
+    flex: none;
+    img {
+      width: 30px;
+    }
+  }
+  .About .model-list-wrap ul.list > li dl dt {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .About .model-list-wrap ul.list > li dl dd ul li {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 7px;
+  }
+  .About .model-list-wrap {
+    margin-top: 35px;
+    padding-top: 60px;
+    ul.list {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+  .About .model-list-wrap .desc-txt {
+    border-radius: 6px 6px 0 0;
+    height: 50px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    place-content: center;
+    span.bar {
+      width: 1px;
+      margin: 0 14px;
+    }
+    img {
+      width: 120px;
+    }
+  }
+  .About {
+    padding-bottom: 65px;
+  }
+  .About .mediIMM-system ul.check-menu.custom li {
+    height: 55px;
+    line-height: 1;
+    align-items: center;
+    display: flex;
+    font-size: 17px;
+    font-weight: 600;
+    img {
+      width: 26px;
+    }
+  }
+  .About .mediIMM-system .txt-wrap {
+    flex: 0 0 100%;
+    .is-tab-show {
+      width: 100%;
+      position: relative;
+      left: -20px;
+    }
+  }
+  .About .mediIMM-system .txt-wrap {
+    text-align: center;
+    h1 {
+      font-size: 30px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 15px;
+      font-weight: 400;
+    }
+  }
+  .sub-banner .wrap {
+    text-align: center;
+  }
+  .sub-title-wrap {
+    margin-bottom: 15px;
+  }
+  ul.check-menu {
+    margin-top: 15px;
+    margin-bottom: 35px;
+  }
+  ul.check-menu li .checkmark img {
+    width: 22px;
+  }
+  .MultiModalData .sub01-1 {
+    padding-bottom: 70px;
+  }
+  ul.check-menu li {
+    font-size: 15px;
+  }
+  .sub-title-wrap p:before {
+    top: 50px !important;
+    height: 2px !important;
+    width: 42px !important;
+  }
+  .sub-title-wrap p {
+    font-size: 15px;
+    margin-top: 22px !important;
+    font-weight: 500 !important;
+  }
+  .sub-title-wrap h2 {
+    font-size: 30px;
+  }
+  .mobileMenu .menuToggle {
+    top: 20px;
+    right: 15px;
+  }
+  .sub-banner-txt {
+    margin-top: 13px;
+  }
+  .sub-banner {
+    height: 25rem;
+  }
+  .sub-banner .inner {
+    height: 100%;
+  }
+  .sub-banner-tit {
+    font-size: 35px;
+  }
+  .sub-banner article.on {
+    text-align: center;
+  }
+  .MultiModalData .sub01-1 .task-modeling {
+    margin-top: 20px;
+  }
+  .MultiModalData .sub01-1 .task-modeling .model-cards .card p span {
+    font-size: 13px;
+    margin-top: 5px;
+  }
+  .MultiModalData .sub01-1 .task-modeling .model-cards .card {
+    padding: 20px 0px;
+  }
+  .MultiModalData .sub01-1 .task-modeling .model-cards .card p {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 13px;
+  }
+  .MultiModalData .sub01-1 .task-modeling h3 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .MultiModalData .sub01-1 .task-modeling p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .MultiModalData .sub01-1 .task-modeling {
+    gap: 32px;
+  }
+  .MultiModalData .sub01-1 .task-modeling .model-cards {
+    flex-wrap: wrap;
+    gap: 11px;
+  }
+  .MultiModalData .sub01-1 .task-modeling .model-cards .card {
+    flex: 1 1 calc(50% - 11px * 2 / 3);
+    height: auto;
+    padding-bottom: 13px;
+  }
   .sub-inner {
     padding-top: 3.75rem;
   }
   .sub-title-wrap h2 {
     text-align: center;
-    font-size: 1.875rem;
     font-weight: 600;
     color: #000;
   }
   .sub-title-wrap p {
-    font-size: 0.9375rem;
     font-weight: 400;
     color: #000;
     margin-top: 1.3125rem;

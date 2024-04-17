@@ -83,9 +83,9 @@
           cursor: pointer;
           padding: 0 1.5625rem;
 
-          &:hover {
-            font-weight: 600;
-          }
+          // &:hover {
+          //   font-weight: 600;
+          // }
 
           &.on {
             @include make-after {
@@ -103,7 +103,6 @@
             &:hover {
               @include make-after {
                 content: 'TM';
-                font-weight: 600;
               }
             }
           }
@@ -471,7 +470,7 @@
     left: 0.9375rem;
     top: 0.9375rem;
     img {
-      width: 11rem;
+      width: 13rem;
     }
   }
   .mobileMenu .menuToggle {
