@@ -1,20 +1,20 @@
-@include media($web, min) {
+@include media($web, max) {
   html {
-    font-size: calc(#{$base-font-size}px);
+    font-size: calc(#{$base-font-size}px - 1px);
   }
 }
 
 // 웹사이트가 모바일 사이즈일 때의 스타일
 @include media($tab, max) {
   html {
-    font-size: calc(#{$base-font-size}px - 2px);
+    font-size: calc(#{$base-font-size}px - 3px);
   }
 }
 
 // 모바일 화면에 대한 스타일
 @include media($mo, max) {
   html {
-    font-size: calc(#{$base-font-size}px - 3px);
+    font-size: calc(#{$base-font-size}px - 5px);
   }
 }
 /* =================== Title =================== */

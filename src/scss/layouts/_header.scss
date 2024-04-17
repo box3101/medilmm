@@ -84,7 +84,7 @@
           padding: 0 1.5625rem;
 
           &:hover {
-            color: $clr-sec;
+            font-weight: 600;
           }
 
           &.on {
@@ -103,7 +103,7 @@
             &:hover {
               @include make-after {
                 content: 'TM';
-                color: $clr-sec;
+                font-weight: 600;
               }
             }
           }
@@ -125,7 +125,7 @@
           transition: opacity 0.5s ease, transform 0.5s ease; /* 투명도와 위치 변화에 대한 전환 효과 적용 */
           top: 6.325rem;
           width: 100%;
-          border: 0.0625rem solid #e2e2e2;
+          border: 1px solid #e2e2e2;
           box-shadow: 0 0.4375rem 0.875rem rgba(0, 0, 0, 0.07);
           border-radius: 0.375rem;
           padding: 0.375rem;
@@ -233,8 +233,8 @@
   .menuToggle {
     background: transparent;
     position: absolute;
-    right: 15px;
-    top: 26px;
+    right: 0.9375rem;
+    top: 1.625rem;
     display: inline-block;
     cursor: pointer;
     z-index: 9999;
@@ -243,18 +243,18 @@
     .menuItem {
       background-color: #000;
       display: block;
-      height: 0.1875rem;
-      margin: 0 0 0.625rem;
+      height: 3px;
+      margin: 0 0 10px;
       transition: all 0.3s ease-in-out;
-      width: 1.875rem;
+      width: 30px;
     }
     &.open .menuItem {
-      margin: 0.0625rem 0rem 0.3125rem;
+      margin: 1px 0px 5px;
       background-color: red;
 
       &:first-child {
         transform: rotate(45deg);
-        transform-origin: 0.25rem;
+        transform-origin: 4px;
       }
 
       &:nth-child(2) {
@@ -263,7 +263,7 @@
 
       &:nth-child(3) {
         transform: rotate(-45deg);
-        transform-origin: 0.1875rem;
+        transform-origin: 3px;
       }
     }
 
@@ -302,13 +302,13 @@
             @include make-after {
               @include po-y;
               transition: all 0.3s ease-in-out;
-              right: 1.25rem;
-              width: 11px;
-              height: 11px;
+              right: 20px;
+              width: 7px;
+              height: 7px;
               border-top: 1px solid #000;
               border-right: 1px solid #000;
               transform: translateY(-50%) rotate(135deg);
-              top: 43%;
+              top: 50%;
             }
           }
         }
@@ -318,9 +318,9 @@
             color: #fff;
             @include make-after {
               @include po-y;
-              right: 1.25rem;
-              width: 11px;
-              height: 11px;
+              right: 20px;
+              width: 7px;
+              height: 7px;
               border-top: 1px solid #fff;
               border-right: 1px solid #fff;
               transform: translateY(-50%) rotate(315deg);
@@ -345,7 +345,10 @@
     margin-top: 2.5rem;
     > li {
       box-sizing: border-box;
-      border-bottom: 0.0625rem solid #f1f1f1;
+      border-bottom: 1px solid #f1f1f1;
+      &:first-of-type {
+        border-top: 1px solid #f1f1f1;
+      }
       > a {
         display: inline-block;
         padding: 1.25rem 1.25rem !important;
@@ -391,7 +394,8 @@
                 }
               }
               &:hover {
-                color: $clr-sec;
+                color: #000;
+                font-weight: 500;
               }
             }
             &:last-of-type {
@@ -431,7 +435,7 @@
   }
   .header .logo {
     position: absolute;
-    left: 15px;
+    left: 0.9375rem;
     z-index: 9999;
   }
   .header .utilmenu {
@@ -456,7 +460,7 @@
     background-color: #000;
     display: block;
     height: 2px;
-    margin: 0 0 7px;
+    margin: 0 0 5px;
     transition: all 0.3s ease-in-out;
     width: 26px;
   }
@@ -464,14 +468,14 @@
 
 @include media($mo, max) {
   .header .logo {
-    left: 15px;
-    top: 15px;
+    left: 0.9375rem;
+    top: 0.9375rem;
     img {
       width: 11rem;
     }
   }
   .mobileMenu .menuToggle {
-    top: 16px;
+    top: 1rem;
   }
 }
 
@@ -514,7 +518,7 @@
   height: 1.25rem;
   background: url('../../assets/img/btn-home.svg');
   position: relative;
-  top: -0.0625rem;
+  top: -1px;
 }
 
 .breadcrumbs a {
@@ -539,7 +543,7 @@
   background-position: center;
   height: 28.938rem;
   @include media($tab, max) {
-    height: 250px;
+    height: 15.625rem;
   }
 }
 .sub-banner .inner {
@@ -570,7 +574,7 @@
   }
 
   @include media($tab, max) {
-    font-size: 35px;
+    font-size: 2.1875rem;
     text-align: center;
   }
 }
@@ -618,11 +622,14 @@
 
 @include media($tab, max) {
   .mobileMenu .mobileNav ul li.mobileNavItem > a {
-    font-size: 18px;
     font-weight: 500;
   }
   .mobileNav > ul > li.on .dapth2 li > a {
     font-size: 16px;
+    color: rgba(0, 0, 0, 0.4);
+    padding-left: 10px;
+    font-weight: 500;
+    padding: 12px 16px !important;
   }
   .sub-banner-txt {
     font-size: 15px;

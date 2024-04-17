@@ -1,0 +1,169 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Subbanner from '../../components/Subbanner.astro';
+import SubTab from '../../components/SubTab.astro';
+import Modal from '../../components/Modal.astro';
+import '../../css/ui.css';
+
+const pageTitle = 'MEDILMM > CADWrap';
+const idName = 'CADWrap';
+const pageHeader = 'sub';
+
+const bannerItem = {
+  isActive: true,
+  url: '../../public/assets/images/img_medilmmCAD.webp',
+  title: 'CAD Warp',
+  text: `CRO 프로세스를 대화형 AI로 시간 및 공수를
+획기적으로 줄인 자동화 인텔리전스 시스템`,
+};
+
+const isActive = 'active04';
+const TabItem = [
+  { name: 'SimPLE Model', url: './SimpleModel.html', activeId: 'active01' },
+  { name: 'UVL Transformer', url: './UVLTransformer.html', activeId: 'active02' },
+  { name: 'CAD Catch', url: './CADCatch.html', activeId: 'active03', on: 'on' },
+  { name: 'CAD Wrap', url: './CADWrap.html', activeId: 'active04', on: 'on' },
+];
+---
+
+<Layout pageTitle={pageTitle} idName={idName} pageHeader={pageHeader}>
+  <!-- 컨텐츠가 들어갈 부분 -->
+  <Subbanner bannerItem={bannerItem} />
+  <SubTab isActive={isActive} TabItem={TabItem} />
+
+  <div class="sub-inner">
+    <div class="sub-title-wrap custom tac">
+      <h2 data-aos="fade-up" data-aos-delay="" data-aos-duration="1000">Management platform</h2>
+      <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+        CRO 프로세스를 대화형 AI로 시간 및 공수를 줄인 자동화 인텔리전스 시스템
+      </p>
+    </div>
+
+    <div class="sec01 inner">
+      <div class="mana-platform-info tac">
+        <div class="img">
+          <img class="" src="../assets/images/p4_s1_mockup.webp" alt="" />
+        </div>
+      </div>
+
+      <ul class="mana-platform-list">
+        <li>
+          <img class="" src="../assets/images/p4_s1_icon1.webp" alt="" />
+          <p class="txt">각 프로세스마다 개별 <br /> LMM이 작동</p>
+        </li>
+        <li>
+          <img class="" src="../assets/images/p4_s1_icon2.webp" alt="" />
+          <p class="txt">모든 프로세스가 유기적으로 <br /> 연결되어 업무 효율 극대화</p>
+        </li>
+        <li>
+          <img class="" src="../assets/images/p4_s1_icon3.webp" alt="" />
+          <p class="txt">이전 프로세스의 아웃풋이 <br /> 다음 인풋에 저장되어 활용</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="sec02">
+      <div class="inner">
+        <div class="sub-title-wrap custom tac">
+          <h2 data-aos="fade-up" data-aos-delay="" data-aos-duration="1000">메디렘 CAD-Wrap<sup>TM</sup> 플랫폼</h2>
+          <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+            시간, 비용, 인원의 각각 프로세스별 필요 기능들을 LMM으로 모듈화하여 사용자가 간단하게 업무를 <br /> 이행할 수
+            있게 하며, 궁극적으로 전체의 프로세스가 순간 이동을 하듯이 자동화되는 고도의 프로세스 이노베이션
+          </p>
+        </div>
+
+        <div class="process-step-wrap">
+          <div class="left">
+            기존 <br /> 프로세스
+          </div>
+          <div class="right">
+            <div class="process-step">
+              <div class="step-title">전임상 단계</div>
+              <div class="step-content">
+                <img src="../assets/images/p4_s2_icon1.webp" alt="Step 1" />
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="step-title">전임상 단계</div>
+              <div class="step-content">
+                <img src="../assets/images/p4_s2_icon2.webp" alt="Step 2" />
+              </div>
+              <span class="participant-count">참가자 <br /> 20-80명</span>
+            </div>
+            <div class="process-step">
+              <div class="step-title">전임상 단계</div>
+              <div class="step-content">
+                <img src="../assets/images/p4_s2_icon3.webp" alt="Step 2" />
+              </div>
+              <span class="participant-count">참가자 <br /> 100-300명</span>
+            </div>
+            <div class="process-step">
+              <div class="step-title">전임상 단계</div>
+              <div class="step-content">
+                <img src="../assets/images/p4_s2_icon4.webp" alt="Step 2" />
+              </div>
+              <span class="participant-count">참가자 <br />1,000-3,000명</span>
+            </div>
+            <div class="process-step">
+              <div class="step-title">전임상 단계</div>
+              <div class="step-content">안정성 <br /> 유효성 확인</div>
+            </div>
+            <div class="process-step">
+              <div class="step-title">전임상 단계</div>
+              <div class="step-content">
+                <img src="../assets/images/p4_s2_icon5.webp" alt="Step 2" />
+              </div>
+              <span class="participant-count">참가자 <br /> 1,000 +명</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="process-step-wrap type2">
+          <div class="left">
+            <img class="" src="../assets/images/sub-logo.svg" alt="" />
+          </div>
+          <div class="right">
+            <div class="process-step">
+              <i class="icon icon-arrow scroll-horizontal-img"></i>
+              <div class="step-content">
+                <img class="" src="../assets/images/p4_s2_cad.webp" alt="" />
+              </div>
+              <span class="participant-count">CAD-Warp <sup>TM</sup> Pre</span>
+            </div>
+            <div class="process-step">
+              <i class="icon icon-arrow scroll-horizontal-img"></i>
+              <div class="step-content">
+                <img class="" src="../assets/images/p4_s2_cad.webp" alt="" />
+              </div>
+              <span class="participant-count">CAD-Warp <sup>TM</sup> MW</span>
+            </div>
+            <div class="process-step">
+              <i class="icon icon-arrow scroll-horizontal-img"></i>
+              <div class="step-content">
+                <img class="" src="../assets/images/p4_s2_cad.webp" alt="" />
+              </div>
+              <span class="participant-count">CAD-Warp <sup>TM</sup> PM</span>
+            </div>
+            <div class="process-step">
+              <i class="icon icon-arrow scroll-horizontal-img"></i>
+              <div class="step-content">
+                <img class="" src="../assets/images/p4_s2_cad.webp" alt="" />
+              </div>
+              <span class="participant-count">CAD-Warp <sup>TM</sup> PL</span>
+            </div>
+            <div class="process-step">
+              <div class="step-content">
+                <img class="" src="../assets/images/p4_s2_cad.webp" alt="" />
+              </div>
+              <span class="participant-count">CAD-Warp <sup>TM</sup> SM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 컨텐츠가 들어갈 부분 eee -->
+
+  <Modal />
+</Layout>

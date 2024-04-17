@@ -1,16 +1,16 @@
 section.visual {
   position: relative;
-  height: calc(100vh + 60px);
+  height: calc(100vh + 3.75rem);
   overflow: hidden;
 
   @include media($tab, max) {
-    height: calc(100vh + 69px);
+    height: calc(100vh + 4.3125rem);
   }
   .video-container {
     position: absolute;
-    top: -2px;
+    top: -0.125rem;
     width: 100vw; /* 뷰포트 너비를 꽉 채움 */
-    height: calc(100% + 2px); /* 뷰포트 높이를 꽉 채움 */
+    height: calc(100% + 0.125rem); /* 뷰포트 높이를 꽉 채움 */
     overflow: hidden;
   }
   .visual__video {
@@ -40,7 +40,7 @@ section.visual {
     line-height: 1.1;
     @include media($tab, max) {
       text-align: center;
-      font-size: 38px;
+      font-size: 2.375rem;
       font-weight: 700;
     }
     img {
@@ -64,8 +64,8 @@ section.visual {
 
 .main-section {
   background: #fff;
-  border-radius: 80px 80px 0 0;
-  margin-top: -69px;
+  border-radius: 3.75rem 3.75rem 0 0;
+  margin-top: -4.3125rem;
   z-index: 10;
   position: relative;
   .inner {
@@ -79,7 +79,7 @@ section.visual {
     position: relative;
     background: #fff;
     border-radius: 1.0625rem;
-    border: 1px solid #dedede;
+    border: 0.0625rem solid #dedede;
     text-align: center;
 
     a {
@@ -89,7 +89,7 @@ section.visual {
     }
     img {
       padding-bottom: 1.875rem;
-      border-bottom: 1px solid #e8e8e8;
+      border-bottom: 0.0625rem solid #e8e8e8;
       margin-bottom: 3.375rem;
     }
 
@@ -98,7 +98,9 @@ section.visual {
       font-weight: 700;
       color: #9a9a9a;
       margin-bottom: 1.375rem;
-      transition: all 0.3s ease;
+      sup {
+        font-size: 1rem;
+      }
     }
 
     p {
@@ -106,9 +108,8 @@ section.visual {
       font-weight: 400;
       color: #7a7a7a;
       margin-bottom: 2.6875rem;
-      letter-spacing: -1px;
+      letter-spacing: -0.0625rem;
       line-height: 1.6;
-      transition: all 0.2s ease;
     }
 
     button {
@@ -127,7 +128,6 @@ section.visual {
       color: #fff;
       border: none; /* Removes the border */
       outline: none; /* Removes the outline */
-      transition: all 0.3s ease;
     }
 
     &:hover {
@@ -150,7 +150,7 @@ section.visual {
 
 @include media($tab, max) {
   section.visual .visual__title img {
-    width: 3rem;
+    width: 48px;
   }
   section.visual .visual__title {
     font-weight: 800;
@@ -164,7 +164,7 @@ section.visual {
     text-align: center;
   }
   .main-section .inner {
-    padding-top: 85px;
+    padding-top: 78px;
     padding-bottom: 80px;
   }
   .main-section {
@@ -178,7 +178,7 @@ section.visual {
   }
   .card-list li.card img {
     padding-bottom: 25px;
-    margin-bottom: 25px;
+    margin-bottom: 26px;
   }
   .card-list li.card p {
     font-size: 16px;
@@ -189,6 +189,45 @@ section.visual {
     max-width: 200px;
     position: relative;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) !important;
+  }
+  section.visual .visual__title {
+    font-size: 38px;
+    font-weight: 700;
+  }
+  section.visual .visual__title img {
+    width: 35px;
+  }
+  .com-title .title-badge {
+    padding: 8px 22px;
+    font-size: 13px;
+  }
+  .com-title h1 {
+    font-size: 30px;
+  }
+  .com-title h1 span {
+    display: block;
+  }
+  .card-list li.card:first-child {
+    margin-top: 0;
+  }
+  .mobileMenu .menuToggle {
+    top: 1.2rem;
+    right: 5px;
+  }
+  .header .logo {
+    top: 19px;
+    left: 16px;
+  }
+  .mobileMenu .menuToggle {
+    top: 22px;
+    right: 15px;
+  }
+  .mobileMenu .menuToggle.open {
+    right: 13px;
+  }
+  .mobileMenu .mobileNav ul li.mobileNavItem > a {
+    font-size: 18px;
+    font-weight: 500;
   }
 }

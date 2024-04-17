@@ -81,9 +81,7 @@
    서브배너 효과
   */ ////////////////////////////////////////////////////////
 
-  // .sub-banner 클래스를 가진 요소를 찾습니다.
   const subBannerElement = document.querySelector('.sub-banner');
-  // 해당 요소가 존재하는 경우, 스크립트를 실행합니다.
   if (subBannerElement) {
     const boxs = document.querySelectorAll('article');
 
@@ -150,14 +148,12 @@
   window.addEventListener('scroll', function () {
     // 헤더 요소를 선택합니다.
     var header = document.querySelector('.header');
-    // 스크롤 위치가 50px보다 크면 클래스를 추가합니다.
     if (window.pageYOffset > 50) {
       header.classList.add('on');
       if (!document.querySelector('main').classList.contains('main')) {
         header.classList.remove('sub');
       }
     } else {
-      // 스크롤 위치가 50px 이하면 클래스를 제거합니다.
       header.classList.remove('on');
       if (!document.querySelector('main').classList.contains('main')) {
         header.classList.add('sub');
