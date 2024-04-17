@@ -21,7 +21,7 @@ const { bannerItem } = Astro.props;
               <p class="sub-banner-txt is-tab-show">{bannerItem.moText}</p>
             </>
           ) : (
-            <p class="sub-banner-txt">{bannerItem.text}{bannerItem.cmText && <em><sup>TM</sup></em>}</p>
+            <p class="sub-banner-txt">{bannerItem.text}{bannerItem.cmText && <em><sup>TM</sup></em>}{bannerItem.text2}</p>
           )
         }
         <!-- <img class="" src=`${bannerItem.img}` alt="" /> -->

@@ -420,10 +420,10 @@ body.isOpen {
         border-radius: 0.4375rem;
         height: 6.75rem;
         display: flex;
-        align-items: center;
+        padding-top: 20px;
         padding-left: 1.875rem;
         position: relative;
-        margin-bottom: 0.625rem;
+        margin-bottom: 1.625rem;
         @include bg-url('img', 'bg-uvl.png', 'cover');
         background-position: top;
         &:last-of-type {
@@ -436,6 +436,7 @@ body.isOpen {
           position: relative;
           z-index: 10;
           dt {
+            margin-top: 10px;
             font-size: 1.25rem;
             font-weight: 700;
             color: #fff;
@@ -444,7 +445,7 @@ body.isOpen {
           }
 
           dd {
-            line-height: 1;
+            line-height: 1.5;
             font-size: 1.125rem;
             font-weight: 400;
             color: #fff;
@@ -746,7 +747,7 @@ body.isOpen {
             background: #000;
             border-radius: 1.3125rem;
             sup {
-              font-size: 0.5rem;
+              font-size: 0.6rem;
             }
           }
           img {
@@ -790,12 +791,65 @@ web
     max-width: 100%;
     width: 90%;
   }
+  .UVLTransformer section.se02 h3 {
+    font-size: 15px;
+  }
+  .UVLTransformer section.se02 {
+    padding-bottom: 100px;
+  }
+  .UVLTransformer section.se02 h2 {
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .UVLTransformer section.se02 ul li {
+    background-size: initial;
+  }
+  .UVLTransformer section.se02 ul li:last-of-type {
+    @include bg-url('img', 'bg-uvl.png');
+    background-size: initial;
+  }
+  .UVLTransformer section.se02 ul li dl dd {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+  .UVLTransformer section.se02 ul li dl dt {
+    margin-top: 33px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .UVLTransformer section.se02 ul li {
+    padding-left: 0;
+    flex: 1 1 100%;
+    gap: 0px;
+    place-content: center;
+    height: 85px;
+    margin-bottom: 20px;
+  }
+  .UVLTransformer section.se02 ul {
+    width: 100%;
+  }
+  .UVLTransformer section.se02 .inner:before {
+    display: none;
+  }
+  .UVLTransformer section.se02 .inner {
+    text-align: center;
+  }
+  .UVLTransformer .sub-inner {
+    padding-bottom: 70px;
+  }
 }
 
 /* ///////////////////////////////////////////////////////
 tab
 */ ////////////////////////////////////////////////////////
 @include media($tab, max) {
+  .pol-l50 {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .modal__img {
     overflow-y: scroll;
     height: calc(85vh - 300px);
@@ -1007,5 +1061,17 @@ tab
       background: rgb(28, 69, 249);
       background: linear-gradient(90deg, rgba(28, 69, 249, 1) 0%, rgba(2, 198, 255, 1) 100%);
     }
+  }
+}
+
+/* ///////////////////////////////////////////////////////
+mo
+*/ ////////////////////////////////////////////////////////
+@include media($mo, max) {
+  .UVLTransformer section.se02 ul li {
+    background-size: cover;
+  }
+  .UVLTransformer section.se02 ul li:last-of-type {
+    background-size: cover;
   }
 }
