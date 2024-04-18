@@ -738,6 +738,10 @@
   font-weight: 500;
   color: #fff;
 
+  @include media($mo, max) {
+    font-size: 15px;
+  }
+
   &.type-essential {
     position: absolute;
     top: auto;
@@ -773,6 +777,11 @@
   font-weight: 500;
   color: #fff;
 
+  @include media($mo, max) {
+    padding-left: 66px;
+    font-size: 15px;
+  }
+
   &::placeholder {
     color: rgba(#fff, 0.3);
   }
@@ -804,6 +813,12 @@
   font-weight: 500;
   color: #fff;
   cursor: pointer;
+
+  @include media($mo, max) {
+    padding-left: 28px;
+    background-size: 20px 20px;
+    font-size: 15px;
+  }
 }
 
 .check-switch:checked + .chk-01 {
@@ -825,6 +840,14 @@
   font-weight: 600;
   color: #fff;
   line-height: 57px;
+
+  @include media($mo, max) {
+    width: 150px;
+    height: 46px;
+    margin: 50px auto 0;
+    font-size: 16px;
+    line-height: 46px;
+  }
 }
 
 .btn-underline {
@@ -832,4 +855,8 @@
   font-weight: 500;
   color: rgba(#fff, 0.8);
   text-decoration: underline;
+
+  @include media($mo, max) {
+    font-size: 14px;
+  }
 }

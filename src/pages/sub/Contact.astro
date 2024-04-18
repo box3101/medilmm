@@ -36,6 +36,11 @@ const TabItem = [
               나아가고 있습니다
             </p>
           </div>
+          <div class="video-grp mb-show">
+            <video class="video" autoplay loop muted>
+              <source src="../assets/video/p3_s1.mp4" type="video/mp4" />
+            </video>
+          </div>
           <div>
             <p class="info-ttl">office information</p>
             <div class="info-list">
@@ -52,9 +57,11 @@ const TabItem = [
             </div>
           </div>
         </div>
-        <video class="video-grp" autoplay loop muted>
-          <source class="video" src="../assets/video/p3_s1.mp4" type="video/mp4" />
-        </video>
+        <div class="video-grp mb-hide">
+          <video class="video" autoplay loop muted>
+            <source src="../assets/video/p3_s1.mp4" type="video/mp4" />
+          </video>
+        </div>
       </div>
     </div>
     <div class="co-contact-wrap">
@@ -72,7 +79,7 @@ const TabItem = [
                 답변을 남겨드리겠습니다.
               </p>
             </div>
-            <button id="myButton" class="btn btn-inquiry">문의 보내기</button>
+            <button id="myButton" class="btn btn-inquiry mb-hide">문의 보내기</button>
           </div>
           <div class="right">
             <div>
@@ -105,6 +112,7 @@ const TabItem = [
               </div>
               <button class="btn btn-underline">내용 확인</button>
             </div>
+            <button id="myButton" class="btn btn-inquiry mb-show">문의 보내기</button>
           </div>
         </div>
       </div>
