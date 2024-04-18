@@ -17,8 +17,8 @@ const menu = [
     items: [
       { url: 'SimpleModel', title: 'Simple Model' },
       { url: 'UVLTransformer', title: 'UVL Transformer' },
-      { url: 'CADCatch', title: 'CAD Catch' },
-      { url: 'CADWrap', title: 'CAD Wrap' },
+      { url: 'CADCatch', title: 'CAD Catch', active: 'on' },
+      { url: 'CADWrap', title: 'CAD Wrap', active: 'on' },
     ],
     active: 'on',
     active2: 'on',
@@ -49,6 +49,7 @@ const menu = [
     title: 'Contact us',
     url: 'Contactus',
     active2: 'on',
+    gradienText: 'on',
     items: [
       { url: 'MediLMMCEO', title: 'MediLMM CEO' },
       { url: 'Board', title: 'Board' },
@@ -56,15 +57,15 @@ const menu = [
       { url: 'Contact', title: 'Contact' },
     ],
   },
-  {
-    category: 'sub',
-    title: 'error',
-    url: 'PageError',
-    items: [
-      { url: 'PageError', title: 'Page Error' },
-      { url: 'ServerError', title: 'Server Error' },
-    ],
-  },
+  // {
+  //   category: 'sub',
+  //   title: 'error',
+  //   url: 'PageError',
+  //   items: [
+  //     { url: 'PageError', title: 'Page Error' },
+  //     { url: 'ServerError', title: 'Server Error' },
+  //   ],
+  // },
 ];
 
 export default menu;

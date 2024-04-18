@@ -24,19 +24,21 @@ const { pageHeader } = Astro.props;
       <div class="mobileNav">
         <ul class="mobileNavList">
           {
-            menu.map(({ category, title, items, active2, url }) => {
+            menu.map(({ category, title, items, active2, url, gradienText }) => {
               return (
                 <>
                   <li class="mobileNavItem">
-                    <a class={active2 === 'on' ? 'on' : ''} href={`../${category}/${url}.html`}>
-                      {title}
+                    <a class={active2 && gradienText === 'on' ? 'on is-gra' : 'on'} href={`../${category}/${url}.html`}>
+                      <span> {title} </span>
                     </a>
                     {items && (
                       <ul class="dapth2">
-                        {items.map(function ({ url, title }) {
+                        {items.map(function ({ url, title, active }) {
                           return (
                             <li>
-                              <a href={`../${category}/${url}.html`}>{title}</a>
+                              <a class={active && 'on'} href={`../${category}/${url}.html`}>
+                                {title}
+                              </a>
                             </li>
                           );
                         })}
@@ -62,10 +64,10 @@ const { pageHeader } = Astro.props;
                   </a>
                   {items && (
                     <ul class="sub-menu">
-                      {items.map(function ({ url, title, active2 }) {
+                      {items.map(function ({ url, title, active }) {
                         return (
                           <li>
-                            <a class={active2 === 'on' ? 'on' : ''} href={`../${category}/${url}.html`}>
+                            <a class={active === 'on' ? 'on' : ''} href={`../${category}/${url}.html`}>
                               {title}
                             </a>
                           </li>
@@ -84,31 +86,3 @@ const { pageHeader } = Astro.props;
 
   <!-- header eee -->
 </header>
-
-<script>
-  document.querySelector('.menuToggle')?.addEventListener('click', () => {
-    document.querySelector('.menuToggle')?.classList.toggle('open');
-    if (document.querySelector('.menuToggle')?.classList.contains('open')) {
-      document.querySelector('.sub-img')?.setAttribute('src', '../assets/images/logo_blk.svg');
-    } else {
-      document.querySelector('.sub-img')?.setAttribute('src', '../assets/images/logo_wh.svg');
-    }
-  });
-
-  const $$mobileNav = document.querySelectorAll('.mobileNavItem');
-  const $$mobileNavItem = document.querySelectorAll('.mobileNavItem>a');
-
-  $$mobileNavItem.forEach((el) => {
-    el.addEventListener('click', (e) => {
-      if (!el.closest('li')?.classList.contains('on')) {
-        $$mobileNav.forEach((el) => el.classList.remove('on'));
-      }
-
-      if (el.classList.contains('on')) {
-        e.preventDefault();
-        el.closest('li')?.classList.toggle('on');
-      } else {
-      }
-    });
-  });
-</script>

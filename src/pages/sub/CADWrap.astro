@@ -15,6 +15,7 @@ const bannerItem = {
   title: 'CAD Warp',
   text: `CRO 프로세스를 대화형 AI로 시간 및 공수를
 획기적으로 줄인 자동화 인텔리전스 시스템`,
+  moText: `CADTM의 두번째 기초 기술`,
 };
 
 const isActive = 'active04';
@@ -33,29 +34,34 @@ const TabItem = [
 
   <div class="sub-inner">
     <div class="sub-title-wrap custom tac">
-      <h2 data-aos="fade-up" data-aos-delay="" data-aos-duration="1000">Management platform</h2>
+      <h2 class="f-pop" data-aos="fade-up" data-aos-delay="" data-aos-duration="1000">
+        Management <br class="is-tab-show" /> platform
+      </h2>
       <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-        CRO 프로세스를 대화형 AI로 시간 및 공수를 줄인 자동화 인텔리전스 시스템
+        CRO 프로세스를 대화형 AI로 시간 및 <br class="is-tab-show" /> 공수를 줄인 자동화 인텔리전스 시스템
       </p>
     </div>
 
     <div class="sec01 inner">
       <div class="mana-platform-info tac">
-        <div class="img">
-          <img class="" src="../assets/images/p4_s1_mockup.webp" alt="" />
+        <div class="img" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+          <img class="img-w100" src="../assets/images/p4_s1_mockup.webp" alt="" />
         </div>
+        <!-- <div class="img is-tab-show">
+          <img class="img-w100" src="../assets/images/mo_p4_s1_mockup.jpg" alt="" />
+        </div> -->
       </div>
 
       <ul class="mana-platform-list">
-        <li>
+        <li data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
           <img class="" src="../assets/images/p4_s1_icon1.webp" alt="" />
-          <p class="txt">각 프로세스마다 개별 <br /> LMM이 작동</p>
+          <p class="txt">각 프로세스마다 개별 <br class="is-tab-hide" /> LMM이 작동</p>
         </li>
-        <li>
+        <li data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
           <img class="" src="../assets/images/p4_s1_icon2.webp" alt="" />
           <p class="txt">모든 프로세스가 유기적으로 <br /> 연결되어 업무 효율 극대화</p>
         </li>
-        <li>
+        <li data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
           <img class="" src="../assets/images/p4_s1_icon3.webp" alt="" />
           <p class="txt">이전 프로세스의 아웃풋이 <br /> 다음 인풋에 저장되어 활용</p>
         </li>
@@ -65,97 +71,109 @@ const TabItem = [
     <div class="sec02">
       <div class="inner">
         <div class="sub-title-wrap custom tac">
-          <h2 data-aos="fade-up" data-aos-delay="" data-aos-duration="1000">메디렘 CAD-Wrap<sup>TM</sup> 플랫폼</h2>
-          <p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+          <h2 data-aos="fade-up" data-aos-delay="" data-aos-duration="1000">
+            메디렘 <br class="is-tab-show" /> CAD-Wrap<sup>TM</sup> 플랫폼
+          </h2>
+          <p class="is-tab-hide" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
             시간, 비용, 인원의 각각 프로세스별 필요 기능들을 LMM으로 모듈화하여 사용자가 간단하게 업무를 <br /> 이행할 수
             있게 하며, 궁극적으로 전체의 프로세스가 순간 이동을 하듯이 자동화되는 고도의 프로세스 이노베이션
           </p>
+          <p class="is-tab-show" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+            프로세스별 필요 기능들을 LMM으로 모듈화 하여 <br />
+            사용자가 간단하게 업무를 이행하고, 궁극적으로 <br />
+            순간이동하듯 자동화되는 고도의 프로세스 이노베이션
+          </p>
         </div>
 
-        <div class="process-step-wrap">
-          <div class="left">
-            기존 <br /> 프로세스
+        <div class="wrap">
+          <div class="process-step-wrap">
+            <div class="left" data-aos="fade-right" data-aos-delay="" data-aos-duration="1000">
+              기존 <br /> 프로세스
+            </div>
+            <div class="right">
+              <div class="process-step" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+                <div class="step-title">전임상 단계</div>
+                <div class="step-content">
+                  <img src="../assets/images/p4_s2_icon1.webp" alt="Step 1" />
+                </div>
+              </div>
+              <div class="process-step" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+                <div class="step-title">1단계</div>
+                <div class="step-content">
+                  <img src="../assets/images/p4_s2_icon2.webp" alt="Step 2" />
+                </div>
+                <span class="participant-count">참가자 <br class="is-tab-hide" /> 20-80명</span>
+              </div>
+              <div class="process-step" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">
+                <div class="step-title">2단계</div>
+                <div class="step-content">
+                  <img src="../assets/images/p4_s2_icon3.webp" alt="Step 2" />
+                </div>
+                <span class="participant-count">참가자 <br class="is-tab-hide" /> 100-300명</span>
+              </div>
+              <div class="process-step" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
+                <div class="step-title">3단계</div>
+                <div class="step-content">
+                  <img src="../assets/images/p4_s2_icon4.webp" alt="Step 2" />
+                </div>
+                <span class="participant-count">참가자 <br class="is-tab-hide" />1,000-3,000명</span>
+              </div>
+              <div class="process-step" data-aos="fade-right" data-aos-delay="400" data-aos-duration="1000">
+                <div class="step-title">FDA승인</div>
+                <div class="step-content">안정성 <br /> 유효성 확인</div>
+              </div>
+              <div class="process-step" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000">
+                <div class="step-title">4단계</div>
+                <div class="step-content">
+                  <img src="../assets/images/p4_s2_icon5.webp" alt="Step 2" />
+                </div>
+                <span class="participant-count">참가자 <br class="is-tab-hide" /> 1,000 +명</span>
+              </div>
+            </div>
           </div>
-          <div class="right">
-            <div class="process-step">
-              <div class="step-title">전임상 단계</div>
-              <div class="step-content">
-                <img src="../assets/images/p4_s2_icon1.webp" alt="Step 1" />
-              </div>
+          <div class="process-step-wrap type2">
+            <div class="left" data-aos="fade-right" data-aos-delay="" data-aos-duration="1000">
+              <img class="" src="../assets/images/sub-logo.svg" alt="" />
             </div>
-            <div class="process-step">
-              <div class="step-title">전임상 단계</div>
-              <div class="step-content">
-                <img src="../assets/images/p4_s2_icon2.webp" alt="Step 2" />
+            <div class="right">
+              <div class="process-step" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+                <div class="is-tab-hide"><i class="icon icon-arrow scroll-horizontal-img"></i></div>
+                <div class="icon-bottom is-tab-show"><i class="icon icon-arrow scroll-horizontal-img"></i></div>
+                <div class="step-content">
+                  <img class="" src="../assets/images/p4_s2_cad.webp" alt="" />
+                </div>
+                <span class="participant-count">CAD-Warp <sup>TM</sup> Pre</span>
               </div>
-              <span class="participant-count">참가자 <br /> 20-80명</span>
-            </div>
-            <div class="process-step">
-              <div class="step-title">전임상 단계</div>
-              <div class="step-content">
-                <img src="../assets/images/p4_s2_icon3.webp" alt="Step 2" />
+              <div class="process-step" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">
+                <div class="is-tab-hide"><i class="icon icon-arrow scroll-horizontal-img"></i></div>
+                <div class="icon-bottom is-tab-show"><i class="icon icon-arrow scroll-horizontal-img"></i></div>
+                <div class="step-content">
+                  <img class="" src="../assets/images/p4_s2_cad.webp" alt="" />
+                </div>
+                <span class="participant-count">CAD-Warp <sup>TM</sup> MW</span>
               </div>
-              <span class="participant-count">참가자 <br /> 100-300명</span>
-            </div>
-            <div class="process-step">
-              <div class="step-title">전임상 단계</div>
-              <div class="step-content">
-                <img src="../assets/images/p4_s2_icon4.webp" alt="Step 2" />
+              <div class="process-step" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
+                <div class="is-tab-hide"><i class="icon icon-arrow scroll-horizontal-img"></i></div>
+                <div class="icon-bottom is-tab-show"><i class="icon icon-arrow scroll-horizontal-img"></i></div>
+                <div class="step-content">
+                  <img class="" src="../assets/images/p4_s2_cad.webp" alt="" />
+                </div>
+                <span class="participant-count">CAD-Warp <sup>TM</sup> PM</span>
               </div>
-              <span class="participant-count">참가자 <br />1,000-3,000명</span>
-            </div>
-            <div class="process-step">
-              <div class="step-title">전임상 단계</div>
-              <div class="step-content">안정성 <br /> 유효성 확인</div>
-            </div>
-            <div class="process-step">
-              <div class="step-title">전임상 단계</div>
-              <div class="step-content">
-                <img src="../assets/images/p4_s2_icon5.webp" alt="Step 2" />
+              <div class="process-step" data-aos="fade-right" data-aos-delay="400" data-aos-duration="1000">
+                <div class="is-tab-hide"><i class="icon icon-arrow scroll-horizontal-img"></i></div>
+                <div class="icon-bottom is-tab-show"><i class="icon icon-arrow scroll-horizontal-img"></i></div>
+                <div class="step-content">
+                  <img class="" src="../assets/images/p4_s2_cad.webp" alt="" />
+                </div>
+                <span class="participant-count">CAD-Warp <sup>TM</sup> PL</span>
               </div>
-              <span class="participant-count">참가자 <br /> 1,000 +명</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="process-step-wrap type2">
-          <div class="left">
-            <img class="" src="../assets/images/sub-logo.svg" alt="" />
-          </div>
-          <div class="right">
-            <div class="process-step">
-              <i class="icon icon-arrow scroll-horizontal-img"></i>
-              <div class="step-content">
-                <img class="" src="../assets/images/p4_s2_cad.webp" alt="" />
+              <div class="process-step" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000">
+                <div class="step-content">
+                  <img class="" src="../assets/images/p4_s2_cad.webp" alt="" />
+                </div>
+                <span class="participant-count">CAD-Warp <sup>TM</sup> SM</span>
               </div>
-              <span class="participant-count">CAD-Warp <sup>TM</sup> Pre</span>
-            </div>
-            <div class="process-step">
-              <i class="icon icon-arrow scroll-horizontal-img"></i>
-              <div class="step-content">
-                <img class="" src="../assets/images/p4_s2_cad.webp" alt="" />
-              </div>
-              <span class="participant-count">CAD-Warp <sup>TM</sup> MW</span>
-            </div>
-            <div class="process-step">
-              <i class="icon icon-arrow scroll-horizontal-img"></i>
-              <div class="step-content">
-                <img class="" src="../assets/images/p4_s2_cad.webp" alt="" />
-              </div>
-              <span class="participant-count">CAD-Warp <sup>TM</sup> PM</span>
-            </div>
-            <div class="process-step">
-              <i class="icon icon-arrow scroll-horizontal-img"></i>
-              <div class="step-content">
-                <img class="" src="../assets/images/p4_s2_cad.webp" alt="" />
-              </div>
-              <span class="participant-count">CAD-Warp <sup>TM</sup> PL</span>
-            </div>
-            <div class="process-step">
-              <div class="step-content">
-                <img class="" src="../assets/images/p4_s2_cad.webp" alt="" />
-              </div>
-              <span class="participant-count">CAD-Warp <sup>TM</sup> SM</span>
             </div>
           </div>
         </div>

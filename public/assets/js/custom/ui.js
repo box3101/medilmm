@@ -1,5 +1,35 @@
 (function () {
   /* ///////////////////////////////////////////////////////
+    모바일 네비게이션
+  */ ////////////////////////////////////////////////////////
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('.menuToggle')?.addEventListener('click', () => {
+      document.querySelector('.menuToggle')?.classList.toggle('open');
+      if (document.querySelector('.menuToggle')?.classList.contains('open')) {
+        document.querySelector('.sub-img')?.setAttribute('src', '../assets/images/logo_blk.svg');
+      } else {
+        document.querySelector('.sub-img')?.setAttribute('src', '../assets/images/logo_wh.svg');
+      }
+    });
+
+    const $$mobileNav = document.querySelectorAll('.mobileNavItem');
+    const $$mobileNavItem = document.querySelectorAll('.mobileNavItem>a');
+
+    $$mobileNavItem.forEach((el) => {
+      el.addEventListener('click', (e) => {
+        if (!el.closest('li')?.classList.contains('on')) {
+          $$mobileNav.forEach((el) => el.classList.remove('on'));
+        }
+
+        if (el.classList.contains('on')) {
+          e.preventDefault();
+          el.closest('li')?.classList.toggle('on');
+        } else {
+        }
+      });
+    });
+  });
+  /* ///////////////////////////////////////////////////////
    공통 영문일때 클리스 f-pop 넣기
   */ ////////////////////////////////////////////////////////
   document.addEventListener('DOMContentLoaded', function () {
@@ -189,48 +219,46 @@
     },
   ];
 
-  document.addEventListener('DOMContentLoaded', function (e) {
-    cardList_a.forEach((el, idx) => {
-      el.addEventListener('click', (e) => {
-        body?.classList.add('isOpen');
-        modal?.classList.add('isOpen');
-        modal.querySelector('h2').innerText = modalItem[idx].title;
-        modalIdx = idx;
-        updateModal(modalIdx);
+  if (modal) {
+    document.addEventListener('DOMContentLoaded', function (e) {
+      cardList_a.forEach((el, idx) => {
+        el.addEventListener('click', (e) => {
+          body?.classList.add('isOpen');
+          modal?.classList.add('isOpen');
+          modal.querySelector('h2').innerText = modalItem[idx].title;
+          modalIdx = idx;
+          updateModal(idx);
+        });
+      });
+
+      closeBtn?.addEventListener('click', () => {
+        body?.classList.remove('isOpen');
+        modal?.classList.remove('isOpen');
       });
     });
 
-    closeBtn?.addEventListener('click', () => {
-      body?.classList.remove('isOpen');
-      modal?.classList.remove('isOpen');
+    window.addEventListener('resize', function () {
+      let wid = window.innerWidth;
+
+      if (wid > 900) {
+        resizeImg(modalIdx, modalItem[modalIdx].imgUrl);
+      } else {
+        resizeImg(modalIdx, modalItem[modalIdx].moImgUrl);
+      }
     });
-  });
 
-  window.addEventListener('resize', function () {
-    let wid = window.innerWidth;
+    function updateModal(idx) {
+      let wid = window.innerWidth;
 
-    if (wid > 900) {
-      console.log('pc');
-      resizeImg(modalIdx, modalItem[modalIdx].imgUrl);
-    } else {
-      console.log('모바일');
-      resizeImg(modalIdx, modalItem[modalIdx].moImgUrl);
+      if (wid > 900) {
+        resizeImg(idx, modalItem[idx].imgUrl);
+      } else {
+        resizeImg(idx, modalItem[idx].moImgUrl);
+      }
     }
-  });
 
-  function updateModal(idx) {
-    if (wid > 900) {
-      console.log('pc2');
-      resizeImg(idx, modalItem[idx].imgUrl);
-    } else {
-      console.log('모바일2');
-      resizeImg(idx, modalItem[idx].moImgUrl);
+    function resizeImg(idx, url) {
+      modal.querySelector('.modal__img img').setAttribute('src', url);
     }
-  }
-
-  function resizeImg(idx, url) {
-    console.log(idx);
-    console.log(url);
-    modal.querySelector('.modal__img img').setAttribute('src', url);
   }
 })();
