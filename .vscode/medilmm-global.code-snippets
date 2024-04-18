@@ -49,6 +49,10 @@
     "prefix": "au",
     "body": ["<div class='$1' data-aos='fade-up' data-aos-duration='1000'></div>"]
   },
+  "aos fade up2": {
+    "prefix": "aos",
+    "body": ["data-aos='fade-up' data-aos-delay='$1' data-aos-duration='1000'"]
+  },
   "bor": {
     "prefix": "bor",
     "body": ["border-radius: $1px;"]

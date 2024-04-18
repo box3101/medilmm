@@ -12,6 +12,9 @@ section.visual {
     width: 100vw; /* 뷰포트 너비를 꽉 채움 */
     height: calc(100% + 0.125rem); /* 뷰포트 높이를 꽉 채움 */
     overflow: hidden;
+    @include media($tab, max) {
+      height: calc(87% + 0.125rem); /* 뷰포트 높이를 꽉 채움 */
+    }
   }
   .visual__video {
     position: absolute;
@@ -65,7 +68,10 @@ section.visual {
 .main-section {
   background: #fff;
   border-radius: 3.75rem 3.75rem 0 0;
-  margin-top: -4.3125rem;
+  margin-top: -3.3125rem;
+  @include media($tab, max) {
+    margin-top: -15.3125rem;
+  }
   z-index: 10;
   position: relative;
   .inner {
@@ -100,6 +106,9 @@ section.visual {
       margin-bottom: 1.375rem;
       sup {
         font-size: 1rem;
+        @include media($tab, max) {
+          font-size: 1.4rem;
+        }
       }
     }
 
@@ -154,14 +163,17 @@ section.visual {
   }
   section.visual .visual__title {
     font-weight: 800;
-    line-height: 1.2;
+    line-height: 1.3;
   }
   section.visual .visual__inner {
     justify-content: flex-start;
-    padding-top: 193px;
+    padding-top: 175px;
   }
   section.visual .visual__txt {
+    margin-top: 1.6rem;
     text-align: center;
+    font-size: 15px;
+    font-weight: 500;
   }
   .main-section .inner {
     padding-top: 78px;
