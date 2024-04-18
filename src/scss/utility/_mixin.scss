@@ -77,3 +77,16 @@
     @content;
   }
 }
+
+/* ========= 인풋 초기화 =================*/
+@mixin input-reset {
+  border-radius: 0;
+  background-color: transparent;
+  border: 0;
+  -webkit-appearance: none;
+  /*ios에 나오는 그림자 제거*/
+  -moz-appearance: none;
+  /*ios에 나오는 그림자 제거*/
+  padding: 0;
+  outline: none;
+}

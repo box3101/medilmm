@@ -3,6 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 import '../../css/ui.css';
 import Subbanner from '../../components/Subbanner.astro';
 import SubTab from '../../components/SubTab.astro';
+import NewsItem from '../../components/NewsItem.astro';
+import Pagination from '../../components/Pagination.astro';
 
 const pageTitle = 'MediLMMCEO';
 const idName = 'ceo';
@@ -17,6 +19,23 @@ const TabItem = [
   { name: 'MediLMM CEO', url: './MediLMMCEO.html', activeId: 'active01' },
   { name: 'Board', url: './Board.html', activeId: 'active02' },
   { name: 'Contact', url: './Contact.html', activeId: 'active03' },
+];
+const NewsList = [
+  {
+    img: '../assets/images/p2_2.webp',
+    title: '[메디렘 소개] 데이터 보안의 새로운 혁신, 메디렘이란?',
+    date: '2024.02.29',
+  },
+  {
+    img: '../assets/images/p2_2.webp',
+    title: 'AI로 변해가는 우리 삶 속, 의료 데이터는 어떨까?',
+    date: '2024.02.29',
+  },
+  {
+    img: '../assets/images/p2_2.webp',
+    title: '혁신적인 메디렘 서비스를 소개합니다.',
+    date: '2024.02.29',
+  },
 ];
 ---
 
@@ -46,17 +65,9 @@ const TabItem = [
       <div class="co-board-news-wrap">
         <p class="ttl">Upcoming News</p>
         <div class="co-board-news-conts">
-          <div class="grp">
-            <div class="img-grp">
-              <img class="img" src="../assets/images/p2_2.webp" />
-            </div>
-            <p class="tt">[메디렘 소개] 데이터 보안의 새로운 혁신, 메디렘이란?</p>
-            <div class="date-grp">
-              <i class="icon icon-date"></i>
-              <p class="date">2024.02.29</p>
-            </div>
-          </div>
+          {NewsList.map((product) => <NewsItem product={product} />)}
         </div>
+        <Pagination />
       </div>
     </div>
   </div>

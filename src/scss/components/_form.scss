@@ -1,11 +1,6 @@
 /* =================== Button =================== */
 // 공통 버튼 스타일
-@mixin button-style(
-  $bg-color: $clr-pri,
-  $font-size: 0.875rem,
-  $font-weight: normal,
-  $border-radius: 0.25rem
-) {
+@mixin button-style($bg-color: $clr-pri, $font-size: 0.875rem, $font-weight: normal, $border-radius: 0.25rem) {
   background-color: $bg-color;
   color: #fff;
   border: none;
@@ -48,13 +43,13 @@
     padding: 0 1.125rem;
     min-width: 11.875rem;
     box-sizing: border-box;
-  }@else if $size == 'x-lg' {
+  } @else if $size == 'x-lg' {
     height: 3.75rem;
     padding: 0 1.125rem;
     min-width: 11.875rem;
     box-sizing: border-box;
   } @else if $size == 'mid' {
-    height:2.5rem;
+    height: 2.5rem;
     padding: 0 1.125rem;
   } @else if $size == 'sm' {
     // min-width: 5.125rem;
@@ -229,8 +224,7 @@
   &:focus {
     border: 0.0625rem solid $clr-pri;
     outline: 0.0625rem solid $clr-pri;
-    box-shadow: inset 0 0.0625rem 0.0625rem rgba(0, 0, 0, 0.075),
-      0 0 0.5rem rgba(102, 175, 233, 0.6);
+    box-shadow: inset 0 0.0625rem 0.0625rem rgba(0, 0, 0, 0.075), 0 0 0.5rem rgba(102, 175, 233, 0.6);
   }
 }
 
@@ -484,14 +478,14 @@
 }
 
 .com-select {
-  @include select-style-base; 
-  @include bg-url('img','bg-select-arr.svg');
+  @include select-style-base;
+  @include bg-url('img', 'bg-select-arr.svg');
   font-size: 18px;
   font-weight: 400;
   color: #000;
   border-radius: 8px;
 
-  option{
+  option {
     font-size: 18px;
     font-weight: 400;
     color: #000;
@@ -515,8 +509,7 @@
   &:focus {
     border: 0.0625rem solid $clr-pri;
     outline: 0.0625rem solid $clr-pri;
-    box-shadow: inset 0 0.0625rem 0.0625rem rgba(0, 0, 0, 0.075),
-      0 0 0.5rem rgba(102, 175, 233, 0.6);
+    box-shadow: inset 0 0.0625rem 0.0625rem rgba(0, 0, 0, 0.075), 0 0 0.5rem rgba(102, 175, 233, 0.6);
   }
 }
 
@@ -557,8 +550,7 @@
   &:focus {
     border: 0.0625rem solid $clr-pri;
     outline: 0.0625rem solid $clr-pri;
-    box-shadow: inset 0 0.0625rem 0.0625rem rgba(0, 0, 0, 0.075),
-      0 0 0.5rem rgba(102, 175, 233, 0.6);
+    box-shadow: inset 0 0.0625rem 0.0625rem rgba(0, 0, 0, 0.075), 0 0 0.5rem rgba(102, 175, 233, 0.6);
   }
 }
 
@@ -718,4 +710,126 @@
   &:hover {
     background-color: darken($clr-pri, 10%);
   }
+}
+
+.is-none {
+  display: none;
+}
+
+// input
+.inp-grp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+
+.input {
+  position: relative;
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.label-md {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #fff;
+
+  &.type-essential {
+    position: absolute;
+    top: auto;
+    bottom: 14px;
+    left: 7px;
+
+    &::after {
+      content: '*';
+      z-index: 1;
+      position: absolute;
+      top: -8px;
+      right: -13px;
+      left: auto;
+      color: #02c6ff;
+      font-size: 1.25rem;
+    }
+  }
+
+  &.type-02 {
+    top: 0;
+    bottom: auto;
+  }
+}
+
+.inp {
+  @include input-reset;
+
+  width: 100%;
+  padding-left: 90px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(#8b8b8b, 0.7);
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #fff;
+
+  &::placeholder {
+    color: rgba(#fff, 0.3);
+  }
+}
+
+.textarea-01 {
+  height: 214px;
+  padding: 0 0 0 7px;
+  margin-top: 40px;
+
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(#8b8b8b, 0.7);
+    border-radius: 2px;
+  }
+}
+
+.chk-01 {
+  display: inline-block;
+  padding-left: 35px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg id='그룹_28311' data-name='그룹 28311' transform='translate(-768 -2078)'%3E%3Cg id='사각형_5889' data-name='사각형 5889' transform='translate(768 2078)' fill='none' stroke='%23fff' stroke-width='1' opacity='0.5'%3E%3Crect width='24' height='24' rx='4' stroke='none'/%3E%3Crect x='0.5' y='0.5' width='23' height='23' rx='3.5' fill='none'/%3E%3C/g%3E%3Cpath id='패스_11269' data-name='패스 11269' d='M7849.751-4484.921l3.957,4.723,7.276-8.169' transform='translate(-7075.368 6574.283)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' opacity='0.5'/%3E%3C/g%3E%3C/svg%3E%0A");
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+}
+
+.check-switch:checked + .chk-01 {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg id='그룹_28306' data-name='그룹 28306' transform='translate(-768 -2078)'%3E%3Crect id='사각형_5889' data-name='사각형 5889' width='24' height='24' rx='4' transform='translate(768 2078)' fill='%2302c6ff'/%3E%3Cpath id='패스_11269' data-name='패스 11269' d='M7849.751-4484.921l3.957,4.723,7.276-8.169' transform='translate(-7075.368 6574.283)' fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5'/%3E%3C/g%3E%3C/svg%3E%0A");
+  color: #02c6ff;
+}
+
+// btn
+.btn {
+  @include input-reset;
+}
+
+.btn-inquiry {
+  width: 191px;
+  height: 57px;
+  border-radius: 29px;
+  background: linear-gradient(to right bottom, #02c6ff, #1c45f9);
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 57px;
+}
+
+.btn-underline {
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(#fff, 0.8);
+  text-decoration: underline;
 }

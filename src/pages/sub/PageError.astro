@@ -9,18 +9,20 @@ const idName = 'page-error';
 <Layout pageTitle={pageTitle} idName={idName}>
   <!-- 컨텐츠가 들어갈 부분 -->
   <div class="page-error-section">
-    <div class="img-grp-01" data-aos="fade-up" data-aos-duration="1000">
-      <img class="img" src="../assets/images/error_icon.webp" alt="" />
-    </div>
-    <div class="img-grp-02" data-aos="fade-up" data-aos-duration="1000">
-      <img class="img" src="../assets/images/error_404.webp" alt="" />
-    </div>
-    <div class="error-ttl-grp" data-aos="fade-up" data-aos-duration="1000">
-      <p class="error-ttl">요청하신 페이지를 찾을 수 없습니다</p>
-      <p class="error-desc">
-        존재하지 않는 주소이거나 사용할 수 없는 페이지 입니다.<br />
-        입력하신 주소가 맞는지 다시 한번 확인하여 검색하시길 바랍니다.
-      </p>
+    <div class="inner">
+      <div class="img-grp-01" data-aos="fade-up" data-aos-duration="1000">
+        <img class="img" src="../assets/images/error_icon.webp" alt="" />
+      </div>
+      <div class="img-grp-02" data-aos="fade-up" data-aos-duration="1000">
+        <img class="img" src="../assets/images/error_404.webp" alt="" />
+      </div>
+      <div class="error-ttl-grp" data-aos="fade-up" data-aos-duration="1000">
+        <p class="error-ttl">요청하신 페이지를 찾을 수 없습니다</p>
+        <p class="error-desc">
+          존재하지 않는 주소이거나 사용할 수 없는 <br class="mb-show" />페이지 입니다.<br class="mb-hide" />
+          입력하신 주소가 맞는지 다시 <br class="mb-show" />한번 확인하여 검색하시길 바랍니다.
+        </p>
+      </div>
     </div>
   </div>
 </Layout>

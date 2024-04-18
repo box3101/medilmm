@@ -58,8 +58,111 @@ const TabItem = [
       </div>
     </div>
     <div class="co-contact-wrap">
-      <div class="inner"></div>
+      <div class="inner">
+        <div class="co-contact-conts">
+          <div class="left">
+            <div class="ttl-grp">
+              <p class="ttl">
+                Contact <br />
+                MEDILMM
+              </p>
+              <p class="desc">
+                궁금하신 점을 문의하기를 통해 남겨주시면<br />
+                최대한 빠르게 확인 후 이메일로<br />
+                답변을 남겨드리겠습니다.
+              </p>
+            </div>
+            <button id="myButton" class="btn btn-inquiry">문의 보내기</button>
+          </div>
+          <div class="right">
+            <div>
+              <div class="input">
+                <label for="Name" class="label-md type-essential">이름</label>
+                <input type="text" id="Name" class="inp" placeholder="이름을 입력해주세요" />
+              </div>
+              <div class="input">
+                <label for="Belong" class="label-md type-essential">소속</label>
+                <input type="text" id="Belong" class="inp" placeholder="소속을 입력해주세요" />
+              </div>
+              <div class="input">
+                <label for="Phone" class="label-md type-essential">연락처</label>
+                <input type="text" id="Phone" class="inp" placeholder="연락처를 입력해주세요" />
+              </div>
+              <div class="input">
+                <label for="Mail" class="label-md type-essential">메일</label>
+                <input type="text" id="Mail" class="inp" placeholder="메일을 입력해주세요" />
+              </div>
+              <div class="input">
+                <label for="Inquiry" class="label-md type-02 type-essential">문의사항</label>
+                <textarea name="Inquiry" id="Inquiry" class="inp textarea-01" placeholder="문의사항을 입력해주세요"
+                ></textarea>
+              </div>
+            </div>
+            <div class="inp-grp">
+              <div class="chk-grp">
+                <input type="checkbox" id="Privacy" class="is-none check-switch" />
+                <label for="Privacy" class="chk-01">개인정보 활용 동의</label>
+              </div>
+              <button class="btn btn-underline">내용 확인</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </Layout>
 <!-- 컨텐츠가 들어갈 부분 eee -->
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const button = document.getElementById('myButton');
+
+    if (button) {
+      button.addEventListener('click', function () {
+        sendInquiry();
+      });
+    }
+  });
+
+  function sendInquiry() {
+    const name = document.getElementById('Name').value;
+    const belong = document.getElementById('Belong').value;
+    const phone = document.getElementById('Phone').value;
+    const mail = document.getElementById('Mail').value;
+    const inquiry = document.getElementById('Inquiry').value;
+    const privacy = document.getElementById('Privacy');
+
+    if (!name) {
+      alert('이름을 입력해주세요');
+      return;
+    }
+    if (!belong) {
+      alert('소속을 입력해주세요');
+      return;
+    }
+    if (!phone) {
+      alert('연락처(휴대폰)을 입력해주세요');
+      return;
+    }
+
+    if (!/^\d{10,11}$/.test(phone)) {
+      alert('올바른 전화번호를 입력해주세요.');
+      return;
+    }
+
+    if (!mail) {
+      alert('메일을 입력해주세요');
+      return;
+    }
+    if (!inquiry) {
+      alert('문의사항을 입력해주세요');
+      return;
+    }
+
+    if (!privacy.checked) {
+      alert('개인정보 활용에 동의해주세요');
+      return;
+    }
+    console.log('성공');
+  }
+</script>

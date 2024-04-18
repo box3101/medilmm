@@ -9,18 +9,20 @@ const idName = 'page-error';
 <Layout pageTitle={pageTitle} idName={idName}>
   <!-- 컨텐츠가 들어갈 부분 -->
   <div class="page-error-section">
-    <div class="img-grp-01" data-aos="fade-up" data-aos-duration="1000">
-      <img class="img" src="../assets/images/error_icon.webp" alt="" />
-    </div>
-    <div class="img-grp-02" data-aos="fade-up" data-aos-duration="1000">
-      <img class="img" src="../assets/images/error_500.webp" alt="" />
-    </div>
-    <div class="error-ttl-grp" data-aos="fade-up" data-aos-duration="1000">
-      <p class="error-ttl">요청하신 페이지에 접근할 수 없습니다</p>
-      <p class="error-desc">
-        서버 오류로 인해 페이지에 일시적으로 접근할 수 없습니다.<br />
-        잠시 후 다시 접속해 주시기 바랍니다.
-      </p>
+    <div class="inner">
+      <div class="img-grp-01" data-aos="fade-up" data-aos-duration="1000">
+        <img class="img" src="../assets/images/error_icon.webp" alt="" />
+      </div>
+      <div class="img-grp-02" data-aos="fade-up" data-aos-duration="1000">
+        <img class="img" src="../assets/images/error_500.webp" alt="" />
+      </div>
+      <div class="error-ttl-grp" data-aos="fade-up" data-aos-duration="1000">
+        <p class="error-ttl">요청하신 페이지에 접근할 수 없습니다</p>
+        <p class="error-desc">
+          서버 오류로 인해 페이지에 일시적으로 접근할 수 <br class="mb-show" />없습니다.<br class="mb-hide" />
+          잠시 후 다시 접속해 주시기 바랍니다.
+        </p>
+      </div>
     </div>
   </div>
 </Layout>

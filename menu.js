@@ -47,7 +47,7 @@ const menu = [
   {
     category: 'sub',
     title: 'Contact us',
-    url: 'Contactus',
+    url: 'MediLMMCEO',
     active2: 'on',
     items: [
       { url: 'MediLMMCEO', title: 'MediLMM CEO' },

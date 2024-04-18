@@ -1,0 +1,14 @@
+---
+const { product } = Astro.props;
+---
+
+<div class="grp">
+  <div class="img-grp">
+    <img class="img" src={product.img} />
+  </div>
+  <p class="tt">{product.title}</p>
+  <div class="date-grp">
+    <i class="icon icon-date"></i>
+    <p class="date">{product.date}</p>
+  </div>
+</div>
