@@ -220,21 +220,19 @@
   ];
 
   if (modal) {
-    document.addEventListener('DOMContentLoaded', function (e) {
-      cardList_a.forEach((el, idx) => {
-        el.addEventListener('click', (e) => {
-          body?.classList.add('isOpen');
-          modal?.classList.add('isOpen');
-          modal.querySelector('h2').innerText = modalItem[idx].title;
-          modalIdx = idx;
-          updateModal(idx);
-        });
+    cardList_a.forEach((el, idx) => {
+      el.addEventListener('click', (e) => {
+        body?.classList.add('isOpen');
+        modal?.classList.add('isOpen');
+        modal.querySelector('h2').innerText = modalItem[idx].title;
+        modalIdx = idx;
+        updateModal(idx);
       });
+    });
 
-      closeBtn?.addEventListener('click', () => {
-        body?.classList.remove('isOpen');
-        modal?.classList.remove('isOpen');
-      });
+    closeBtn?.addEventListener('click', () => {
+      body?.classList.remove('isOpen');
+      modal?.classList.remove('isOpen');
     });
 
     window.addEventListener('resize', function () {
