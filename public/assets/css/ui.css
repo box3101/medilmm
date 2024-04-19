@@ -108269,7 +108269,7 @@ section.visual {
 }
 @media (max-width: 900px) {
   section.visual {
-    height: calc(100vh + 4.3125rem);
+    height: 700px;
   }
 }
 section.visual .video-container {
