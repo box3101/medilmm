@@ -1,5 +1,6 @@
 ---
 import '../css/ui.css';
+import menu from '../../menu.js';
 ---
 
 <!-- footer -->
@@ -38,38 +39,34 @@ import '../css/ui.css';
           Copyright ⓒ MEDILMM CO.,LTD. All Rights Reserved
         </p>
       </div>
-      <div class="footer__grp is-tab-hide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
-        <p class="footer__ttl">CORE TECHNOLOGY</p>
-        <div class="footer__page">
-          <p class="footer__link">Multi Modal Data</p>
-          <p class="footer__link">About MediLMM</p>
-          <p class="footer__link">Our Platform</p>
-        </div>
-      </div>
-      <div class="footer__grp is-tab-hide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-        <p class="footer__ttl">MEDILMM CAD&#8482;</p>
-        <div class="footer__page">
-          <p class="footer__link">Simple Model</p>
-          <p class="footer__link">UVL Transformer</p>
-          <p class="footer__link">CAD Catch&#8482;</p>
-          <p class="footer__link">CAD Wrap&#8482;</p>
-        </div>
-      </div>
-      <div class="footer__grp is-tab-hide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="450">
-        <p class="footer__ttl">STRATEGY</p>
-        <div class="footer__page">
-          <p class="footer__link">Overview</p>
-          <p class="footer__link">Business Strategy</p>
-          <p class="footer__link">Marketing Strategy</p>
-        </div>
-      </div>
-      <div class="footer__grp is-tab-hide" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600"> 
-        <p class="footer__ttl">PLAN</p>
-        <div class="footer__page">
-          <p class="footer__link">MediLMM Roadmap</p>
-          <p class="footer__link">Financial Plan</p>
-        </div>
-      </div>
+      <ul class="footer__link_wrap is-tab-hide" data-aos="fade-up" data-aos-duration="1000" >
+          {
+            menu.map(({ category, title, items, active2, url, gradienText }) => {
+              return (
+                <>
+                  <li class="footer__grp type_footer_link">
+                    <a class= {active2 && gradienText === 'on' ? 'on is-gra' : 'on'}  href={`../${category}/${url}.html`}>
+                      <span class="footer__ttl"> {title} </span>
+                    </a> 
+                    {items && (
+                      <ul class="footer__page">
+                        {items.map(function ({ url, title, active }) {
+                          return (
+                            <li class="">
+                              <a class={active && 'on'} href={`../${category}/${url}.html`}>
+                                <span class="footer__link">{title}</span>
+                              </a>
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    )}
+                  </li>
+                </>
+              );
+            })
+          }
+      </ul>
     </div>
   </div>
 </footer>

@@ -11,12 +11,20 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 62.5px;
       width: 100%;
       height: 390px;
 
       @include media($web, max) {
         padding: 52px 0 32px;
         height: auto;
+        gap: 0;
+      }
+
+      .footer__link_wrap {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
       }
 
       .footer__grp {
@@ -54,28 +62,43 @@
         }
 
         &:last-child {
-          padding-bottom: 43px;
-
           &::after {
+            display: none;
+          }
+        }
+
+        &.type_footer_link {
+          &:nth-child(1) {
+            padding-right: 52.5px;
+          }
+
+          &:nth-child(2) {
+            // padding-top: 43px;
+            padding-right: 32.5px;
+          }
+
+          &:nth-child(3) {
+            padding-right: 42.8px;
+          }
+
+          &:nth-child(3) {
+            padding-right: 42.8px;
+          }
+
+          &:nth-child(4) {
+            &::after {
+              display: none;
+            }
+          }
+
+          &:nth-child(5) {
             display: none;
           }
         }
 
         &:nth-child(1) {
           padding-right: 58.5px;
-        }
-
-        &:nth-child(2) {
-          padding-right: 52.5px;
-        }
-
-        &:nth-child(3) {
-          padding-top: 43px;
-          padding-right: 32.5px;
-        }
-
-        &:nth-child(4) {
-          padding-right: 42.8px;
+          //margin-right: 62.5px;
         }
 
         .footer__info_grp {
@@ -142,18 +165,25 @@
           font-size: 1.25rem;
           font-weight: 600;
           color: #afb8c7;
+          white-space: nowrap;
         }
 
         .footer__page {
           display: flex;
           flex-direction: column;
           gap: 25px;
+          margin-top: 34px;
 
           .footer__link {
             cursor: pointer;
             font-size: 0.875rem;
             font-weight: 400;
             color: #a9adb4;
+            white-space: nowrap;
+
+            &:hover {
+              text-decoration: underline;
+            }
           }
         }
       }
