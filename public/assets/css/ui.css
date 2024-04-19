@@ -108281,7 +108281,7 @@ section.visual .video-container {
 }
 @media (max-width: 900px) {
   section.visual .video-container {
-    height: calc(87% + 0.125rem); /* 뷰포트 높이를 꽉 채움 */
+    height: calc(100% + 0.125rem); /* 뷰포트 높이를 꽉 채움 */
   }
 }
 section.visual .visual__video {
@@ -108342,7 +108342,7 @@ section.visual .visual__txt span {
 }
 @media (max-width: 900px) {
   .main-section {
-    margin-top: -15.3125rem;
+    margin-top: -25px;
   }
 }
 .main-section .inner {
