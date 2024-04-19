@@ -257,16 +257,14 @@
 
     function resizeImg(idx, url) {
       const imgElement = modal.querySelector('.modal__img img');
-      const loader = document.createElement('div');
-      loader.className = 'loading-spinner';
-      modal.querySelector('.modal__img').appendChild(loader);
-
-      imgElement.style.display = 'none'; // Hide the image until it's loaded
-      imgElement.onload = () => {
-        loader.remove(); // Remove the spinner
-        imgElement.style.display = 'block'; // Show the new image
-      };
-      imgElement.setAttribute('src', url);
+      // Only set the src if it's different to avoid unnecessary loading
+      if (imgElement.src !== url) {
+        imgElement.onload = () => {
+          imgElement.style.opacity = 1;
+        };
+        imgElement.style.opacity = 0; // Reduce opacity to fade out the current image
+        imgElement.src = url; // Set the new image source which triggers the loading
+      }
     }
   }
 })();
