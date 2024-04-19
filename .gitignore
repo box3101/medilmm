@@ -16,5 +16,5 @@ pnpm-debug.log*
 # css
 public/assets/css/ui.css.map
 public/assets/css/ui.css
-src/css/ui.css
+# src/css/ui.css
 src/css/ui.css.map
