@@ -256,7 +256,17 @@
     }
 
     function resizeImg(idx, url) {
-      modal.querySelector('.modal__img img').setAttribute('src', url);
+      const imgElement = modal.querySelector('.modal__img img');
+      const loader = document.createElement('div');
+      loader.className = 'loading-spinner';
+      modal.querySelector('.modal__img').appendChild(loader);
+
+      imgElement.style.display = 'none'; // Hide the image until it's loaded
+      imgElement.onload = () => {
+        loader.remove(); // Remove the spinner
+        imgElement.style.display = 'block'; // Show the new image
+      };
+      imgElement.setAttribute('src', url);
     }
   }
 })();
