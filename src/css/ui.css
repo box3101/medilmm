@@ -107729,7 +107729,7 @@ body {
   border-top: 1px solid #000;
   border-right: 1px solid #000;
   transform: translateY(-50%) rotate(135deg);
-  top: 28px;
+  top: 25px;
 }
 .mobileMenu .mobileNav ul li.mobileNavItem > a.is-gra span {
   background: -webkit-linear-gradient(133deg, rgb(2, 198, 255) 0%, rgb(28, 69, 249) 100%);
