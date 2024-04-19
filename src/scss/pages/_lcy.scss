@@ -1127,7 +1127,7 @@ tab
     }
     p {
       font-size: 15px;
-      font-weight: 500;
+      font-weight: 400;
     }
   }
   .sub-banner .wrap {
@@ -1148,7 +1148,7 @@ tab
     padding-bottom: 70px;
     .sub-title-wrap p {
       margin-top: 25px !important;
-      font-weight: 600 !important;
+      font-weight: 400 !important;
       position: relative;
       @include media($tab, max) {
         &::before {
@@ -1173,7 +1173,7 @@ tab
   .sub-title-wrap p {
     font-size: 15px;
     margin-top: 15px !important;
-    font-weight: 500 !important;
+    font-weight: 400 !important;
   }
   .sub-title-wrap h2 {
     font-size: 30px;
