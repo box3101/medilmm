@@ -8,6 +8,7 @@ import Pagination from '../../components/Pagination.astro';
 
 const pageTitle = 'MediLMMCEO';
 const idName = 'ceo';
+const pageHeader = 'sub';
 const bannerItem = {
   url: '../assets/images/img_board_01.webp',
   title: 'Board',
@@ -39,7 +40,7 @@ const NewsList = [
 ];
 ---
 
-<Layout pageTitle={pageTitle} idName={idName}>
+<Layout pageTitle={pageTitle} idName={idName} pageHeader={pageHeader}>
   <!-- 컨텐츠가 들어갈 부분 -->
   <Subbanner bannerItem={bannerItem} />
   <SubTab isActive={isActive} TabItem={TabItem} />

@@ -6,6 +6,7 @@ import SubTab from '../../components/SubTab.astro';
 
 const pageTitle = 'Financial Plan';
 const idName = 'roadmap';
+const pageHeader = 'sub';
 const bannerItem = {
   url: '../assets/images/img_plan_01.webp',
   title: 'Financial Plan',
@@ -20,7 +21,7 @@ const TabItem = [
 ];
 ---
 
-<Layout pageTitle={pageTitle} idName={idName}>
+<Layout pageTitle={pageTitle} idName={idName} pageHeader={pageHeader}>
   <!-- 컨텐츠가 들어갈 부분 -->
   <Subbanner bannerItem={bannerItem} />
   <SubTab isActive={isActive} TabItem={TabItem} />
