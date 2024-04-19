@@ -1,5 +1,14 @@
 (function () {
   /* ///////////////////////////////////////////////////////
+  비디오 로딩
+  */ ////////////////////////////////////////////////////////
+
+  window.addEventListener('load', function () {
+    var video = document.querySelector('.visual__video.is-tab-hide');
+    video.src = '../assets/video/main.mp4';
+    video.load();
+  });
+  /* ///////////////////////////////////////////////////////
     모바일 네비게이션
   */ ////////////////////////////////////////////////////////
   document.addEventListener('DOMContentLoaded', function () {
