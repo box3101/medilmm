@@ -263,222 +263,54 @@
   }
 })();
 
-// 카운트 업
-// additional-count-section 숫자 카운팅
 document.addEventListener('DOMContentLoaded', function () {
-  let count01 = 0;
-  const increment01 = 5;
+  const button = document.getElementById('myButton');
 
-  function countUp01() {
-    if (count01 < 500) {
-      isCounting01 = true;
-      document.getElementById('count01').innerText = count01.toLocaleString();
-      count01 += increment01;
-      requestAnimationFrame(countUp01);
-    } else {
-      document.getElementById('count01').innerText = '500';
-      isCounting01 = false;
-      count01 = 0;
-    }
+  if (button) {
+    button.addEventListener('click', function () {
+      sendInquiry();
+    });
   }
-
-  let isCounting01 = false;
-
-  //공통요소, 뷰포트 height
-  const windowHeight = window.outerHeight;
-  let focusingSec = [false];
-  focusingSec[2] = false;
-
-  //특정 html태그의 DOM상 위치 계산
-  function getSectionPositionOf(sectionName) {
-    var section = document.getElementById(sectionName);
-
-    //찾으려는 객체의 top
-    const sectionTop = section.offsetTop;
-    //찾으려는 객체의 bottom
-    const sectionBottom = sectionTop + section.offsetHeight;
-
-    return {
-      sectionTop: sectionTop,
-      sectionBottom: sectionBottom,
-    };
-  }
-
-  const targetSection = getSectionPositionOf('st-bs-bottom-wrap');
-  //section의 뷰포트 중심 확인
-  function checkViewport(_targetSection) {
-    var scrollTop = window.scrollY;
-    var scrollBottom = scrollTop + windowHeight;
-    if (
-      scrollBottom - windowHeight / 10 > _targetSection.sectionTop &&
-      _targetSection.sectionBottom > scrollTop + windowHeight / 10
-    ) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
-  //해당섹션에서 새로고침시 애니메이션 이벤트
-  if (checkViewport(targetSection)) {
-    countUp01();
-    focusingSec[2] = true;
-  }
-
-  //스크롤 이동시
-  window.addEventListener('scroll', function (e1) {
-    //뷰포트가 selectSection을 입장할떄 (상/하 입장)
-    if (checkViewport(targetSection)) {
-      if (!isCounting01 && !focusingSec[2]) countUp01();
-      focusingSec[2] = true;
-    } else {
-      focusingSec[2] = false;
-    }
-  });
 });
 
-// 2
-document.addEventListener('DOMContentLoaded', function () {
-  let count02 = 0;
-  const increment02 = 50;
+function sendInquiry() {
+  const name = document.getElementById('Name').value;
+  const belong = document.getElementById('Belong').value;
+  const phone = document.getElementById('Phone').value;
+  const mail = document.getElementById('Mail').value;
+  const inquiry = document.getElementById('Inquiry').value;
+  const privacy = document.getElementById('Privacy');
 
-  function countUp02() {
-    if (count02 < 5250) {
-      isCounting02 = true;
-      document.getElementById('count02').innerText = count02.toLocaleString();
-      count02 += increment02;
-      requestAnimationFrame(countUp02);
-    } else {
-      document.getElementById('count02').innerText = '5,250';
-      isCounting02 = false;
-      count02 = 0;
-    }
+  if (!name) {
+    alert('이름을 입력해주세요');
+    return;
+  }
+  if (!belong) {
+    alert('소속을 입력해주세요');
+    return;
+  }
+  if (!phone) {
+    alert('연락처(휴대폰)을 입력해주세요');
+    return;
   }
 
-  let isCounting02 = false;
-
-  //공통요소, 뷰포트 height
-  const windowHeight = window.outerHeight;
-  let focusingSec = [false];
-  focusingSec[2] = false;
-
-  //특정 html태그의 DOM상 위치 계산
-  function getSectionPositionOf(sectionName) {
-    var section = document.getElementById(sectionName);
-
-    //찾으려는 객체의 top
-    const sectionTop = section.offsetTop;
-    //찾으려는 객체의 bottom
-    const sectionBottom = sectionTop + section.offsetHeight;
-
-    return {
-      sectionTop: sectionTop,
-      sectionBottom: sectionBottom,
-    };
+  if (!/^\d{10,11}$/.test(phone)) {
+    alert('올바른 전화번호를 입력해주세요.');
+    return;
   }
 
-  const targetSection = getSectionPositionOf('st-bs-bottom-wrap');
-  //section의 뷰포트 중심 확인
-  function checkViewport(_targetSection) {
-    var scrollTop = window.scrollY;
-    var scrollBottom = scrollTop + windowHeight;
-    if (
-      scrollBottom - windowHeight / 10 > _targetSection.sectionTop &&
-      _targetSection.sectionBottom > scrollTop + windowHeight / 10
-    ) {
-      return true;
-    } else {
-      return false;
-    }
+  if (!mail) {
+    alert('메일을 입력해주세요');
+    return;
+  }
+  if (!inquiry) {
+    alert('문의사항을 입력해주세요');
+    return;
   }
 
-  //해당섹션에서 새로고침시 애니메이션 이벤트
-  if (checkViewport(targetSection)) {
-    countUp02();
-    focusingSec[2] = true;
+  if (!privacy.checked) {
+    alert('개인정보 활용에 동의해주세요');
+    return;
   }
-
-  //스크롤 이동시
-  window.addEventListener('scroll', function (e1) {
-    //뷰포트가 selectSection을 입장할떄 (상/하 입장)
-    if (checkViewport(targetSection)) {
-      if (!isCounting02 && !focusingSec[2]) countUp02();
-      focusingSec[2] = true;
-    } else {
-      focusingSec[2] = false;
-    }
-  });
-});
-
-// 3
-document.addEventListener('DOMContentLoaded', function () {
-  let count03 = 0;
-  const increment03 = 50;
-
-  function countUp03() {
-    if (count03 < 7314) {
-      isCounting03 = true;
-      document.getElementById('count03').innerText = count03.toLocaleString();
-      count03 += increment03;
-      requestAnimationFrame(countUp03);
-    } else {
-      document.getElementById('count03').innerText = '7,314';
-      isCounting03 = false;
-      count03 = 0;
-    }
-  }
-
-  let isCounting03 = false;
-
-  //공통요소, 뷰포트 height
-  const windowHeight = window.outerHeight;
-  let focusingSec = [false];
-  focusingSec[2] = false;
-
-  //특정 html태그의 DOM상 위치 계산
-  function getSectionPositionOf(sectionName) {
-    var section = document.getElementById(sectionName);
-
-    //찾으려는 객체의 top
-    const sectionTop = section.offsetTop;
-    //찾으려는 객체의 bottom
-    const sectionBottom = sectionTop + section.offsetHeight;
-
-    return {
-      sectionTop: sectionTop,
-      sectionBottom: sectionBottom,
-    };
-  }
-
-  const targetSection = getSectionPositionOf('st-bs-bottom-wrap');
-  //section의 뷰포트 중심 확인
-  function checkViewport(_targetSection) {
-    var scrollTop = window.scrollY;
-    var scrollBottom = scrollTop + windowHeight;
-    if (
-      scrollBottom - windowHeight / 10 > _targetSection.sectionTop &&
-      _targetSection.sectionBottom > scrollTop + windowHeight / 10
-    ) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
-  //해당섹션에서 새로고침시 애니메이션 이벤트
-  if (checkViewport(targetSection)) {
-    countUp03();
-    focusingSec[2] = true;
-  }
-
-  //스크롤 이동시
-  window.addEventListener('scroll', function (e1) {
-    //뷰포트가 selectSection을 입장할떄 (상/하 입장)
-    if (checkViewport(targetSection)) {
-      if (!isCounting03 && !focusingSec[2]) countUp03();
-      focusingSec[2] = true;
-    } else {
-      focusingSec[2] = false;
-    }
-  });
-});
+  console.log('성공');
+}

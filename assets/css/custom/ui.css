@@ -113019,12 +113019,70 @@ mo
 .pl-roadmap-wrap {
   padding: 140px 0 182px;
 }
+@media (max-width: 600px) {
+  .pl-roadmap-wrap {
+    padding: 60px 0 80px;
+  }
+}
 .pl-roadmap-wrap .img-grp {
+  position: relative;
+  padding-top: 62.667%;
   margin-top: 19px;
+}
+@media (max-width: 600px) {
+  .pl-roadmap-wrap .img-grp {
+    padding-top: 279.134%;
+  }
+}
+.pl-roadmap-wrap .img-grp .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 600px) {
+  .pl-roadmap-wrap .sub-page-ttl {
+    text-align: left;
+  }
+}
+.pl-roadmap-wrap .mo-pl-roadmap-list {
+  margin-top: 31px;
+}
+.pl-roadmap-wrap .mo-pl-roadmap-list .ttl {
+  position: relative;
+  padding-left: 25px;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1c1c1c;
+}
+.pl-roadmap-wrap .mo-pl-roadmap-list .ttl::before {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #e9f4ff;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.pl-roadmap-wrap .mo-pl-roadmap-list .ttl:first-child {
+  margin-top: 0;
 }
 
 .pl-financial-section {
   padding: 140px 0;
+}
+@media (max-width: 600px) {
+  .pl-financial-section {
+    padding: 61px 0 80px;
+  }
 }
 .pl-financial-section .gif-grp {
   position: relative;
@@ -113043,8 +113101,18 @@ mo
 .pl-financial-section .pl-finanial-bottom-wrap {
   padding-top: 200px;
 }
+@media (max-width: 600px) {
+  .pl-financial-section .pl-finanial-bottom-wrap {
+    padding-top: 70px;
+  }
+}
 .pl-financial-section .pl-finanial-bottom-wrap p {
   text-align: left;
+}
+@media (max-width: 600px) {
+  .pl-financial-section .pl-finanial-bottom-wrap p {
+    text-align: center;
+  }
 }
 .pl-financial-section .pl-finanial-bottom-wrap .img-grp-01 {
   margin-top: -68px;

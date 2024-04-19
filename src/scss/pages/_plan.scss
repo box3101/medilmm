@@ -2,19 +2,84 @@
 .pl-roadmap-wrap {
   padding: 140px 0 182px;
 
+  @include media($mo, max) {
+    padding: 60px 0 80px;
+  }
+
   .img-grp {
+    position: relative;
+    padding-top: 62.667%;
     margin-top: 19px;
+
+    @include media($mo, max) {
+      padding-top: 279.134%;
+    }
+
+    .img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .sub-page-ttl {
+    @include media($mo, max) {
+      text-align: left;
+    }
+  }
+
+  .mo-pl-roadmap-list {
+    margin-top: 31px;
+
+    .ttl {
+      position: relative;
+      padding-left: 25px;
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #1c1c1c;
+
+      &::before {
+        content: '';
+        z-index: 1;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #e9f4ff;
+        transform: translateY(-50%);
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
   }
 }
 
 // financial
 .pl-financial-section {
+  overflow: hidden;
   padding: 140px 0;
+
+  @include media($mo, max) {
+    padding: 61px 0 80px;
+  }
 
   .gif-grp {
     position: relative;
     padding-top: 36.259%;
     margin-top: 40px;
+
+    @include media($mo, max) {
+      padding-top: 89.259%;
+      margin-top: 32px;
+    }
 
     .gif {
       position: absolute;
@@ -26,11 +91,61 @@
     }
   }
 
+  .pl-financial-card-grp {
+    padding: 15px 10px;
+    border-radius: 0 0 8px 8px;
+    background-color: rgba(#fafbfd, 0.9);
+
+    .pl-financial-card {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 17.5px 16px;
+      margin-top: 8px;
+      border-radius: 6px;
+      background-color: #fff;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      .left {
+        flex-basis: 88px;
+        flex-shrink: 0;
+        margin-right: 15px;
+
+        .year {
+          font-size: 14px;
+          font-weight: 700;
+          color: rgba(#000, 0.4);
+        }
+
+        .won {
+          font-size: 14px;
+          font-weight: 700;
+          color: #000;
+
+          .lg-txt {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+
   .pl-finanial-bottom-wrap {
     padding-top: 200px;
 
+    @include media($mo, max) {
+      padding-top: 70px;
+    }
+
     p {
       text-align: left;
+
+      @include media($mo, max) {
+        text-align: center;
+      }
     }
 
     .img-grp-01 {
